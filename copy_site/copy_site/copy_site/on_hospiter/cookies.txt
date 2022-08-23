@@ -1,7 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-onhospital.org	TRUE	/	FALSE	1999999999	PHPSESSID	0slpn0t45aphre22antfmlejm1
-onhospital.org	TRUE	/	FALSE	1999999999	rx_sesskey1	Oy9BMB0ldVDMFiOnmHya5F80
-onhospital.org	TRUE	/	FALSE	1999999999	rx_sesskey2	Gk00BcKpqTb9n94KZZNrZ6LB
-onhospital.org	TRUE	/	FALSE	1999999999	XE_REDIRECT_URL	http%3A%2F%2Fonhospital.org%2Findex.php%3Fmid%3Dboard%26document_srl%3D223%26act%3DdispMemberSignUpForm
-
