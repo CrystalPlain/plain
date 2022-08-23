@@ -1,0 +1,638 @@
+@charset "utf-8";
+/*
+ksodesign1@naver.com
+http://ksodesign.com/
+
+Copyright 2010 KSODESIGN
+Contributing author : KSJade
+----------------------------------------------------------------*/
+
+/*------------------------------------------------------------
+**
+** Page (teamserenade)
+**
+--------------------------------------------------------------*/
+#kso-page {
+	line-height: 1.8;
+	color: #777;
+}
+.page-section h3,
+.page-section h4,
+.page-section h5 {font-weight: 500;color: #333;}
+#kso-page b {font-weight: bold;}
+#kso-page .page-section {
+	margin-bottom: 4rem;
+}
+#kso-page .page-title {
+	position: relative;
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-weight: 500;
+	color: #222;
+}
+#kso-page .page-title>svg {
+	margin-bottom: 5px;
+	font-size: 30px;
+	vertical-align: middle;
+	color: #DC2429;
+}
+#kso-page .page-title-sm {
+	margin-bottom: 30px;
+	font-size: 15px;
+	font-weight: 600;
+	letter-spacing: 6px;
+	text-align: center;
+}
+#kso-page .box-img {
+	position: relative;
+	height: 400px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#kso-page .box-img2 {
+	position: relative;
+	height: 103px !important;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#kso-page .box-img .summary {
+	position: absolute;
+	left: 4rem;top: 5rem;
+	font-size: 20px;
+	color: #fff;
+}	
+#kso-page .box-img .summary h3 {
+	font-size: 36px;
+	font-weight: 600;
+}	
+#kso-page .box-img .summary,
+#kso-page .box-img .summary h3 {
+	color: #fff;
+}
+#kso-page .box-img h3.line-under:before {
+	border-bottom-color: #fff;
+}
+
+
+
+.page-section .text-justify h4 {
+	margin-bottom: 20px;
+	font-weight: 500;
+	color: #007dd6;
+}
+.page-section .text-justify ul {
+	padding-left: 1.5rem;
+	list-style: disc;
+}
+
+.page-section .text-justify .circle {
+	display: inline-block;
+	margin-right: 5px;
+	width: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	background-color: #007dd6;
+	border-radius: 50%;
+}
+
+
+
+.page-section .page-sec-title {
+	font-size: 26px;
+}
+.page-section.medical .col-6 {
+	margin-bottom: 10px;
+}	
+.page-section .colbox {
+	height: 85px;	
+	text-align: center;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+	border: 1px solid #ddd;
+}
+.page-section .colbox a {
+	display: block;
+	padding: 1.5rem 0;	
+}
+.page-section .colbox:hover {
+	border-width: 3px;
+	border-color: #34a4e6;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.page-section .colbox h5 {
+	margin: 0;padding: 0 10px;
+	/*margin-top: 1rem;*/
+	font-size: 16px;
+	line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #555;
+}
+
+.page-section.medical .nav li {
+	margin-right: 1rem;
+}
+.page-section.medical .nav-pills .nav-link {
+	padding: .5rem 0;
+}
+.page-section.medical .nav-pills .nav-link>span {
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+	width: 24px;height: 24px;
+	vertical-align: middle;
+	border-radius: 50%;
+	border: 1px solid #bbb;
+}
+.page-section.medical .nav-pills .nav-link.active, 
+.page-section.medical .nav-pills .show > .nav-link {
+	color: #111;
+	background-color: transparent;
+}
+.page-section.medical .nav-pills .nav-link.active>span {
+	border: 1px solid #2763BA;
+}
+.page-section.medical .nav-pills .nav-link.active>span:before {
+	content: '';
+	position: absolute;
+	left: 7px;top: 7px;right: 7px;bottom: 7px;
+	background-color: #2763BA;
+	border-radius: 50%;
+}
+
+
+
+.page-section.col-circle .box {
+	padding: 15px;
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+	text-align: center;
+	width: 190px;height: 190px;
+	background-color: #7f79c1;
+	border-radius: 50%;
+	box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.2);
+}
+.page-section.col-circle .box>span {
+	display: flex;
+	padding: .5rem;	
+	width: 100%;height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.page-section.col-circle .box>span>h6 {
+	line-height: 1.4;
+}
+.page-section.col-circle .box>span>h6>span {
+	font-size: 24px;
+	letter-spacing: -1px;
+	color: #d2ceff;
+}
+.page-section.two-col h3 {
+	font-size: 20px;
+}
+
+/*-----------------------------------------------------------
+** 
+** use information
+** 
+-----------------------------------------------------------*/
+.page-section .table-floor {
+	border-top: 2px solid #beccf1;
+	border-bottom: 1px solid #beccf1;
+}
+.page-section .table-floor th {
+	min-width: 150px;
+	text-align: center;
+	background-color: #f1f2f9;
+	white-space: nowrap;
+}
+.page-section .table-floor td {
+	text-align: left;
+}
+
+.page-section .table-phone {
+	border-top: 2px solid #3c3c3c;
+	border-bottom: 1px solid #999;
+}
+.page-section .table-phone th {
+	min-width: 100px;
+	text-align: center;
+	vertical-align: middle;
+	color: #222;
+	background-color: #f6f6f6;
+	white-space: nowrap;
+}
+.page-section .table-phone td {
+	text-align: left;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+
+.page-section .history .d-flex span {
+	display: inline-block;
+	text-align: right;
+	margin-right: 3rem;
+    width: 32px;	
+    min-width: 34px;    
+}
+
+.page-section .history .font-oswald {
+	text-align: center;
+}
+
+.page-section .table-phone.table-bordered th {
+	width: 50%;
+}
+
+.page-section .vision .circle-box {	
+	text-align: center;
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+	line-height: 180px;
+	vertical-align: middle;
+	color: #fff;
+	background-color: #4686D6;
+	border-radius: 50%;
+	border: 10px solid #fff;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.17);
+}
+.page-section .vision .circle-box.bg1 {background-color: #d280a4;}
+.page-section .vision .circle-box.bg2 {background-color: #6861AE;}
+.page-section .vision .circle-box.bg3 {background-color: #61ae89;}
+.page-section .vision .one {	
+	display: flex;
+    align-items: center;
+    justify-content: center;	
+	text-align: center;
+	margin: 0 auto;
+	width: 120px;
+	height: 120px;
+    line-height: 1.4;	
+	vertical-align: middle;
+	color: #fff;
+	background-color: #598dd0;
+	border-radius: 50%;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.17);
+}
+.page-section .vision .type2 .one {	
+	background-color: #9377af;
+}
+
+
+
+.page-section .step {
+	position: relative;
+	padding: 10px;
+	min-height: 155px;
+    font-size: 13px;	
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+.page-section .bar,
+.page-section .step h4 {
+	padding: 6px 0;
+	margin-bottom: 10px;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	background-color: #516f80;
+	border-radius: 4px 4px 0 0;
+}
+.page-section .text-justify .bar {
+	position: relative;
+	color: #fff;
+	border-radius: 4px;
+}
+
+.page-section .text-justify .bar.line-two:before {
+	left: 20%;bottom: -40px;
+	width: 1px;height: 50px;
+	border-right: 1px solid; 
+}
+.page-section .text-justify .bar.line-two:after {
+	right: 20%;bottom: -40px;
+	width: 1px;height: 50px;
+	border-right: 1px solid; 
+}
+.page-section .text-justify .bar.none:before {
+	display: none;
+}
+.page-section .text-justify .bar.line-l:before {
+	left: -125px;top:1rem;
+	width: 150px;height: 1px;
+	border-top: 1px solid; 	
+}
+.page-section .text-justify .bar:before,
+.page-section .text-justify .bar.line-l:after {
+	left: 50%;bottom: -40px;
+	width: 1px;height: 50px;
+	border-right: 1px solid; 	
+}
+.page-section .text-justify .step:before,
+.page-section .text-justify .bar.line-two:before,
+.page-section .text-justify .bar.line-two:after,
+.page-section .text-justify .bar:before,
+.page-section .text-justify .bar.line-l:before,
+.page-section .text-justify .bar.line-l:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	border-color: #a2b8c5; 	
+}
+
+.page-section .proce {
+	padding: 2px 15px;
+	font-size: 14px;
+	color: #fff;
+	background-color: #eb5f22;
+	border-radius: 20px;
+}
+.page-section .circle100 {
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	height: 100px;width: 100px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+
+#kso-page .funeral .top {
+	display: flex;
+	align-items: center;
+	padding: 2rem;
+	background-color: #FBF8F1;
+}
+
+#kso-page .funeral .section1 {
+	padding: 2rem;
+	border: 2px solid #6A3907;
+}
+#kso-page .funeral .section1 .circle {
+	position: absolute;
+	left: 25px;top: 0;
+}
+#kso-page .funeral .color1 {color: #6A3907;}
+#kso-page .funeral .bg-color1 {background-color: #6A3907;}
+
+.font-myeongjo {font-family: 'Nanum Myeongjo', serif;}
+
+
+
+.page-section h6 {
+	font-size: 17px;
+	color: #5a72cc;
+}
+.page-section .circle {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	border-radius: 50%;
+}
+.page-section ol>li>span {color: #111;}
+
+.page-section.team .btn-team {
+	margin-bottom: 30px;
+	font-size: 17px !important;
+	color: #fff;
+	background-color: #5C9FE3;
+}
+
+.btn-download {
+	display: inline-block;
+	padding: 1rem 2rem;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #999;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+	box-shadow: 1px 2px 3px rgba(0,0,0,.1);
+}
+.btn-download:hover {
+	color: #007dd9;
+	box-shadow: 3px 5px 10px rgba(0,0,0,.1);
+}
+.font-oswald {font-family: 'Oswald', sans-serif;color: #597288 !important;}
+
+
+/*tab element*/
+.page-section.table .text-justify .nav.nav-pills {
+	padding: 0;
+	list-style: none;
+}
+.page-section.table .nav-pills .nav-item {
+	margin-right: -1px;
+}
+.page-section.table .nav-pills .nav-link {
+	border: 1px solid #ddd;
+	border-radius: 0;
+}
+.page-section.table .nav-pills .nav-link.active {
+	border-color: #007BFF;
+}
+
+.page-section.table table {
+	border-top: 2px solid #3c3c3c;
+    border-bottom: 1px solid #999;
+}
+.page-section.table table th,
+.page-section.table table td {
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.page-section.table table th {
+	color: #000;
+	background-color: #f6f6f6;
+	border-bottom-width: 1px;
+}
+.page-section.table table.table-sm td {
+    font-size: 14px;
+}
+.page-section.table table.td-left td:nth-child(2) {
+	text-align: left;
+}
+.page-section.table table.td-left3 td:nth-child(3) {
+	text-align: left;
+}
+
+
+.page-section .img-block>img {
+	max-width: 100%;
+	height: auto;
+}
+
+.page-section .textbox {
+	font-size: 18px;
+	color: #333;
+}
+
+#kso-page .em {
+	font-weight: 500;
+	color: #000;
+}
+
+#kso-page .emerg td {
+	padding: 1.5rem 0.75rem;
+}
+
+/*table*/
+#kso-page .table.table-bordered{
+	border: 0;
+    border-top: 2px solid #333;
+}
+.table-bordered thead th {
+    background-color: #f8f8f8;
+}
+.table-bordered thead th:first-child,
+.table-bordered tbody td:first-child {
+    border-left: 0;
+}
+.table-bordered thead th:last-child,
+.table-bordered tbody td:last-child {
+    border-right: 0;
+}
+.table-bordered thead th, 
+.table-bordered tbody td {
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+.table-bordered thead th, 
+.table-bordered thead td {
+    border-bottom-width: 1px;    
+}
+.table-bordered tbody td {
+    font-size: 14px;
+}
+.table-bordered th {
+    white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+    .table-bordered th, 
+    .table-bordered td {
+        white-space: nowrap;
+    }
+}
+/*------------------------------------------------------------
+**
+** Media Query
+**
+--------------------------------------------------------------*/
+@media (min-width: 992px) {
+	.page-section .text-justify .line-bg {
+		background-image: url(../img/line-992.png);
+		background-position: center 155px;
+		background-repeat: no-repeat;
+	}
+	.page-section.table .nav-pills .nav-link {
+		padding: .5rem 2rem;
+	}
+	.page-section.table .nav-pills .nav-item {
+		margin-right: .5rem;
+	}
+	#kso-page .emerg td:first-child {
+		min-width: 200px;
+	}
+}
+@media (max-width: 991px) {
+	.page-section .text-justify .step:before {
+		left: 50%;bottom: -40px;
+		width: 1px;height: 38px;
+		border-right: 1px solid; 
+		z-index: -1;
+	}
+	.page-section .text-justify .step.line-long:before {
+		height: 210px;bottom: -210px;
+	}
+}
+
+@media (max-width: 576px) {
+	#kso-page .page-title {
+		font-size: 30px;
+	}
+	#kso-page .box-img {
+		height: 300px;
+	}
+	#kso-page .box-img .summary {
+		left: 2rem;right: 2rem;top: 3rem;
+		font-size: 16px;
+	}
+	#kso-page .box-img .summary h3 {font-size: 30px;}
+	#kso-page .box-summary {font-size: 17px;line-height: 30px;}
+
+	.page-section.table .nav-item {
+	    -ms-flex: 1 1 auto;
+	    flex: 1 1 auto;
+	    text-align: center;
+	}	
+}
+
+/*-----------------------------------------------------------
+** 
+** medical 5column
+** 
+-----------------------------------------------------------*/
+.medical .col-6 {
+	padding-right: 5px;
+    padding-left: 5px;
+}
+.w-20 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+@media (min-width: 576px) {
+  .w-sm-20 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media (min-width: 768px) {
+  .w-md-20 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+	.pl-md-3{padding-left: 1rem !important;}
+	.pr-md-3{padding-left: 1rem !important;}
+}
+
+@media (min-width: 992px) {
+  .w-lg-20 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .w-xl-20 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
