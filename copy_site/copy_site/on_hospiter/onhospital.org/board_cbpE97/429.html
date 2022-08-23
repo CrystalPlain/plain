@@ -71,10 +71,6 @@
 		/*.sub-header,
 		.sub-header>.container>.row {height: 200px;}*/
 	}
-#google_translate_element {
-	opacity: 1;
-	background-color: #0AA2E5;
-}
 #google_translate_element > div > div > select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -209,37 +205,6 @@
 	var rewrite_level = 1;
 	if (detectColorScheme) detectColorScheme();
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script type="text/javascript">
-	/* 새 UI 선택 클릭 이벤트가 발생하면 감춤 처리한 구글 번역 콤보리스트에 선택한 언어를 적용해 변경 이벤트를 발생시키는 코드  */
-	document.querySelector('.translation-links').addEventListener('change',function(event) {
-
-		let el = this.value;
-		console.log("!!"+el);
-		if(el != null){
-			const gtcombo = document.querySelector('.goog-te-combo');
-			if (gtcombo == null) {
-				alert("Error: Could not find Google translate Combolist.");
-				return false;
-			}
-			gtcombo.value = el; // 변경할 언어 적용
-			gtcombo.dispatchEvent(new Event('change')); // 변경 이벤트 트리거
-		}
-		return false;
-	});
-
-	function googleTranslateElementInit() {
-		//setCookie('googtrans', '/en',1);
-		new google.translate.TranslateElement({
-			pageLanguage: 'en',
-			/*includedLanguages: "en,zh-TW,vi,es,th,ru,fr",*/
-			autoDisplay: true,
-			multilanguagePage: true
-
-		}, 'google_translate_element');
-	}
-	//frequently asked questions
-</script>
 <script>
 	//$('.lang_img').click(function(){
 		//$('.g_second_box').css({
@@ -289,6 +254,37 @@
                     <ul class="login-top d-none d-xl-block"></ul>
                 </div>
 			</div>
+			<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+			<script type="text/javascript">
+				/* 새 UI 선택 클릭 이벤트가 발생하면 감춤 처리한 구글 번역 콤보리스트에 선택한 언어를 적용해 변경 이벤트를 발생시키는 코드  */
+				document.querySelector('.translation-links').addEventListener('change',function(event) {
+
+					let el = this.value;
+					console.log("!!"+el);
+					if(el != null){
+						const gtcombo = document.querySelector('.goog-te-combo');
+						if (gtcombo == null) {
+							alert("Error: Could not find Google translate Combolist.");
+							return false;
+						}
+						gtcombo.value = el; // 변경할 언어 적용
+						gtcombo.dispatchEvent(new Event('change')); // 변경 이벤트 트리거
+					}
+					return false;
+				});
+
+				function googleTranslateElementInit() {
+					//setCookie('googtrans', '/en',1);
+					new google.translate.TranslateElement({
+						pageLanguage: 'en',
+						/*includedLanguages: "en,zh-TW,vi,es,th,ru,fr",*/
+						autoDisplay: true,
+						multilanguagePage: true
+
+					}, 'google_translate_element');
+				}
+				//frequently asked questions
+			</script>
 			
 			<div class="g_first_box">
 				<div class="g_second_box">
