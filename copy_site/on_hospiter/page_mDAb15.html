@@ -160,6 +160,7 @@ a.point-hover:hover,
 @media (max-width: 1920px) {
 	.g_first_box {right: 300px}
 	.flex_nav {padding-left: 170px;}
+    .logo img {max-width:100%;}
 }
 @media (max-width: 1700px) {
 	.g_first_box {right: 170px}
@@ -180,19 +181,22 @@ a.point-hover:hover,
 	.flex_nav {padding-left: 80px;}
 }
 @media (max-width: 1200px) {
-	.g_first_box {right: 70px; top: 0px;}
+	.g_first_box {right: 70px; top: 8px;}
+    .logo img {max-width:85% !important;}
 }
 @media (max-width: 770px) {
-	.g_first_box {width: 130px; right: 110px; top: 0px;}
+	.g_first_box {width: 130px; right: 110px; }
 }
 @media (max-width: 445px) {
 	#google_translate_element > div > div > select {max-width: 100px; padding: 0 10px; font-size: 12px;}
+    .logo img {max-width:85% !important;}
 }
 	
 .flex_nav {
 	display: flex;
     justify-content: flex-start;
 }
+
 
 </style>
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,600&amp;display=swap&amp;subset=korean" rel="stylesheet">
@@ -288,13 +292,13 @@ a.point-hover:hover,
         <div class="navik-header header-shadow center-menu-2 position-fixed-xs">				
 <div class="navik-header-container">							
     <div class="logo" 
-    data-mobile-logo="/./layouts/KSOTheme_Starter/img/logo-m2.png" 
+    data-mobile-logo="https://onhospital.org/layouts/KSOTheme_Starter/img/logo-dark2.png" 
     data-sticky-logo="/./layouts/KSOTheme_Starter/img/logo-dark.png" 
     
    >
-        <div class="container position-relative">
+        <div class="container position-relative m_logo">
             <a href="page_mDAb15.html">
-                <img src="layouts/KSOTheme_Starter/img/logo-dark2.png" alt="logo">                		                	</a>
+                <img src="https://onhospital.org/layouts/KSOTheme_Starter/img/logo-dark2.png" alt="logo" class="logo_img">                		                	</a>
             <ul class="login-top d-none d-xl-block">
                                                             </ul>
         </div>
@@ -477,7 +481,9 @@ a.point-hover:hover,
 <div class="navik-fixed-sidebar navik-sidebar-right d-block d-xl-none">		
 <div class="navik-header-container">			
     <div class="logo">
-        <a href="#"><img src="layouts/KSOTheme_Starter/img/logo-m.png" alt="logo"/></a>
+        <a href="#">
+            <img src="layouts/KSOTheme_Starter/img/logo-m.png" alt="logo"/>
+        </a>
     </div>			
     <div class="burger-menu">
         <div style="position: absolute;left: -28px;top: 22px;font-size: 12px;font-weight: 400;color: #000;">MENU</div>
