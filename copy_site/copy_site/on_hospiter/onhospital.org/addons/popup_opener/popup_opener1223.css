@@ -3,15 +3,17 @@
 /* xe_popup_border */
 .xe_popup_border{
     z-index: 999998;
-    display: block;
+    /* display: block; */
     border: 0px solid #cecece;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
+    display: none;
 }
 .xe_popup_border .popupbody{
     position: relative;
     cursor: hand;
+    display: none;
     overflow: hidden;
     width: auto;
     margin: 0;
@@ -25,6 +27,7 @@
     margin: 0;
     padding:8px 35px 8px 5px;
     background-color: #000000;
+    display: none;
 }
 .xe_popup_border .popupcloser input{
     cursor: pointer;
@@ -34,14 +37,16 @@
     padding: 0;
     border: 0;
     vertical-align: middle;
+    display: none;
 }
 .xe_popup_border .popupcloser span{
     color: #ffffff;
 	padding-left:5px;
+    display: none;
 }
 .xe_popup_border .popupcloser button{
     position: absolute;
-	display: block;
+	/* display: block; */
     cursor: pointer;
     border: 0;
 	top: 7px;
@@ -51,16 +56,18 @@
     margin: 0;
     padding: 0;
     background: url('addons/popup_opener/close.png') no-repeat;
+    display: none;
 }
 
 /* xe_popup_borderless */
 .xe_popup_borderless{
     z-index: 999999;
-    display: block;
+    /* display: block; */
     border: none;
     background-color: #fff;
     margin: 0;
     padding: 0;
+    display: none;
 }
 .xe_popup_borderless .popupbody{
     position: relative;
@@ -70,6 +77,7 @@
     margin: 0;
     padding: 0;
 	background-color: transparent;
+    display: none;
 }
 .xe_popup_borderless .popupcloser{
     cursor: move;
@@ -79,6 +87,7 @@
     padding:5px 10px 5px 0;
     background-color: #000;
 	text-align: right;
+    display: none;
 }
 .xe_popup_borderless .popupcloser input{
     cursor: pointer;
@@ -88,15 +97,17 @@
     padding: 0;
     border: 0;
     vertical-align: middle;
+    display: none;
 }
 .xe_popup_borderless .popupcloser span{
     color: #fff;
 	font-size: 13px;
 	padding-left:5px;
+    display: none;
 }
 .xe_popup_borderless .popupcloser button{
     position: absolute;
-	display: block;
+	/* display: block; */
     cursor: pointer;
     border: 0;
 	top: 0;
@@ -106,15 +117,18 @@
     margin: 0;
     padding: 0;
     background: url('addons/popup_opener/close.png') no-repeat;
+    display: none;
 }
 
 /* ksjade */
 .popupbody img {
-    display: block;
+    /* display: block; */
     max-width: 100%;
     height: auto;
+    display: none;
 }
-.popupbody>p {margin-bottom: 0;}
+.popupbody>p {margin-bottom: 0;
+    display: none;}
 @media (max-width: 767px) { 
     .xe_popup_border,
 	.xe_popup_borderless {left: 1.5em !important;top: 70px !important;width: 90% !important;}
