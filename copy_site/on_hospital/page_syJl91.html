@@ -148,7 +148,7 @@ iframe.goog-te-banner-frame { display: none !important; }
 	max-width: 100%;
 	height: 50px;
 	position: absolute;
-	right: 300px;
+	right: 100px;
 	/* float: right; */
 	z-index: 99999;
 }
@@ -163,8 +163,9 @@ iframe.goog-te-banner-frame { display: none !important; }
 	margin: 10px 0 0 10px;
 }
 
+
 @media (max-width: 1920px) {
-	.g_first_box {right: 300px; margin-top: 5px;
+	.g_first_box {right: 100px; margin-top: 5px;
         position: absolute;
         z-index: 99999;}
 	.flex_nav {padding-left: 170px;}
@@ -202,12 +203,13 @@ iframe.goog-te-banner-frame { display: none !important; }
 	.g_first_box {right: 100px; top: 3px;
         position: absolute;
         z-index: 99999;}
-		.logo img {max-width:85% !important; min-width: 170px;}
+    .logo img {max-width:85% !important; min-width: 170px;}
 }
 @media (max-width: 770px) {
 	.g_first_box {width: 130px; right: 110px; 
         position: absolute;
         z-index: 99999;}
+    .logo img {max-width: 33% !important;}
 }
 @media (max-width: 445px) {
 	#google_translate_element > div > div > select {max-width: 100px; padding: 0 10px; font-size: 12px;}
@@ -222,6 +224,9 @@ iframe.goog-te-banner-frame { display: none !important; }
 	display: flex;
     justify-content: flex-start;
     z-index: 999;
+}
+.navik-sidebar-right.fixed-sidebar-open {
+    transform: translateX(0);
 }
 
 		
@@ -273,7 +278,7 @@ iframe.goog-te-banner-frame { display: none !important; }
 		//setCookie('googtrans', '/en',1);
 		new google.translate.TranslateElement({
 			pageLanguage: 'en',
-			/*includedLanguages: "en,zh-TW,vi,es,th,ru,fr",*/
+			includedLanguages: "en,af,sq,ar,ar-EG,ar-SA,ar-AE,bg,zh-TW,zh-CN,hr,cs,da,nl,en-PH,et,fa,fi,fr,de,el,hi,hu,id,it,ja,ko,mk,ms,mn,no,pt,ro,ru,es,sv,th,tr-TR,uk,uz,vi",
 			autoDisplay: true,
 			multilanguagePage: true
 
@@ -305,6 +310,11 @@ iframe.goog-te-banner-frame { display: none !important; }
 		})
 	})
 </script>
+<script>
+  $('.burger-menu').click(function(){
+	  $('.navik-fixed-sidebar').toggleClass('.fixed-sidebar-open');
+  })
+</script>
 <!-- PAGE CONTENT -->
 <!--===============================
 ** KSODESIGN
@@ -322,19 +332,18 @@ iframe.goog-te-banner-frame { display: none !important; }
 		<div class="navik-header-container">							
 			<div class="logo" 
 			data-mobile-logo="https://onhospital.org/layouts/KSOTheme_Starter/img/logo-dark2.png" 
-			data-sticky-logo="/./layouts/KSOTheme_Starter/img/logo-dark.png" 
-			
-		>
+			data-sticky-logo="/./layouts/KSOTheme_Starter/img/logo-dark.png" >
 				<div class="container position-relative m_logo">
 					<a href="page_mDAb15.html">
-						<img src="https://onhospital.org/layouts/KSOTheme_Starter/img/logo-dark2.png" alt="logo" class="logo_img">                		                	</a>
-					<ul class="login-top d-none d-xl-block">
-																	</ul>
-				</div>
-			</div>
-			<div class="g_first_box">
-				<div class="g_second_box">
-					<div id="google_translate_element"></div>
+						<img src="https://onhospital.org/layouts/KSOTheme_Starter/img/logo-dark2.png" alt="logo" class="logo_img">                		                	
+					</a>
+					
+					<div class="g_first_box">
+						<div class="g_second_box">
+							<div id="google_translate_element" style="display: inline-flex;"></div>
+						</div>
+					</div>
+					<ul class="login-top d-none d-xl-block"></ul>
 				</div>
 			</div>
             <div class="container">

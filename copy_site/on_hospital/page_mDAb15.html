@@ -228,6 +228,9 @@ iframe.goog-te-banner-frame { display: none !important; }
     justify-content: flex-start;
     z-index: 999;
 }
+.navik-sidebar-right.fixed-sidebar-open {
+    transform: translateX(0);
+}
 
 
 
@@ -279,7 +282,7 @@ iframe.goog-te-banner-frame { display: none !important; }
 		//setCookie('googtrans', '/en',1);
 		new google.translate.TranslateElement({
 			pageLanguage: 'en',
-			/*includedLanguages: "en,zh-TW,vi,es,th,ru,fr",*/
+			includedLanguages: "en,af,sq,ar,ar-EG,ar-SA,ar-AE,bg,zh-TW,zh-CN,hr,cs,da,nl,en-PH,et,fa,fi,fr,de,el,hi,hu,id,it,ja,ko,mk,ms,mn,no,pt,ro,ru,es,sv,th,tr-TR,uk,uz,vi",
 			autoDisplay: true,
 			multilanguagePage: true
 
@@ -297,7 +300,9 @@ iframe.goog-te-banner-frame { display: none !important; }
     });
   </script>
   <script>
-    $('#google_translate_elemnet')
+    $('.burger-menu').click(function(){
+        $('.navik-fixed-sidebar').toggleClass('.fixed-sidebar-open');
+    })
   </script>
 <!-- PAGE CONTENT -->
 <!--===============================
@@ -316,19 +321,18 @@ iframe.goog-te-banner-frame { display: none !important; }
 <div class="navik-header-container">							
     <div class="logo" 
     data-mobile-logo="https://onhospital.org/layouts/KSOTheme_Starter/img/logo-dark2.png" 
-    data-sticky-logo="/./layouts/KSOTheme_Starter/img/logo-dark.png" 
-    
-   >
+    data-sticky-logo="/./layouts/KSOTheme_Starter/img/logo-dark.png" >
         <div class="container position-relative m_logo">
             <a href="page_mDAb15.html">
-                <img src="https://onhospital.org/layouts/KSOTheme_Starter/img/logo-dark2.png" alt="logo" class="logo_img">                		                	</a>
-            <ul class="login-top d-none d-xl-block">
-                                                            </ul>
-        </div>
-    </div>
-    <div class="g_first_box">
-        <div class="g_second_box">
-            <div id="google_translate_element" style="display: inline-flex;"></div>
+                <img src="https://onhospital.org/layouts/KSOTheme_Starter/img/logo-dark2.png" alt="logo" class="logo_img">                		                	
+            </a>
+            
+            <div class="g_first_box">
+                <div class="g_second_box">
+                    <div id="google_translate_element" style="display: inline-flex;"></div>
+                </div>
+            </div>
+            <ul class="login-top d-none d-xl-block"></ul>
         </div>
     </div>
     <div class="container">
