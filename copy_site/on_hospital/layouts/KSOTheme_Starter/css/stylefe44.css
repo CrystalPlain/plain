@@ -467,12 +467,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @media (max-width: 1199px) { 
-    #kso-container {padding-top: 70px;}
+    #kso-container {padding-top: 60px;}
 }
-@media (max-width: 991px) { 
-    #kso-container {padding-top: 150px;}
+@media (max-width: 771px) { 
+    #kso-container {padding-top: 100px !important;}
 }
 @media (max-width: 575px) { 
+    #kso-container {padding-top: 100px;}
 
     #kso-promotion {height: 250px !important;}
     #kso-parallax {padding: 3rem 0;}

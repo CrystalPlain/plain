@@ -71,7 +71,7 @@
 .navik-menu-fixed>ul>li>ul ul{padding-top:6px}
 .navik-menu-fixed>ul>li>ul>li ul{padding-left:18px}
 .navik-menu-fixed>ul ul{display:none;opacity:0;transition:opacity .3s ease-in-out}
-.navik-menu-fixed>ul ul
+.navik-menu-fixed>ul ul,
 .submenu-collapse{opacity:1}
 .navik-menu-fixed>ul ul li{margin-bottom:6px}
 .navik-menu-fixed>ul ul li:last-child{margin-bottom:0}
