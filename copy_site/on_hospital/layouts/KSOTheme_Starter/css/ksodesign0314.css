@@ -244,6 +244,11 @@ header .navik-header-overlay .burger-menu {
 .owl-slide .item-caption h1 {margin-top: 0;font-weight: normal;color: #fff;}
 .owl-slide .item-caption .container>div {font-size: 18px;}
 
+
+@media (max-width: 1920px) {
+    .owl-slide .item-caption h1 {font-size: 40px;margin-bottom: 1rem;}
+}
+
 @media (max-width: 991px) {
 	.owl-slide .item-caption h1 {font-size: 40px !important;}
 }
@@ -252,8 +257,18 @@ header .navik-header-overlay .burger-menu {
 }
 @media (max-width: 480px) {
 	.owl-slide .item-caption {top: 35%;}
-	.owl-slide .item-caption h1 {font-size: 20px !important;margin-bottom: .5rem !important;}
+	.owl-slide .item-caption h1 {margin-bottom: .5rem !important;}
 	.owl-slide .item-caption .container>div {font-size: 14px;}
+}
+@media (max-width: 500px) {
+    .owl-slide .item-caption h1 {font-size: 14px !important;}
+    .owl-h4 {font-size: 13px !important;}
+    .owl-p {font-size: 12px !important;}
+    .owl-slide .item-caption {top: 10px !important;}
+    .owl-item .btn-kso {
+        font-size: 12px !important;
+        padding: .3rem 1rem !important;
+    }
 }
 
 /*owl-carousel nav*/
