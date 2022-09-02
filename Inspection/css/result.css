@@ -1,3 +1,296 @@
 .wrap {
-    
+    max-width: 1920px;
+    width: 100%;
+
+    margin-top: 200px;
 }
+.content {
+    width: 60%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f3f3f3;
+    padding: 30px 20px;
+    border-radius: 30px;
+}
+.top_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.result_text_box {
+    width: 60%;
+    margin: 0 20px ;
+    text-align: center;
+    padding: 50px 50px;
+    box-sizing: border-box;
+}
+.table_box {
+    width: 55%;
+    border-radius: 20px;
+
+    display: flex;
+    gap: 20px;
+}
+.chart {
+    width: 100%;
+    border-radius: 20px;
+    display: inline-block;
+    background-color: white;
+}
+
+.inspection {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: 1px solid #d0d0d0;
+}
+.normal {
+    border-right: 1px solid #d0d0d0;
+}
+.dis_name {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #d0d0d0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    line-height: 36px;
+    font-size: 17px;
+    font-weight: 800;
+    padding-top: 10px;
+}
+.ins,
+.nam {
+    width: calc(100% / 2);
+}
+.my_inspection {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid #d0d0d0;
+}
+.my_result {
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+}
+
+.r_t_result_box {
+    width: 100%;
+    margin-top: 50px;
+}
+.rt_fixed {
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+.rt_r_name {
+    font-weight: 800;
+}
+.rt_result_text {
+    font-size: 22px;
+    font-weight: 800;
+
+    display: flex;
+    gap: 10px;
+}
+.rt_dis_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dangerous_text {
+    color: rgb(255, 71, 71);
+}
+.rt_big_quitation_mark {
+    font-size: 21px;
+    font-weight: 800;
+}
+.r_t_text {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.bottom_box {
+    width: 100%;
+    margin-top: 60px;
+}
+.persent_2_box,
+.persent_1_box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 17px;
+    line-height: 25px;
+    font-weight: 800;
+}
+.per_2_persent_box,
+.per_1_persent_box {
+    width: 80%;
+    height: 70px;
+}
+.p2_box,
+.p1_box {
+    position: relative;
+}
+.p2_border,
+.p1_border {
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #e2e2e2;
+}
+
+.p2_color,
+.p1_color {
+    height: 30px;
+    background-color: #707882;
+    opacity: .8;
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.persent1 {
+    width: 40%;
+}
+.persent2 {
+    width: 90%;
+}
+.p2_ten_box,
+.p1_ten_box {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    top: 5px;
+}
+.p2_ten,
+.p1_ten {
+    width: calc(100% / 10);
+    height: 20px;
+}
+.both {
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+.right {
+    border-right: 1px solid;
+}
+.box2 {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+@media (max-width: 1800px) {
+    .result_text_box {width: 80%;}
+    .chart {font-size: 14px;}
+}
+
+@media (max-width: 1620px) {
+    .rt_fixed {font-size: 18px;}
+    .rt_result_text {font-size: 20px;}
+    .r_t_text  {font-size: 17px;}
+    .result_text_box {
+        width: 60%;
+        padding: 50px 0;
+    }
+}
+@media (max-width: 1430px) {
+    .content {width: 80%;}
+    .result_text_box {
+        padding: 50px 0 50px 70px ;
+    }
+}
+@media (max-width: 1380px) {
+    .result_text_box {
+        padding: 50px 0 50px 50px ;
+    }
+}
+@media (max-width: 1260px) {
+    .result_text_box {
+        padding: 50px 0 50px 30px ;
+    }
+}
+@media (max-width: 1140px) {
+    .result_text_box {
+        padding: 50px 0 50px 0 ;
+    }
+}
+@media (max-width: 1070px) {
+    .chart {font-size: 13px;}
+    .rt_fixed {font-size: 16px;}
+    .rt_result_text {font-size: 18px;}
+    .result_text_box {padding: 20px 0 50px 10px ;}
+    .r_t_text {font-size: 15px;}
+    .inspection {height: 50px; line-height: 50px;}
+    .dis_name {height: 30px; line-height: 26px; font-size: 14px;}
+    .my_inspection {height: 30px; line-height: 30px;}
+    .my_result {height: 20px; line-height: 63px;}
+    .persent_2_box, .persent_1_box {font-size: 15px;}
+}
+@media (max-width: 1002px) {
+    .table_box {width: 45%;}
+}
+@media (max-width: 818px) {
+    .top_box {display: inline-block;}
+    .table_box {width: 100%;}
+    .my_result {height: 80px; line-height: 80px;}
+    .my_inspection {height: 50px; line-height: 50px;}
+    .dis_name {height: 40px; line-height: 36px;}
+    .result_text_box {width: 100%; padding: 10px 90px;}
+}
+@media (max-width: 740px) {
+    .result_text_box {padding: 10px 70px;}
+}
+@media (max-width: 670px) {
+    .result_text_box {padding: 10px 50px;}
+}
+@media (max-width: 630px) {
+    .result_text_box {padding: 10px 30px;}
+    .per_2_persent_box, .per_1_persent_box {width: 60%;}
+}
+@media (max-width: 577px) {
+    .result_text_box {padding: 10px 10px; margin: 0;}
+}
+@media (max-width: 520px) {
+    .result_text_box {padding: 0;}
+    .rt_fixed {
+        flex-direction: column;
+        align-items: center;
+    }
+    .p2_border, .p1_border {height: 25px;}
+    .p2_color, .p1_color {height: 25px;}
+    .p2_ten, .p1_ten {height: 15px;}
+    .table_box {
+        display: inline-block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .chart {margin-bottom: 10px;}
+    .wrap {
+        margin-top:  40px;
+        margin-bottom: 30px;
+    }
+    .none {
+        display: none;
+    }
+    .p2_ten, .p1_ten {width: calc(100% / 5);}
+    .persent_2_box, .persent_1_box {gap: 10px; font-size: 14px;}
+    .result_text_box {position: absolute; top: 50px; right: 0;}
+    .content {padding: 250px 20px 30px 20px ;}
+ }

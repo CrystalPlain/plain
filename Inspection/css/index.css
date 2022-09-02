@@ -179,9 +179,10 @@ input[name="rg_c"]:checked ~ label > div {
     }
     .c_name_box, 
     .c_gender_box {
-        padding: 0 10px;
+        padding: 0 20px;
     }
     .to_inspect {
         margin: 0 20px;
+        width: 220px;
     }
 }

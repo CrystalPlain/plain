@@ -205,8 +205,11 @@
 
 @media (max-width: 480px) {
     .content {
-        width: 70%;
-        margin-top: 70px;
+        width: 80%;
+        margin-top: 40px;
         padding: 30px 20px;
+    }
+    .ql_q_num, .ql_q_text {
+        font-size: 13px;
     }
 }
