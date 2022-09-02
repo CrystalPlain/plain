@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/list.js"></script>
+    <script src="./js/list_item.js"></script>
+    <script src="./js/common.js"></script>
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>검사_메인</title>
+</head>
+<body>
+   
+    <div class="wrap">
+        <div class="content">
+            <div class="title_box"><h1>췌장/당뇨 검사</h1></div>
+            <div class="c_box">
+                <span>검사를 시작하기 전 정보를 입력해주세요</span>
+            </div>
+            <div class="center_box">
+                <div class="c_hidden_box"></div>
+                <form action="./list.html" method="get" class="c_text_box">
+                    <div class="c_gender_box">
+                        <span>성별</span>
+                        <div class="radio_box">
+                            <span class="gender">
+                                <input type="radio" name="rg_c" id="woman" value="woman">
+                                <label for="woman"><div class="r_gen_circle"></div><span class="rg_span">여성</span></label>
+                                
+                            </span>
+                            <span class="gender">
+                                <input type="radio" name="rg_c" id="men" value="woman">
+                                <label for="men"><div class="r_gen_circle"></div><span class="rg_span">남성</span></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="c_name_box">
+                        <span>이름</span>
+                        <div class="name_box"><input type="text" placeholder="이름을 입력하세요" name="name"></div>
+                    </div>
+                    <button type="submit" class="to_inspect">검사 하기</button>
+                </form>
+                <div class="c_hidden_box"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('input[type=submit]').click(function(){
+                var value = $("input[type=radio][name=novel]:checked").val();
+                if(value) {
+                    console.log(value);
+                }
+                else {
+                    console.log('Nothing if selected');
+                }
+            })
+        })
+    </script> -->
+</body>
+</html>
