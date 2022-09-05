@@ -62,13 +62,13 @@
 }
 .ql_a_text2,
 .ql_a_text {
-    width: 180px;
-    height: 40px;
+    padding: 17px 20px;
+    height: auto;
     background-color: rgb(204, 204, 204);
     border-radius: 8px;
 
     text-align: center;
-    line-height: 40px;
+    line-height: 23px;
 }
 
 .active {
@@ -110,18 +110,24 @@
     display: none;
 }
 
+/* input[type='radio']:checked ~ label > .ql_a_text {
+    background-color: #414a56;
+} */
+
 
 @media (max-width: 1500px) {
     .ql_a_text {
-        width: 160px;
+       
+        padding: 9px 20px;
         font-size: 14px;
     }
 }
 
 @media (max-width: 1307px) {
     .ql_a_text {
-        width: 130px;
-        font-size: 13px;
+        
+    padding: 9px 10px;
+        font-size: 12px;
     }
     .ql_answer_box {
         margin: 30px 0 10px 0;

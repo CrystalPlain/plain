@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>검사</title>
     <script src="./js/jquery-1.12.4.js"></script>
-    <script src="./js/list.js"></script>
-    <script src="./js/list_item.js"></script>
-    <script src="./js/common.js"></script>
+    <script defer src="./js/list.js"></script>
+    <script defer src="./js/list_item.js"></script>
+    <script defer src="./js/common.js"></script>
 
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/list.css">
@@ -21,45 +21,11 @@
             <div class="question_box">
                 <div class="q_text_box">
                     <div class="q_t_box1">
-                        아래 문항을 읽고 자신의 <span>현재 상태</span>에 해당하는 내용을 작성하여 주십시오.
+                        아래 문항을 읽고 <span id="id_name"></span>님의 <span>현재 상태</span>에 해당하는 내용을 작성하여 주십시오.
                     </div>
                 </div>
-                <form action="./result.html" class="q_list_box">
-                    <div id="q_1" class="ql_box">
-                        <div class="ql_question_box">
-                            <span class="ql_q_num"><span>01</span></span>
-                            <span class="ql_q_text">최근 3개월동안 체중 변화</span>
-                        </div>
-                        <div class="ql_answer_box">
-                            <input type="radio" name="question_1" id="weight_X" value="weight_X">
-                            <input type="radio" name="question_1" id="weight2kg_under" value="weight2kg_under">
-                            <input type="radio" name="question_1" id="weight5kg_under" value="weight5kg_under">
-                            <input type="radio" name="question_1" id="weight2kg_up" value="weight2kg_up">
-                    
-                            <label for="weight_X"><div class="ql_a_text ql_text1">체중 변동 사항 없음</div></label>
-                            <label for="weight2kg_under"><div class="ql_a_text ql_text2">2kg 미만 감소</div></label>
-                            <label for="weight5kg_under"><div class="ql_a_text ql_text3">5kg 미만 감소</div></label>
-                            <label for="weight2kg_up"><div class="ql_a_text ql_text4">6kg 이상 감소</div></label>
-                        </div>
-                    </div>
-                    <div id="q_2" class="ql_box">
-                        <div class="ql_question_box">
-                            <span class="ql_q_num"><span>02</span></span>
-                            <span class="ql_q_text">최근 3개월동안 체중 변화</span>
-                        </div>
-                        <div class="ql_answer_box">
-                            <input type="radio" name="question_2" id="weight_X2" value="weight_X2">
-                            <input type="radio" name="question_2" id="weight2kg_under2" value="weight2kg_under2">
-                            <input type="radio" name="question_2" id="weight5kg_under2" value="weight5kg_under2">
-                            <input type="radio" name="question_2" id="weight2kg_up2" value="weight2kg_up2">
-                    
-                            <label for="weight_X2"><div class="ql_a_text ql_text1">체중 변동 사항 없음</div></label>
-                            <label for="weight2kg_under2"><div class="ql_a_text ql_text2">2kg 미만 감소</div></label>
-                            <label for="weight5kg_under2"><div class="ql_a_text ql_text3">5kg 미만 감소</div></label>
-                            <label for="weight2kg_up2"><div class="ql_a_text ql_text4">6kg 이상 감소</div></label>
-                        </div>
-                    </div>
-                    
+                <form action="./result.html">
+                    <div class="q_list_box"></div>
                     <div class="pre_next">
                         <input type="radio" name="pre_nex" id="prev">
                         <input type="radio" name="pre_nex" id="next">
@@ -72,11 +38,6 @@
     </div>
 
     <script>
-        //문제 question의 버튼들을 누르면 색칠 되는 기능
-        $('.ql_a_text').click(function(){
-            $('.ql_a_text').removeClass('active')
-            $(this).addClass('active')
-        })
 
         //이전 다음 버튼 클릭하면 색칠 되는 기능
         $('.pn_button').click(function(){
