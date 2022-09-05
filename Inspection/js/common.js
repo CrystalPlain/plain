@@ -1,30 +1,34 @@
-// url에서 특정정보
-function get_url_info(key) {
-    // 1) url에 있는 문자열 가져오기
-    let url = location.href; // product.html?xcode=044&cate_no=0&genre=men
+// let url = decodeURI(location.href);
+// url = url.split("?");
 
-    // 2) ? 뒤에꺼만(정보) 잘라내기
-    url = url.split("?"); // [product.html , xcode=044&cate_no=0&genre=men]
+// console.log(url)  //0: "file:///E:/Inspection/result.html" 1: "question_1=weight2kg_under&question_2=weight2kg_up2"
 
-    if(url.length > 1) {
+// if(url.length > 1) {
+//     url = url[1];
+//     url = url.split("&");
 
-        url = url[1]; // xcode=044&cate_no=0&genre=men
+// console.log(url) // 0: "question_1=weight2kg_under"  1: "question_2=weight2kg_up2"
 
-        // 3) &(정보별)로 나누기
-        url = url.split("&"); // [xcode=044  ,  cate_no=0  ,  genre=men]
+//     for(let i=0; i<url.length; i++) {
+//         let tmp_url = url[i].split("=")
 
-        // 4) 각 방마다 'cate_no' 있는지 체크
-        for(let i=0; i<url.length; i++) {
-            let tmp_url = url[i].split("=") // i:0 =>[xcode , 044]
-                                            // i:1 =>[cate_no , 0]
-            if(tmp_url[0] == key) {
-                // 5) 있으면 'cate_no'의 실제값 return 해주기
-                return tmp_url[1];
-            }
-        }
-        return -1;
-    }
-    else {
-        return -1;
-    }
+// console.log(tmp_url)   // 0: "question_1" 1: "weight2kg_under" // 0: "question_2"  1: "weight2kg_up2"
+//         if(tmp_url == 'rg_c') {
+//             rg_c = 'rg_c'
+//         }console.log(tmp_url)
+//     }
+// }
+
+const searchParams = new URLSearchParams(location.search);
+
+for (const param of searchParams) {
+  console.log(param);
 }
+
+const urlParams = new URL(location.href).searchParams;
+const rg_c = urlParams.get('rg_c');
+console.log(rg_c)
+
+const name = urlParams.get('name');
+console.log(name)
+$('#rt_name').html(name)
