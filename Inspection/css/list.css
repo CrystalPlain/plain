@@ -1,3 +1,5 @@
+body {
+    background-color: #f3f3f3;}
 .wrap {
     max-width: 1920px;
     width: 100%;
@@ -7,9 +9,7 @@
     margin: 0 auto;
     margin-top: 100px;
 
-    background-color: #f3f3f3;
     border-radius: 30px;
-    padding: 50px 30px;
 }
 .q_t_box1 > span {
     font-weight: 800;
@@ -20,6 +20,8 @@
     border-bottom: 1px solid #888888;
 }
 
+.q_list_box3,
+.q_list_box2,
 .q_list_box {
     width: 100%;
 }
@@ -52,6 +54,8 @@
     font-size: 20px;
     font-weight: 800;
     color: #272727;
+    word-break: break-all;
+    width: 90%;
 }
 .ql_answer_box {
     display: flex;
@@ -64,6 +68,7 @@
 .ql_a_text {
     padding: 17px 20px;
     height: auto;
+    width: auto;
     background-color: rgb(204, 204, 204);
     border-radius: 8px;
 
@@ -87,11 +92,17 @@
     display: flex;
     justify-content: flex-end;
     gap: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+
+    opacity: 0;
 }
 .pn_button {
     width: 60px;
     height: 40px;
-    background-color: rgb(191, 191, 191);
+    background-color: rgb(161, 161, 161);
     border-radius: 10px;
     font-weight: 700;
     text-align: center;
@@ -114,6 +125,109 @@
     background-color: #414a56;
 } */
 
+
+/* 재 디자인 css */
+
+.q_list {
+    padding: 15px 0;
+    border-bottom: 1px solid #888888;
+}
+
+.q_list_tab {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px 60px;
+    font-size: 16px;
+}
+.q_list_tab input {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    margin-right: 10px;
+}
+.q_list_tab input:checked{
+    accent-color: rgb(49, 49, 49);
+}
+
+.position_r {
+    position: relative;
+    height: 280vh;
+    margin: 10px 10px;
+}
+#dis,
+#pan_cancer,
+#pan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f3f3f3;
+    z-index: 9;
+}
+#dis,
+#pan_cancer {
+    opacity: 0;
+}
+
+.q_box input[name=page] {
+    position: absolute;
+    bottom: 20px;
+    right: 320px;
+    z-index: 99;
+}
+.tab_box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+}
+.tab_box label {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(191, 191, 191);
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 40px;
+    color: #272727;
+    margin-top: 30px;
+    border: none;
+    font-size: 14px;
+    margin-left: 24px;
+}
+.prev_page {
+    position: absolute;
+    bottom: 0;
+    right: 90px;
+    opacity: 0;
+}
+.next_page1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+}
+.next_page2 {
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    opacity: 0;
+    z-index: 9;
+}
+
+input[name=page] {
+    opacity: 0;
+}
+
+
+#page3:checked ~ #dis,
+#page2:checked ~ #pan_cancer,
+#page1:checked ~ #pan {
+    opacity: 1;
+    z-index: 99;
+}
 
 @media (max-width: 1500px) {
     .ql_a_text {
@@ -149,10 +263,6 @@
     }
     .ql_answer_box label {
         width: 100%;
-    }
-    .ql_a_text {
-        width: 100%;
-        max-width: 530px;
     }
     .pre_next {
         gap: 15px;
@@ -207,6 +317,9 @@
         height: 40px;
         margin-top: 20px;
         font-size: 13px;
+    }
+    .q_list_tab {
+        margin: 10px 30px;
     }
 }
 

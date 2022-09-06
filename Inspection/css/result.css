@@ -22,7 +22,7 @@
     justify-content: center;
 }
 .result_text_box {
-    width: 60%;
+    width: auto;
     margin: 0 20px ;
     text-align: center;
     padding: 50px 50px;
@@ -125,72 +125,31 @@
 
 
 .bottom_box {
-    width: 100%;
+    width: auto;
     margin-top: 60px;
+    padding-left:110px;
+    box-sizing: border-box;
+    text-align: center;
 }
-.persent_2_box,
-.persent_1_box {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-size: 17px;
-    line-height: 25px;
+.bottom_box div {
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.up,
+.center,
+.down {
+    font-size: 27px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.font_active {
+    font-size: 37px;
     font-weight: 800;
 }
-.per_2_persent_box,
-.per_1_persent_box {
-    width: 80%;
-    height: 70px;
-}
-.p2_box,
-.p1_box {
-    position: relative;
-}
-.p2_border,
-.p1_border {
-    width: 100%;
-    height: 30px;
-    border: 1px solid;
-    position: absolute;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: #e2e2e2;
-}
 
-.p2_color,
-.p1_color {
-    height: 30px;
-    background-color: #707882;
-    opacity: .8;
-    position: absolute;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-.persent1 {
-    width: 40%;
-}
-.persent2 {
-    width: 90%;
-}
-.p2_ten_box,
-.p1_ten_box {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    top: 5px;
-}
-.p2_ten,
-.p1_ten {
-    width: calc(100% / 10);
-    height: 20px;
-}
-.both {
-    border-left: 1px solid;
-    border-right: 1px solid;
-}
-.right {
-    border-right: 1px solid;
-}
+
+
 .box2 {
     display: flex;
     align-items: flex-end;
@@ -198,7 +157,6 @@
 
 
 @media (max-width: 1800px) {
-    .result_text_box {width: 80%;}
     .chart {font-size: 14px;}
 }
 
@@ -207,7 +165,6 @@
     .rt_result_text {font-size: 20px;}
     .r_t_text  {font-size: 17px;}
     .result_text_box {
-        width: 60%;
         padding: 50px 0;
     }
 }
@@ -215,6 +172,9 @@
     .content {width: 80%;}
     .result_text_box {
         padding: 50px 0 50px 70px ;
+    }
+    .bottom_box {
+        padding-left: 100px;
     }
 }
 @media (max-width: 1380px) {
@@ -231,6 +191,9 @@
     .result_text_box {
         padding: 50px 0 50px 0 ;
     }
+    .bottom_box {
+        padding-left: 80px;
+    }
 }
 @media (max-width: 1070px) {
     .chart {font-size: 13px;}
@@ -241,7 +204,7 @@
     .inspection {height: 50px; line-height: 50px;}
     .dis_name {height: 30px; line-height: 26px; font-size: 14px;}
     .my_inspection_ch,.my_inspection_da {height: 30px; line-height: 30px;}
-    .my_result {height: 20px; line-height: 63px;}
+    .my_result {height: 60px; line-height: 63px;}
     .persent_2_box, .persent_1_box {font-size: 15px;}
 }
 @media (max-width: 1002px) {
@@ -253,20 +216,21 @@
     .my_result {height: 80px; line-height: 80px;}
     .my_inspection_ch,.my_inspection_da {height: 50px; line-height: 50px;}
     .dis_name {height: 40px; line-height: 36px;}
-    .result_text_box {width: 100%; padding: 10px 90px;}
+    .result_text_box { padding: 10px 70px;}
+    .bottom_box {padding-left: 0;}
 }
 @media (max-width: 740px) {
-    .result_text_box {padding: 10px 70px;}
+    .result_text_box {padding: 10px 40px;}
 }
 @media (max-width: 670px) {
-    .result_text_box {padding: 10px 50px;}
+    .result_text_box {padding: 10px 20px;}
 }
 @media (max-width: 630px) {
-    .result_text_box {padding: 10px 30px;}
+    .result_text_box {padding: 10px 0;}
     .per_2_persent_box, .per_1_persent_box {width: 60%;}
 }
 @media (max-width: 577px) {
-    .result_text_box {padding: 10px 10px; margin: 0;}
+    .result_text_box {padding: 10px 0; margin: 0;}
 }
 @media (max-width: 520px) {
     .result_text_box {padding: 0;}
@@ -292,6 +256,7 @@
     }
     .p2_ten, .p1_ten {width: calc(100% / 5);}
     .persent_2_box, .persent_1_box {gap: 10px; font-size: 14px;}
-    .result_text_box {position: absolute; top: 50px; right: 0;}
+    .result_text_box {position: absolute; top: 50px;}
     .content {padding: 250px 20px 30px 20px ;}
+    .bottom_box {margin-bottom: 30px;}
  }

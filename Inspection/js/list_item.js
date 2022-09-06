@@ -1,14 +1,21 @@
 const QUESTION = [
-    //0번 묶음
+    //0번 묶음 췌장암
     [
-        {cate_no:0, item_no:1, id:'a', title: '최근 3개월동안 체중변화', question: ['체중 변동 사항 없음','2kg 미만 감소', '5kg 미만 감소','6kg 이상 감소'], value: ['weight_X', 'weight2kg_under', 'weight5kg_under', 'wegiht6kg_up']},
-        {cate_no:0, item_no:2, id:'c', title: '복부통증 (통증 부위로 구분)', question: ['비교적 통증은 없다','우상복부 통증', '우하복부 통증','좌상복부 통증', '복부 전체에 잦은 통증이 있다'], value: ['pain_X', 'r_up_stomach_pain', 'r_un_stomach_pain', 'l_up_stomach_pain', 'l_un_stomach_pain']},
-        {cate_no:0, item_no:3, id:'c', title: '피부가려움증', question: ['특이사항 없음','특정 알레르기성 피부 가려움증이 있다', '날씨나 환경에 영향을 받는다','이유를 알수 없으나 종종 간지럽다'], value: ['special_X', 'allergic_skin_itch', 'effect_weather', 'know_why_often_itchy']},
-        {cate_no:0, item_no:4, id:'b', title: '소화불량', question: ['잘모른다','기름진 음식에 영향', '밀가루 음식에 영향'], value: ['dont_know', 'effect_greasy_food', 'effect_flour_food' ]},
-        {cate_no:0, item_no:5, id:'a', title: '과거에 앓았던 질병 (PH)', question: ['당뇨','고혈얍', '고지혈증','심혈관계 질환'], value: ['past_diabetes', 'past_high_blood_pressure', 'past_hyperlipidemia', 'past_cardiovascular']},
-        {cate_no:0, item_no:6, id:'a', title: '병이나 질환의 가족력 (FH)', question: ['당뇨','고혈얍', '고지혈증','심혈관계 질환'], value: ['family_diabetes', 'family_high_blood_pressure', 'family_hyperlipidemia', 'family_cardiovascular']},
-        {cate_no:0, item_no:7, id:'c', title: '흡연', question: ['유','무'], value: ['smoking_y','smoking_n']},
-        {cate_no:0, item_no:8, id:'c', title: '음주', question: ['유','무'], value: ['drinking_y', 'drinking_n']},
-        {cate_no:0, item_no:9, id:'a', title: '비만bmi지수', question: ['25이하','25~30', '30~35','35이상'], value: ['bmi_25_down', 'bmi_25_30', 'bmi_30_35', 'bmi_35_up']},
+        {cate_no:0, item_no:1, title: 'Age 나이', question: ['만 55세 이상','만 55세 미만',], value: ['1', '0',], num: ['Age1','Age2']},
+        {cate_no:0, item_no:2, title: 'Sex 성별', question: ['남성','여성',], value: ['1', '0',], num: ['Sex1','Sex2']},
+        {cate_no:0, item_no:3, title: 'Blood group 혈액형', question: ['A형,B형,AB형','O형',], value: ['1', '0',], num: ['Blood1','Blood2']},
+        {cate_no:0, item_no:4, title: 'Diabetes 당뇨', question: ['유','무',], value: ['1', '0',], num: ['Diabetes1','Diabetes2']},
+        {cate_no:0, item_no:5, title: 'Smoking 흡연', question: ['유','무',], value: ['1', '0',], num: ['Smoking1','Smoking2']},
+        {cate_no:0, item_no:6, title: 'Alcohol 술', question: ['하루에 소주 2잔 이상','하루에 소주 2잔 이하',], value: ['1','0'], num: ['Alcohol1','Alcohol2']},
+        {cate_no:0, item_no:7, title: 'Obesity 비만 (BMI)', question: ['< 25','> 25', '> 30', '> 35'], value: ['0', '0.5', '1','2' ], num: ['Obesity1','Obesity2','Obesity3','Obesity4']},
+        {cate_no:0, item_no:8, title: 'Hypertension 고혈압 (120/80mmHg 이상)', question: ['유','무',], value: ['1', '0',], num: ['Hyper1','Hyper2']},
+        {cate_no:0, item_no:9, title: 'Dietary factors 식이 요인', question: ['하루에 가공육 섭취 50g 이상','하루에 가공육 섭취 50g 이하',], value: ['1', '0',], num: ['Diet1','Diet2']},
+        {cate_no:0, item_no:10, title: 'Family history and genetic susceptibility 가족력과 유전적 감수성', question: ['2명 이상의 직계가족 췌장암 진단 유','2명 이상의 직계가족 췌장암 진단 무',], value: ['1', '0',], num: ['Family1','Family2']},
+        {cate_no:0, item_no:11, title: 'Chronitc pancreatitis 만성 췌장염 진단', question: ['Y','N',], value: ['1', '0',], num: ['Chronitc1','Chronitc2']},
+        {cate_no:0, item_no:12, title: 'Cholelithisasis 담석증', question: ['유','무',], value: ['1', '0',], num: ['Chole1','Chole2']},
+        {cate_no:0, item_no:13, title: 'Prior history of cholecystectomy 담낭 절제술의 과거력', question: ['유','무',], value: ['1', '0',], num: ['Prior1','Prior2']},
+        {cate_no:0, item_no:14, title: 'Gallbladder polyps 담낭 용종', question: ['유','무',], value: ['1', '0',], num: ['Gall1','Gall2']},
+        {cate_no:0, item_no:15, title: 'TC(total cholesterol)/HDL-C(high-density lipoprotein-cholesterol) ratio 총 콜레스테롤/고밀도 지단백-콜레스테롤 비율', question: ['>5','0~5',], value: ['1', '0',], num: ['TC1','TC2']},
+        {cate_no:0, item_no:16, title: 'Helicobacter pylori Infection 헬리코박터균 감염증', question: ['유','무',], value: ['1', '0',], num: ['Helicob1','Helicob2']},
     ]
 ]
