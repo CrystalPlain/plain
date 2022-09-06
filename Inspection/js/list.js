@@ -62,9 +62,6 @@ $(document).on('click', '#page2', function(){
     $('.position_r').css({height: '600px'})
     $('#pan').css({display: 'none'})
 })
-$(document).on('click', '#page3', function(){
-    $('.position_r').css({height: '600px'})
-})
 
 const urlParams = new URL(location.href).searchParams;
 const name = urlParams.get('name');
@@ -91,17 +88,7 @@ $('.next_page1').click(function(){
         zIndex: '99',
         bottom: '0px',
     })
-})
-$('.next_page2').click(function(){
-    $('.prev_page').css({opacity: '0', zIndex: '9'})
-    $('.next_page1').css({right: '90px', zIndex: '99', opacity: '0', display: 'none'})
-    $('.next_page2').css({
-        opacity: '0',
-        zIndex: '9',
-        bottom: '0px',
-        right: '90px',
-    })
-    $('.next_page2').html('이전')
+    
     $('.pre_next').css({opacity:'1', zIndex: '8'})
 })
 
