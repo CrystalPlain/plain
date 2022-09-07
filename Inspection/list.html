@@ -16,7 +16,11 @@
 </head>
 <body>
     <div class="wrap">
-        <div class="header"></div>
+        <div class="header">
+            <div class="logo">
+                <a href="#">ON P.E.P</a>
+            </div>
+        </div>
         <div class="content">
             <div class="question_box">
                 <div class="q_text_box">
@@ -28,44 +32,14 @@
                     <form action="./result.html">
                         <input type="radio" name="page" id="page1" checked>
                         <input type="radio" name="page" id="page2">
+                        <input type="radio" name="page" id="page3">
 
                         <input type="hidden" name="index_name" value="" id="index_name">
-                        <div class="q_list_box" id="pan">
+                        <div class="q_list_box" id="pan_pc">
                         </div>
                         <div class="q_list_box2" id="pan_cancer">
-                            <div class="q_list">
-                                <div class="ql_question_box">
-                                    <span class="ql_q_num"><span>1</span></span>
-                                    <span class="ql_q_text">안주</span>
-                                </div>
-                                
-                                <div class="q_list_tab">
-                                    <label for="pan_c_1"><input type="radio" name="pan_c_1 pc" id="pan_c_1" value="true">유</label>
-                                    <label for="pan_c_2"><input type="radio" name="pan_c_1 pc" id="pan_c_2" value="false">무</label>
-                                </div>
-                            </div>
-                            <div class="q_list">
-                                <div class="ql_question_box">
-                                    <span class="ql_q_num"><span>2</span></span>
-                                    <span class="ql_q_text">그대 눈빛</span>
-                                </div>
-                               
-                                <div class="q_list_tab">
-                                    <label for="pan_c_2_1"> <input type="radio" name="pan_c_2 pc" id="pan_c_2_1" value="true">유</label>
-                                    <label for="pan_c_2_2"><input type="radio" name="pan_c_2 pc" id="pan_c_2_2" value="false">무</label>
-                                </div>
-                            </div>
-                            <div class="q_list">
-                                <div class="ql_question_box">
-                                    <span class="ql_q_num"><span>3</span></span>
-                                    <span class="ql_q_text">안주</span>
-                                </div>
-                                
-                                <div class="q_list_tab">
-                                    <label for="pan_c_3_1"><input type="radio" name="pan_c_3 pc" id="pan_c_3_1" value="true">유</label>
-                                    <label for="pan_c_3_2"><input type="radio" name="pan_c_3 pc" id="pan_c_3_2" value="false">무</label>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="q_list_box3" id="pan">
                         </div>
     
                         
@@ -73,8 +47,10 @@
                         <div class="tab_box">
                             <label for="page1" class="prev_page">이전</label>
                             <label for="page2" class="next_page1">다음</label>
+                            <label for="page3" class="next_page2">다음</label>
                             
                         </div>
+                        <input type="hidden" name="total_v" value="" id="total_v">
                         <div class="pre_next">
                             <input type="radio" name="pre_nex" id="next">
                             <label for="next"> <button class="pn_button next" type="submit">결과</div></label>

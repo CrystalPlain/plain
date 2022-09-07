@@ -1,7 +1,6 @@
 .wrap {
     width: 100%;
     max-width: 1920px;
-    padding: 200px 0;
 }
 .content {
     width: 50%;
@@ -167,9 +166,6 @@ input[name="rg_c"]:checked ~ label > div {
 }
 
 @media (max-width: 500px) {
-    .wrap {
-        padding: 100px 0;
-    }
     .content {
         width: 90%;
     }
@@ -184,5 +180,8 @@ input[name="rg_c"]:checked ~ label > div {
     .to_inspect {
         margin: 0 20px;
         width: 220px;
+    }
+    .header {
+        margin-bottom: 80px;
     }
 }

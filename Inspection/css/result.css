@@ -1,8 +1,9 @@
 .wrap {
     max-width: 1920px;
     width: 100%;
-
-    margin-top: 200px;
+}
+.header {
+    margin-bottom: 100px;
 }
 .content {
     width: 60%;
@@ -25,11 +26,11 @@
     width: auto;
     margin: 0 20px ;
     text-align: center;
-    padding: 50px 50px;
+    padding: 0 50px 50px 50px;
     box-sizing: border-box;
 }
 .table_box {
-    width: 55%;
+    width: 75%;
     border-radius: 20px;
 
     display: flex;
@@ -99,17 +100,20 @@
     font-weight: 800;
 }
 .rt_result_text {
-    font-size: 22px;
     font-weight: 800;
+    border-bottom: 3px solid #b9b9b9;
+    padding: 0 25px 6px 25px;
 
     display: flex;
-    gap: 10px;
+    gap: 40px;
 }
 .rt_dis_box {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 23px;
 }
+.rt_dis_name {font-size: 16px;}
+.rt_dis_ins {font-size: 24px;}
 .dangerous_text {
     color: rgb(255, 71, 71);
 }
@@ -119,7 +123,7 @@
 }
 .r_t_text {
     margin: 20px 0;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -127,7 +131,7 @@
 .bottom_box {
     width: auto;
     margin-top: 60px;
-    padding-left:110px;
+    padding-left:60px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -136,6 +140,7 @@
     font-weight: 800;
     margin-bottom: 20px;
 }
+.nothing,
 .up,
 .center,
 .down {
@@ -148,7 +153,53 @@
     font-weight: 800;
 }
 
+.bar_box {
+    width: 100%;
+    margin-top: 30px;
+}
+.bar_little_box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+.bar_name_t {display: flex; gap: 10px; align-items: center;}
+.b_num {font-weight: 800; font-size: 18px;}
+.bar {
+    width: 50%;
+    height: 40px;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
 
+    position: relative;
+}
+.bar_stick_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+}
+.bar_stick {
+    width: 25%;
+    height: 70%;
+    background-color: seagreen;
+}
+.green {background-color: rgb(27, 182, 27);}
+.orange {background-color: orange;}
+.yellow {background-color: rgb(255, 255, 68);}
+.red {background-color: rgb(255, 48, 48);}
+.bar_line2,
+.bar_line1 {
+    width: 2px;
+    height: 100%;
+    background-color: rgb(63, 63, 63);
+
+    position: absolute;
+    top: 0;
+    left: 0%;
+}
 
 .box2 {
     display: flex;
@@ -163,44 +214,44 @@
 @media (max-width: 1620px) {
     .rt_fixed {font-size: 18px;}
     .rt_result_text {font-size: 20px;}
-    .r_t_text  {font-size: 17px;}
+    .r_t_text  {font-size: 24px;}
     .result_text_box {
-        padding: 50px 0;
+        padding-bottom: 50px;
     }
 }
 @media (max-width: 1430px) {
     .content {width: 80%;}
     .result_text_box {
-        padding: 50px 0 50px 70px ;
+        padding: 0 0 50px 70px ;
     }
     .bottom_box {
-        padding-left: 100px;
+        padding-left: 70px;
     }
 }
 @media (max-width: 1380px) {
     .result_text_box {
-        padding: 50px 0 50px 50px ;
+        padding: 0 0 50px 50px ;
     }
 }
 @media (max-width: 1260px) {
     .result_text_box {
-        padding: 50px 0 50px 30px ;
+        padding: 0 0 50px 30px ;
     }
 }
 @media (max-width: 1140px) {
     .result_text_box {
-        padding: 50px 0 50px 0 ;
+        padding: 0 0 50px 0 ;
     }
     .bottom_box {
-        padding-left: 80px;
+        padding-left: 50px;
     }
 }
 @media (max-width: 1070px) {
     .chart {font-size: 13px;}
     .rt_fixed {font-size: 16px;}
     .rt_result_text {font-size: 18px;}
-    .result_text_box {padding: 20px 0 50px 10px ;}
-    .r_t_text {font-size: 15px;}
+    .result_text_box {padding-bottom:50px;}
+    .r_t_text {font-size: 22px;}
     .inspection {height: 50px; line-height: 50px;}
     .dis_name {height: 30px; line-height: 26px; font-size: 14px;}
     .my_inspection_ch,.my_inspection_da {height: 30px; line-height: 30px;}
@@ -208,7 +259,7 @@
     .persent_2_box, .persent_1_box {font-size: 15px;}
 }
 @media (max-width: 1002px) {
-    .table_box {width: 45%;}
+    .table_box {width: 75%;}
 }
 @media (max-width: 818px) {
     .top_box {display: inline-block;}
@@ -216,24 +267,40 @@
     .my_result {height: 80px; line-height: 80px;}
     .my_inspection_ch,.my_inspection_da {height: 50px; line-height: 50px;}
     .dis_name {height: 40px; line-height: 36px;}
-    .result_text_box { padding: 10px 70px;}
+    .result_text_box { padding-bottom:40px ;}
     .bottom_box {padding-left: 0;}
+    .rt_result_text {
+        gap: 20px;
+        padding: 0 15px 6px 15px;
+    }
+    .rt_dis_box {gap: 23px;}
+    .rt_dis_name {font-size: 15px;}
+    .rt_dis_ins {font-size: 22px;}
+    .b_num {font-size: 16px;}
+    .b_name {font-size: 14px;}
+    .bar_little_box  {gap: 15px;}
 }
 @media (max-width: 740px) {
-    .result_text_box {padding: 10px 40px;}
+    .result_text_box {padding-bottom: 40px;}
 }
 @media (max-width: 670px) {
-    .result_text_box {padding: 10px 20px;}
+    .bar_little_box  {gap: 5px;}
 }
 @media (max-width: 630px) {
-    .result_text_box {padding: 10px 0;}
     .per_2_persent_box, .per_1_persent_box {width: 60%;}
+    .b_name {font-size: 13px;}
+    .b_num {font-size: 15px;}
+    .bar_name_t {gap: 5px;}
+    .rt_dis_name {font-size: 14px;}
+    .rt_dis_ins {font-size: 20px;}
 }
 @media (max-width: 577px) {
-    .result_text_box {padding: 10px 0; margin: 0;}
+    .result_text_box {padding-bottom: 40px; margin: 0;}
+    .r_t_text {font-size: 20px;}
 }
+@media(max-width: 535px) {.rt_result_text{padding: 0 10px 6px 10px;} .rt_dis_box {gap: 20px;}}
 @media (max-width: 520px) {
-    .result_text_box {padding: 0;}
+    .header {margin-bottom: 60px;}
     .rt_fixed {
         flex-direction: column;
         align-items: center;
@@ -246,17 +313,24 @@
         margin: 0 auto;
         width: 100%;
     }
-    .chart {margin-bottom: 10px;}
-    .wrap {
-        margin-top:  40px;
-        margin-bottom: 30px;
-    }
+    .chart {margin-bottom: 20px;}
     .none {
         display: none;
     }
     .p2_ten, .p1_ten {width: calc(100% / 5);}
     .persent_2_box, .persent_1_box {gap: 10px; font-size: 14px;}
-    .result_text_box {position: absolute; top: 50px;}
-    .content {padding: 250px 20px 30px 20px ;}
+    .result_text_box {position: absolute; top: 150px;}
+    .content {padding: 270px 20px 30px 20px ;}
     .bottom_box {margin-bottom: 30px;}
+    .rt_result_text {
+        padding: 10px 20px 6px 20px;
+        gap: 25px;
+    }
+    .rt_dis_ins {font-size: 25px;}
+    .rt_dis_name {font-size: 17px;}
+    .r_t_text {font-size: 16px;}
+    .bar_name_t > .b_num {display: none;}
+    .b_name {font-size: 15px;}
+    .b_num {display: none;}
+    .bar {width:  70%;}
  }
