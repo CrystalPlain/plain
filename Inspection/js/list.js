@@ -1,6 +1,6 @@
 $(document).ready(function() {
     console.log(QUESTION[0][1].value.length)
-    for(let i=0; i<16; i++) {
+    for(let i=0; i<11; i++) {
         let list = `<div class="q_list">
                         <div class="ql_question_box">
                             <span class="ql_q_num"><span>${QUESTION[0][i].item_no}</span></span>
@@ -21,7 +21,7 @@ $(document).ready(function() {
     }
 
     console.log(QUESTION[1][1].value.length)
-    for(let i=0; i<16; i++) {
+    for(let i=0; i<11; i++) {
         let list = `<div class="q_list">
                         <div class="ql_question_box">
                             <span class="ql_q_num"><span>${QUESTION[1][i].item_no}</span></span>
@@ -42,7 +42,7 @@ $(document).ready(function() {
     }
     
     console.log(QUESTION[2][1].value.length)
-    for(let i=0; i<16; i++) {
+    for(let i=0; i<11; i++) {
         let list = `<div class="q_list">
                         <div class="ql_question_box">
                             <span class="ql_q_num"><span>${QUESTION[2][i].item_no}</span></span>
@@ -109,6 +109,9 @@ $(document).ready(function() {
             opacity: '1',
             zIndex: '99',
             bottom: '0',
+        })
+        $('#pan_pc').css({
+            display: 'none'
         })
         $('#pan_cancer').css({
             display: 'inline-block'

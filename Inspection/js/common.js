@@ -27,7 +27,7 @@ $(document).ready(function(){
 //         })
 //     })
 
-    $('#pan_pc input').on('change', function() {
+    $('input').on('change', function() {
 
         var list_var = $("input[name='pan_1']:checked").val();
         var list_var2 = $("input[name='pan_2']:checked").val();

@@ -221,9 +221,9 @@ input[name=page] {
 }
 
 
-#page3:checked ~ #dis,
+#page3:checked ~ #pan,
 #page2:checked ~ #pan_cancer,
-#page1:checked ~ #pan {
+#page1:checked ~ #pan_pc {
     opacity: 1;
     z-index: 99;
 }
