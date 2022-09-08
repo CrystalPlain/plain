@@ -3,7 +3,7 @@
     width: 100%;
 }
 .header {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 .content {
     width: 60%;
@@ -14,7 +14,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #f3f3f3;
-    padding: 30px 20px;
+    padding: 30px 20px 50px 20px;
     border-radius: 30px;
 }
 .top_box {
@@ -78,6 +78,18 @@
     line-height: 40px;
     border-bottom: 1px solid #d0d0d0;
 }
+.pc_my_r,
+.p_my_r,
+.pc_my_result,
+.p_my_result {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+.pc_my_r,
+.p_my_r {
+    border-top: 1px solid #d0d0d0;
+}
 .my_result {
     width: 100%;
     height: 90px;
@@ -105,15 +117,25 @@
     padding: 0 25px 6px 25px;
 
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    position: relative;
+}
+.div {
+    width: 1px;
+    height: 93px;
+    background-color: #646464;
+    position: absolute;
+    left: 83px;
 }
 .rt_dis_box {
     display: flex;
-    flex-direction: column;
-    gap: 23px;
 }
-.rt_dis_name {font-size: 16px;}
-.rt_dis_ins {font-size: 24px;}
+.rt_dis_ins_p,
+.rt_dis_name:nth-of-type(1) {
+    padding-right: 20px;
+}
+.rt_dis_name {font-size: 16px; padding-bottom: 15px; border-bottom: 1px solid;}
+.rt_dis_ins_p,.rt_dis_ins_pc {font-size: 24px; padding-top: 15px;}
 .dangerous_text {
     color: rgb(255, 71, 71);
 }
@@ -162,7 +184,12 @@
     justify-content: center;
     gap: 30px;
     align-items: center;
-    margin-top: 20px;
+}
+.bar_little_box:nth-of-type(1) {
+    margin-top: 30px;
+}
+.bar_little_box:nth-of-type(2) {
+    margin-top: 50px;
 }
 .bar_name_t {display: flex; gap: 10px; align-items: center;}
 .b_num {font-weight: 800; font-size: 18px;}
@@ -184,7 +211,26 @@
 .bar_stick {
     width: 25%;
     height: 70%;
-    background-color: seagreen;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(48, 48, 48);
+    line-height: 27px;
+    font-weight: 800;
+}
+.bar_line_per2,
+.bar_line_per1 {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(211, 211, 211);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 800;
+    color: #646464;
+    line-height: 38px;
+
+    position: absolute;
+    top: -40px;
+    left: 0%;
 }
 .green {background-color: rgb(27, 182, 27);}
 .orange {background-color: orange;}
@@ -195,6 +241,7 @@
     width: 2px;
     height: 100%;
     background-color: rgb(63, 63, 63);
+    border: 2px solid rgb(242, 242, 242);
 
     position: absolute;
     top: 0;
@@ -270,10 +317,9 @@
     .result_text_box { padding-bottom:40px ;}
     .bottom_box {padding-left: 0;}
     .rt_result_text {
-        gap: 20px;
         padding: 0 15px 6px 15px;
     }
-    .rt_dis_box {gap: 23px;}
+    .div {left: 70px; bottom: 5px;}
     .rt_dis_name {font-size: 15px;}
     .rt_dis_ins {font-size: 22px;}
     .b_num {font-size: 16px;}
@@ -293,14 +339,17 @@
     .bar_name_t {gap: 5px;}
     .rt_dis_name {font-size: 14px;}
     .rt_dis_ins {font-size: 20px;}
+    .rt_dis_ins_p, .rt_dis_ins_pc {font-size: 22px;}
 }
 @media (max-width: 577px) {
     .result_text_box {padding-bottom: 40px; margin: 0;}
     .r_t_text {font-size: 20px;}
+    .rt_dis_ins_p, .rt_dis_ins_pc {font-size: 20px;}
 }
-@media(max-width: 535px) {.rt_result_text{padding: 0 10px 6px 10px;} .rt_dis_box {gap: 20px;}}
+@media(max-width: 535px) {.rt_result_text{padding: 0 10px 6px 10px;} }
 @media (max-width: 520px) {
     .header {margin-bottom: 60px;}
+    .content {padding: 150px 20px 80px 20px;}
     .rt_fixed {
         flex-direction: column;
         align-items: center;
@@ -319,13 +368,13 @@
     }
     .p2_ten, .p1_ten {width: calc(100% / 5);}
     .persent_2_box, .persent_1_box {gap: 10px; font-size: 14px;}
-    .result_text_box {position: absolute; top: 150px;}
-    .content {padding: 270px 20px 30px 20px ;}
+    .result_text_box {position: absolute; top: 100px;}
     .bottom_box {margin-bottom: 30px;}
     .rt_result_text {
         padding: 10px 20px 6px 20px;
-        gap: 25px;
     }
+    .rt_dis_ins_p, .rt_dis_ins_pc {padding-left: 10px;}
+    .div {left: 80px;}
     .rt_dis_ins {font-size: 25px;}
     .rt_dis_name {font-size: 17px;}
     .r_t_text {font-size: 16px;}
@@ -333,4 +382,5 @@
     .b_name {font-size: 15px;}
     .b_num {display: none;}
     .bar {width:  70%;}
+    body {background-color: #f3f3f3;}
  }

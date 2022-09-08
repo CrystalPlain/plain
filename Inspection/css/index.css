@@ -2,13 +2,16 @@
     width: 100%;
     max-width: 1920px;
 }
+.header {
+    margin-bottom: 60px;
+}
 .content {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
     background-color: #f3f3f3;
     border-radius: 30px;
-    padding: 50px 0;
+    padding: 50px 40px;
 }
 .title_box {
     margin: 0;
@@ -16,14 +19,13 @@
     color: #2f2f2f;
 }
 .center_box {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
 }
 .c_text_box {
-    width: calc(100% /3);
-}
-.c_hidden_box {
-    width: calc(100% /3);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 .c_box {
     font-size: 17px;
@@ -33,15 +35,37 @@
     font-size: 17px;
     color: #4b4b4b;
 }
+.c_name_box {justify-content: center;}
+.c_age_box,
 .c_name_box,
 .c_gender_box {
     display: flex;
-    justify-content: flex-start;
-    gap: 60px;
+    gap: 30px;
     align-items: center;
-    margin: 50px 0;
 }
+.c_name_box {
+    width: 100%;
+    margin-top: 50px;
+}
+.bsa_box,
+.bmi_box,
+.c_age_box,
+.c_gender_box,
+.c_birth_box,
+.c_month_box,
+.c_body_box {
+    width: calc(100% /2);
+    margin-top: 50px;
+    justify-content: center;
+}
+.bsa_box > span,
+.bmi_box > span,
+.c_age_box > span,
+.c_gender_box > span,
+.c_birth_box > span,
+.c_month_box > span,
 .c_name_box > span,
+.c_body_box > span,
 .c_gender_box > span {
     font-size: 15px ;
     font-weight: 700;
@@ -54,14 +78,14 @@
 }
 .gender {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
 }
 .r_gen_circle {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: rgb(222, 222, 222);
+    accent-color: rgb(106, 106, 106);
 }
 .active {
     background-color: #414a56;
@@ -83,6 +107,10 @@
     background-color: transparent;
 }
 
+.bu_box {
+    width: 100%;
+    margin-top: 50px;
+}
 .to_inspect {
     width: 240px;
     height: 45px;
@@ -102,6 +130,71 @@ input[name="rg_c"]:checked ~ label > div {
 }
 .radio_box input {
     display: none;
+}
+.age_box > input {
+    width: 140px;
+    height: 30px;
+    padding: 5px 20px 5px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+.c_body_box,
+.c_birth_box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.c_body_box {gap: 15px;}
+.c_birth_box {
+    gap: 10px;
+}
+.bmi > span,
+.bsa > span,
+.c_body_box > span,
+.c_birth_box > span {
+    width: 100%;
+    display: inline-block;
+}
+.height_box,
+.weight_box,
+.year_box,
+.month_box,
+.date_box {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.height_box > input,
+.weight_box > input,
+.year_box > input,
+.month_box > input,
+.date_box > input {
+    width: 70px;
+    height: 24px;
+    padding: 5px 20px 5px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.bmi,
+.bsa {
+    width: 100px;
+    height: 30px;
+    background-color: #8f9aa7;
+    color: white;
+    border-radius: 5px;
+    line-height: 30px;
+}
+.bsa_box,
+.bmi_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.bmi_in,
+.bsa_in {
+    width: 100px;
 }
 
 @media (max-width: 1560px) {

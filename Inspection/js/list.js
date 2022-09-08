@@ -9,8 +9,8 @@ $(document).ready(function() {
                         
                         <div class="q_list_tab">`
                         for(let j=0; j<QUESTION[0][i].question.length; j++) {
-                list +=`    <label for="pan_${QUESTION[0][i].num[j]}">
-                                <input type="radio" name="pan_${QUESTION[0][i].item_no}" id="pan_${QUESTION[0][i].num[j]}" value="${QUESTION[0][i].value[j]}">
+                list +=`    <label for="pan_pc_${QUESTION[0][i].num[j]}">
+                                <input type="radio" name="pan_pc_${QUESTION[0][i].item_no}" id="pan_pc_${QUESTION[0][i].num[j]}" value="${QUESTION[0][i].value[j]}">
                                 ${QUESTION[0][i].question[j]}
                             </label>`
                         }
@@ -30,8 +30,8 @@ $(document).ready(function() {
                         
                         <div class="q_list_tab">`
                         for(let j=0; j<QUESTION[1][i].question.length; j++) {
-                list +=`    <label for="pan_${QUESTION[1][i].num[j]}">
-                                <input type="radio" name="pan_${QUESTION[1][i].item_no}" id="pan_${QUESTION[1][i].num[j]}" value="${QUESTION[1][i].value[j]}">
+                list +=`    <label for="pc_${QUESTION[1][i].num[j]}">
+                                <input type="radio" name="pc_${QUESTION[1][i].item_no}" id="pc_${QUESTION[1][i].num[j]}" value="${QUESTION[1][i].value[j]}">
                                 ${QUESTION[1][i].question[j]}
                             </label>`
                         }

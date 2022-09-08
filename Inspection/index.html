@@ -27,15 +27,56 @@
                 <span>검사를 시작하기 전 정보를 입력해주세요</span>
             </div>
             <div class="center_box">
-                <div class="c_hidden_box"></div>
                 <form action="./list.html" method="get" class="c_text_box">
                     <div class="c_name_box">
                         <span>이름</span>
                         <div class="name_box"><input type="text" placeholder="이름을 입력하세요" name="name"></div>
                     </div>
-                    <button type="submit" class="to_inspect">검사 하기</button>
+                    <div class="c_gender_box">
+                        <span>성별</span>
+                        <div class="gender">
+                            <label for="women"><input type="radio" name="gender" id="women" class="r_gen_circle" value="women"><div class="women">여성</div></label>
+                            <label for="men"><input type="radio" name="gender" id="men" class="r_gen_circle" value="men"><div class="men">남성</div></label>
+                        </div>
+                    </div>
+                    <div class="c_age_box">
+                        <span>나이</span>
+                        <div class="age_box"><input type="text" name="age" placeholder="나이를 입력하세요"></div>
+                    </div>
+                    <div class="c_birth_box">
+                        <span>생년월일</span>
+                        <div class="year_box">
+                            <input type="text" name="year" placeholder="태어난 해">
+                            <div class="birth_text">년</div>
+                        </div>
+                        <div class="month_box">
+                            <input type="text" name="month" placeholder="태어난 월">
+                            <div class="birth_text">월</div>
+                        </div>
+                        <div class="date_box">
+                            <input type="text" name="date" placeholder="태어난 일">
+                            <div class="birth_text">일</div>
+                        </div>
+                    </div>
+                    <div class="c_body_box">
+                        <span>키/몸무게</span>
+                        <div class="height_box"><input type="text" name="height" placeholder="신장" id="height"><span>(cm)</span></div>
+                        <div class="weight_box"><input type="text" name="weight" placeholder="체중" id="weight"><span>(kg)</span></div>
+                    </div>
+                    <div class="bmi_box">
+                        <span>BMI</span>
+                        <div class="bmi">계산하기</div>
+                        <span class="bmi_in"></span>
+                        <input type="hidden" name="bmi" value="" id="bmi">
+                    </div>
+                    <div class="bsa_box">
+                        <span>BSA</span>
+                        <div class="bsa">계산하기</div>
+                        <span class="bsa_in"></span>
+                        <input type="hidden" name="bsa" value="" id="bsa">
+                    </div>
+                    <div class="bu_box"><button type="submit" class="to_inspect">검사 하기</button></div>
                 </form>
-                <div class="c_hidden_box"></div>
             </div>
         </div>
     </div>
