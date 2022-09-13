@@ -36,7 +36,7 @@
     color: #4b4b4b;
 }
 .c_name_box {justify-content: center;}
-.c_age_box,
+.c_b_type_box,
 .c_name_box,
 .c_gender_box {
     display: flex;
@@ -49,7 +49,7 @@
 }
 .bsa_box,
 .bmi_box,
-.c_age_box,
+.c_b_type_box,
 .c_gender_box,
 .c_birth_box,
 .c_month_box,
@@ -59,9 +59,9 @@
     justify-content: center;
     align-items: center;
 }
-.bsa_box > span,
-.bmi_box > span,
-.c_age_box > span,
+.bsa_box > span:nth-of-type(1),
+.bmi_box > span:nth-of-type(1),
+.c_b_type_box > span,
 .c_gender_box > span,
 .c_birth_box > span,
 .c_month_box > span,
@@ -77,11 +77,13 @@
     justify-content: space-around;
     gap: 30px;
 }
+.b_type,
 .gender {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
+.r_b_type_circle,
 .r_gen_circle {
     width: 30px;
     height: 30px;
@@ -132,14 +134,6 @@ input[name="rg_c"]:checked ~ label > div {
 .radio_box input {
     display: none;
 }
-.age_box > input {
-    width: 140px;
-    height: 30px;
-    padding: 5px 20px 5px 15px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-}
 .c_body_box,
 .c_birth_box {
     display: flex;
@@ -160,7 +154,7 @@ input[name="rg_c"]:checked ~ label > div {
 .weight_box,
 .year_box,
 .month_box,
-.date_box {
+.day_box {
     display: flex;
     align-items: center;
     gap: 7px;
@@ -169,7 +163,7 @@ input[name="rg_c"]:checked ~ label > div {
 .weight_box > input,
 .year_box > input,
 .month_box > input,
-.date_box > input {
+.day_box > input {
     width: 70px;
     height: 24px;
     padding: 5px 20px 5px 10px;
@@ -177,8 +171,8 @@ input[name="rg_c"]:checked ~ label > div {
     border: none;
     outline: none;
 }
-.bmi,
-.bsa {
+#bmi,
+#bsa {
     width: 100px;
     height: 30px;
     background-color: #8f9aa7;
@@ -196,6 +190,11 @@ input[name="rg_c"]:checked ~ label > div {
 .bmi_in,
 .bsa_in {
     width: 100px;
+    height: 30px;
+    background-color: #7d838b;
+    border-radius: 5px;
+    color: #ffffff;
+    line-height: 30px;
 }
 
 @media (max-width: 1560px) {
@@ -217,7 +216,7 @@ input[name="rg_c"]:checked ~ label > div {
         gap: 0 !important;
     }
     
-    .bsa_box, .bmi_box, .c_age_box, .c_gender_box, .c_birth_box, .c_month_box, .c_body_box {
+    .bsa_box, .bmi_box, .c_b_type_box, .c_gender_box, .c_birth_box, .c_month_box, .c_body_box {
         justify-content: center;
         width: 50%;
         margin-top: 30px;
@@ -274,7 +273,7 @@ input[name="rg_c"]:checked ~ label > div {
     .content {
         width: 90%;
     }
-    .c_age_box, .c_name_box, .c_gender_box {
+    .c_b_type_box, .c_name_box, .c_gender_box {
         gap: 10px;
     }
 }
@@ -294,9 +293,8 @@ input[name="rg_c"]:checked ~ label > div {
         margin-bottom: 80px;
     }
     .c_text_box {align-content: space-around; height: 780px; gap: 10px !important;}
-    .bsa_box, .bmi_box, .c_age_box, .c_gender_box, .c_birth_box, .c_month_box, .c_body_box {width: 100%;}
+    .bsa_box, .bmi_box, .c_b_type_box, .c_gender_box, .c_birth_box, .c_month_box, .c_body_box {width: 100%;}
     .c_name_box input {width: 110px;}
     .name_box {width: 150px;}
-    .age_box > input {width: 120px;}
     .bmi_in, .bsa_in {width: 50px;}
 }

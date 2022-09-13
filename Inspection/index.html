@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
-    <title>검사_메인</title>
+    <title>ON P.E.P test</title>
 </head>
 <body>
    
@@ -39,24 +39,30 @@
                             <label for="men"><input type="radio" name="gender" id="men" class="r_gen_circle" value="men"><div class="men">남성</div></label>
                         </div>
                     </div>
-                    <div class="c_age_box">
-                        <span>나이</span>
-                        <div class="age_box"><input type="text" name="age" placeholder="나이를 입력하세요"></div>
+                    <div class="c_b_type_box">
+                        <span>혈액형</span>
+                        <div class="b_type">
+                            <label for="A_type"><input type="radio" name="b_type" id="A_type" class="r_b_type_circle" value="A_type"><div class="A_type">A형</div></label>
+                            <label for="B_type"><input type="radio" name="b_type" id="B_type" class="r_b_type_circle" value="B_type"><div class="B_type">B형</div></label>
+                            <label for="O_type"><input type="radio" name="b_type" id="O_type" class="r_b_type_circle" value="O_type"><div class="O_type">O형</div></label>
+                            <label for="AB_type"><input type="radio" name="b_type" id="AB_type" class="r_b_type_circle" value="AB_type"><div class="A">AB형</div></label>
+                        </div>
                     </div>
                     <div class="c_birth_box">
                         <span>생년월일</span>
                         <div class="year_box">
-                            <input type="text" name="year" placeholder="태어난 해">
+                            <input type="text" name="year" id="year" placeholder="태어난 해">
                             <div class="birth_text">년</div>
                         </div>
                         <div class="month_box">
-                            <input type="text" name="month" placeholder="태어난 월">
+                            <input type="text" name="month" id="month" placeholder="태어난 월">
                             <div class="birth_text">월</div>
                         </div>
-                        <div class="date_box">
-                            <input type="text" name="date" placeholder="태어난 일">
+                        <div class="day_box">
+                            <input type="text" name="day" id="day" placeholder="태어난 일">
                             <div class="birth_text">일</div>
                         </div>
+                        <input type="hidden" name="age" value="" id="age">
                     </div>
                     <div class="c_body_box">
                         <span>키/몸무게</span>
@@ -65,13 +71,11 @@
                     </div>
                     <div class="bmi_box">
                         <span>BMI</span>
-                        <div class="bmi">계산하기</div>
                         <span class="bmi_in"></span>
                         <input type="hidden" name="bmi" value="" id="bmi">
                     </div>
                     <div class="bsa_box">
                         <span>BSA</span>
-                        <div class="bsa">계산하기</div>
                         <span class="bsa_in"></span>
                         <input type="hidden" name="bsa" value="" id="bsa">
                     </div>

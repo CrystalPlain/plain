@@ -122,24 +122,6 @@ $(document).ready(function(){
     })
 
     
-    $('.bmi').click(function(){
-        var height = $('#height').val()
-        var weight = $('#weight').val()
-        
-        var bmi_t = weight/ (height/100 * height/100)
-        $('.bmi_in').html(bmi_t.toFixed(2))
-        $('#bmi').attr('value', bmi_t.toFixed(2))
-    })
-
-    $('.bsa').click(function(){
-        var height = $('#height').val()
-        var weight = $('#weight').val()
-
-        var bsa_t = Math.sqrt((height * weight) / 3600)
-        $('.bsa_in').html(bsa_t.toFixed(2))
-        $('#bsa').attr('value', bsa_t.toFixed(2))
-    })
-    
 
     const searchParams = new URLSearchParams(location.search);
     for (const param of searchParams) {
@@ -149,7 +131,7 @@ $(document).ready(function(){
             $("#pan_pc_Sex2").prop('checked',true);
         } else if (param[0] == 'age') {
             var param_n = Number(param[1])
-            if(param_n <= 55) {
+            if(param_n < 55) {
                 $("#pan_pc_Age1").prop('checked',true);
             } 
             else{
@@ -167,6 +149,62 @@ $(document).ready(function(){
                 $("#pan_pc_Obesity4").prop('checked',true);
             }
         }
+        else if (param[0] == 'b_type') {
+            if(param[1] == 'O_type' ) {
+                $("#pan_pc_Blood2").prop('checked',true);
+            } else {
+                $("#pan_pc_Blood1").prop('checked',true);
+            }
+        }
     }
+    $('#year, #month, #day').change(function(){
+        var year = $('#year').val();
+        var month = $('#month').val();
+        var day = $('#day').val();
+        var age = Number(year+month+day);
+
+        var date = new Date();
+        var t_year = String(date.getFullYear());
+        var t_month = String(date.getMonth()+1);
+        var t_day = String(date.getDate());
+        var t_date = Number(t_year+t_month+t_day)
+
+        var t_age = (t_year - year) +1
+        $('#age').attr('value', t_age)
+    })
+
+    $('#height, #weight').change(function(){
+        var height = $('#height').val();
+        var weight = $('#weight').val();
+
+        var bmi_t = weight/ (height/100 * height/100)
+        var bsa_t = Math.sqrt((height * weight) / 3600)
+
+        $('.bmi_in').html(bmi_t.toFixed(2))
+        $('#bmi').attr('value', bmi_t.toFixed(2))
+
+        $('.bsa_in').html(bsa_t.toFixed(2))
+        $('#bsa').attr('value', bsa_t.toFixed(2))
+
+        console.log(bmi_t,bsa_t)
+    })
+
+    $('.bmi').click(function(){
+        var height = $('#height').val()
+        var weight = $('#weight').val()
+        
+        var bmi_t = weight/ (height/100 * height/100)
+        $('.bmi_in').html(bmi_t.toFixed(2))
+        $('#bmi').attr('value', bmi_t.toFixed(2))
+    })
+
+    $('.bsa').click(function(){
+        var height = $('#height').val()
+        var weight = $('#weight').val()
+
+        var bsa_t = Math.sqrt((height * weight) / 3600)
+        $('.bsa_in').html(bsa_t.toFixed(2))
+        $('#bsa').attr('value', bsa_t.toFixed(2))
+    })
 
 })
