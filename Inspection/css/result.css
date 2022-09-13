@@ -108,6 +108,10 @@
     gap: 10px;
     align-items: flex-end;
 }
+.box {
+    display: flex;
+    gap: 10px;
+}
 #rt_name {
     font-weight: 800;
     font-size: 18px;
@@ -195,7 +199,7 @@
     margin-top: 30px;
 }
 .bar_little_box:nth-of-type(2) {
-    margin-top: 50px;
+    margin-top: 70px;
 }
 .bar_name_t {display: flex; gap: 10px; align-items: center;}
 .b_num {font-weight: 800; font-size: 18px;}
@@ -207,6 +211,26 @@
 
     position: relative;
 }
+.p_bar::before {
+    content: "< 췌장염 유발 가능성 >";
+    font-size: 16px;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: -30px;
+}
+.pc_bar::before {
+    content: "< 췌장암 유발 가능성 >";
+    font-size: 16px;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: -30px;
+}
 .bar_stick_box {
     width: 100%;
     height: 100%;
@@ -214,12 +238,29 @@
     justify-content: center;
     padding-top: 6px;
 }
+.bar_stick_box::before {
+    content: "0%";
+    font-size: 13px;
+    font-weight: 800;
+    position: absolute;
+    top: 100%;
+    left: -10px;
+}
+.bar_stick_box::after {
+    content: "100%";
+    font-size: 13px;
+    font-weight: 800;
+    position: absolute;
+    top: 100%;
+    right: -20px;
+}
 .bar_stick {
-    width: 25%;
+    width: 100%;
     height: 70%;
     text-align: center;
     font-size: 16px;
     color: rgb(48, 48, 48);
+    background-color: #8b8b8b;
     line-height: 27px;
     font-weight: 800;
 }
@@ -227,16 +268,19 @@
 .bar_line_per1 {
     width: 40px;
     height: 40px;
-    background-color: rgb(211, 211, 211);
-    border-radius: 50%;
+    background-color: rgb(229, 229, 229);
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 800;
     color: #646464;
     line-height: 38px;
 
     position: absolute;
-    top: -40px;
+    top: 0;
     left: 0%;
+
+    margin-left: 9px;
+    padding: 0 10px;
 }
 .green {background-color: rgb(27, 182, 27);}
 .orange {background-color: orange;}
@@ -252,6 +296,20 @@
     position: absolute;
     top: 0;
     left: 0%;
+}
+.bar_line2::before,
+.bar_line1::before {
+    content: "";
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-bottom: calc( 10px * 1.732 ) solid #666666;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+
+    position: absolute;
+    top: 110%;
+    left: -10px;
 }
 
 .box2 {
@@ -334,6 +392,10 @@
 }
 @media (max-width: 740px) {
     .result_text_box {padding-bottom: 40px;}
+    .pc_bar::before,
+    .p_bar::before {
+        font-size: 14px;
+    }
 }
 @media (max-width: 670px) {
     .bar_little_box  {gap: 5px;}
@@ -388,5 +450,6 @@
     .b_name {font-size: 15px;}
     .b_num {display: none;}
     .bar {width:  70%;}
+    .box {flex-direction: column;}
     body {background-color: #f3f3f3;}
  }
