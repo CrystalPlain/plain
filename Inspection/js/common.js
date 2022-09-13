@@ -9,117 +9,128 @@ $(document).ready(function(){
 
     $('.q_form').on('change', function() {
 
-        var list_var = $("input[name='pan_pc_1']:checked").val();
-        var list_var2 = $("input[name='pan_pc_2']:checked").val();
-        var list_var3 = $("input[name='pan_pc_3']:checked").val();
-        var list_var4 = $("input[name='pan_pc_4']:checked").val();
-        var list_var5 = $("input[name='pan_pc_5']:checked").val();
-        var list_var6 = $("input[name='pan_pc_6']:checked").val();
-        var list_var7 = $("input[name='pan_pc_7']:checked").val();
-        var list_var8 = $("input[name='pan_pc_8']:checked").val();
-        var list_var9 = $("input[name='pan_pc_9']:checked").val();
-        var list_var10 = $("input[name='pan_pc_10']:checked").val();
-        var list_var11 = $("input[name='pan_pc_11']:checked").val();
-        var list_var12 = $("input[name='pc_12']:checked").val();
-        var list_var13 = $("input[name='pc_13']:checked").val();
-        var list_var14 = $("input[name='pc_14']:checked").val();
-        var list_var15 = $("input[name='pc_15']:checked").val();
-        var list_var16 = $("input[name='pc_16']:checked").val();
-        var list_var17 = $("input[name='pc_17']:checked").val();
-        var list_var18 = $("input[name='pc_18']:checked").val();
-        var list_var19 = $("input[name='pc_19']:checked").val();
-        var list_var20 = $("input[name='pc_20']:checked").val();
-        var list_var21 = $("input[name='pc_21']:checked").val();
-        var list_var22 = $("input[name='pc_22']:checked").val();
-        var list_var23 = $("input[name='pan_23']:checked").val();
-        var list_var24 = $("input[name='pan_24']:checked").val();
-        var list_var25 = $("input[name='pan_25']:checked").val();
-        var list_var26 = $("input[name='pan_26']:checked").val();
-        var list_var27 = $("input[name='pan_27']:checked").val();
-        var list_var28 = $("input[name='pan_28']:checked").val();
-        var list_var29 = $("input[name='pan_29']:checked").val();
-        var list_var30 = $("input[name='pan_30']:checked").val();
-        var list_var31 = $("input[name='pan_31']:checked").val();
-        var list_var32 = $("input[name='pan_32']:checked").val();
-        var list_var33 = $("input[name='pan_33']:checked").val();
+        var list_var =  Number($("input[name='pan_pc_1']:checked").val());
+        var list_var2 = Number($("input[name='pan_pc_2']:checked").val());
+        var list_var3 = Number($("input[name='pan_pc_3']:checked").val());
+        var list_var4 = Number($("input[name='pan_pc_4']:checked").val());
+        var list_var5 = Number($("input[name='pan_pc_5']:checked").val());
+        var list_var6 = Number($("input[name='pan_pc_6']:checked").val());
+        var list_var7 = Number($("input[name='pan_pc_7']:checked").val());
+        var list_var8 = Number($("input[name='pan_pc_8']:checked").val());
+        var list_var9 = Number($("input[name='pan_pc_9']:checked").val());
+        var list_var10 = Number($("input[name='pan_pc_10']:checked").val());
+        var list_var11 = Number($("input[name='pan_pc_11']:checked").val());
+        var list_var12 = Number($("input[name='pc_12']:checked").val());
+        var list_var13 = Number($("input[name='pc_13']:checked").val());
+        var list_var14 = Number($("input[name='pc_14']:checked").val());
+        var list_var15 = Number($("input[name='pc_15']:checked").val());
+        var list_var16 = Number($("input[name='pc_16']:checked").val());
+        var list_var17 = Number($("input[name='pc_17']:checked").val());
+        var list_var18 = Number($("input[name='pc_18']:checked").val());
+        var list_var19 = Number($("input[name='pc_19']:checked").val());
+        var list_var20 = Number($("input[name='pc_20']:checked").val());
+        var list_var21 = Number($("input[name='pc_21']:checked").val());
+        var list_var22 = Number($("input[name='pc_22']:checked").val());
+        var list_var23 = Number($("input[name='pan_23']:checked").val());
+        var list_var24 = Number($("input[name='pan_24']:checked").val());
+        var list_var25 = Number($("input[name='pan_25']:checked").val());
+        var list_var26 = Number($("input[name='pan_26']:checked").val());
+        var list_var27 = Number($("input[name='pan_27']:checked").val());
+        var list_var28 = Number($("input[name='pan_28']:checked").val());
+        var list_var29 = Number($("input[name='pan_29']:checked").val());
+        var list_var30 = Number($("input[name='pan_30']:checked").val());
+        var list_var31 = Number($("input[name='pan_31']:checked").val());
+        var list_var32 = Number($("input[name='pan_32']:checked").val());
+        var list_var33 = Number($("input[name='pan_33']:checked").val());
 
         var pan_list_plus = 
-            Number(list_var)+
-            Number(list_var2)+
-            Number(list_var3)+
-            Number(list_var4)+
-            Number(list_var5)+
-            Number(list_var6)+
-            Number(list_var7)+
-            Number(list_var8)+
-            Number(list_var9)+
-            Number(list_var10)+
-            Number(list_var11)+
-            Number(list_var12)+
-            Number(list_var13)+
-            Number(list_var14)+
-            Number(list_var15)+
-            Number(list_var16)+
-            Number(list_var17)+
-            Number(list_var18)+
-            Number(list_var19)+
-            Number(list_var20)+
-            Number(list_var21)+
-            Number(list_var22)+
-            Number(list_var25)+
-            Number(list_var26)+
-            Number(list_var27)+
-            Number(list_var28)+
-            Number(list_var29)+
-            Number(list_var30)+
-            Number(list_var31)+
-            Number(list_var32)+
-            Number(list_var33)
-
+            list_var *
+            list_var2 *
+            list_var3 *
+            list_var4 *
+            list_var5 *
+            list_var6 *
+            list_var7 *
+            list_var8 *
+            list_var9 *
+            list_var10 *
+            list_var11 *
+            list_var12 *
+            list_var13 *
+            list_var14 *
+            list_var15 *
+            list_var16 *
+            list_var17 *
+            list_var18 *
+            list_var19 *
+            list_var20 *
+            list_var21 *
+            list_var22 *
+            list_var25 *
+            list_var26 *
+            list_var27 *
+            list_var28 *
+            list_var29 *
+            list_var30 *
+            list_var31 *
+            list_var32 *
+            list_var33
+ 
         var pc_list_plus = 
-            Number(list_var)+
-            Number(list_var2)+
-            Number(list_var3)+
-            Number(list_var4)+
-            Number(list_var5)+
-            Number(list_var6)+
-            Number(list_var7)+
-            Number(list_var8)+
-            Number(list_var9)+
-            Number(list_var10)+
-            Number(list_var11)+
-            Number(list_var12)+
-            Number(list_var13)+
-            Number(list_var14)+
-            Number(list_var15)+
-            Number(list_var16)+
-            Number(list_var17)+
-            Number(list_var18)+
-            Number(list_var19)+
-            Number(list_var20)+
-            Number(list_var21)+
-            Number(list_var22)+
-            Number(list_var23)+
-            Number(list_var24)+
-            Number(list_var25)+
-            Number(list_var26)+
-            Number(list_var27)+
-            Number(list_var28)+
-            Number(list_var29)+
-            Number(list_var30)+
-            Number(list_var31)+
-            Number(list_var32)+
-            Number(list_var33)
+            list_var *
+            list_var2 *
+            list_var3 *
+            list_var4 *
+            list_var5 *
+            list_var6 *
+            list_var7 *
+            list_var8 *
+            list_var9 *
+            list_var10 *
+            list_var11 *
+            list_var12 *
+            list_var13 *
+            list_var14 *
+            list_var15 *
+            list_var16 *
+            list_var17 *
+            list_var18 *
+            list_var19 *
+            list_var20 *
+            list_var21 *
+            list_var22 *
+            list_var23 *
+            list_var24 *
+            list_var25 *
+            list_var26 *
+            list_var27 *
+            list_var28 *
+            list_var29 *
+            list_var30 *
+            list_var31 *
+            list_var32 *
+            list_var33
+        console.log('list_var' , list_var)
 
-        var p_percent = pan_list_plus/31 *100
-        $('input[name=p_total_v]').attr('value',p_percent.toFixed(1))
-        console.log('p_percent' ,p_percent.toFixed(1));
+        var p_percent = Math.sqrt(pan_list_plus)
+        $('input[name=p_total_v]').attr('value',p_percent.toFixed(0))
+        console.log('p_percent' ,p_percent.toFixed(0));
 
-        var pc_percent = pc_list_plus/33 *100
-        $('input[name=pc_total_v]').attr('value',pc_percent.toFixed(1))
-        console.log('pc_percent' ,pc_percent.toFixed(1))
+        var pc_percent = Math.sqrt(pc_list_plus)
+        $('input[name=pc_total_v]').attr('value',pc_percent.toFixed(0))
+        console.log('pc_percent' ,pc_percent.toFixed(0))
          
+
+        var p_pro_percent = p_percent /97  //만점값은 예시로 적어 놓은것
+        $('#p_pro_v').attr('value', p_pro_percent.toFixed(0))
+
+        var pc_pro_percent = pc_percent /94  //만점값은 예시로 적어 놓은것
+        $('#pc_pro_v').attr('value', pc_pro_percent.toFixed(0))
+
+        console.log('pc_' ,pc_pro_percent.toFixed(0))
     })
+
+    
 
     
 

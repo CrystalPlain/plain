@@ -77,6 +77,7 @@ $(document).ready(function() {
     $(document).on('click', '#page2', function(){
         $('.position_r').css({height: 'auto'})
         $('#pan_pc').css({display: 'none'})
+
     })
     $(document).on('click', '#page3', function(){
         $('.position_r').css({height: 'auto'})

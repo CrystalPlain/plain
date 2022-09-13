@@ -52,6 +52,9 @@
                         </div>
                         <input type="hidden" name="p_total_v" value="" id="p_total_v">
                         <input type="hidden" name="pc_total_v" value="" id="pc_total_v">
+
+                        <input type="hidden" name="p_pro_v" value="" id="p_pro_v">
+                        <input type="hidden" name="pc_pro_v" value="" id="pc_pro_v">
                         <div class="pre_next">
                             <input type="radio" name="pre_nex" id="next">
                             <label for="next"> <button class="pn_button next" type="submit">결과</div></label>
@@ -64,11 +67,13 @@
 
     <script>
 
-        //이전 다음 버튼 클릭하면 색칠 되는 기능
-        $('.pn_button').click(function(){
+       $(document).ready(function(){
+         //이전 다음 버튼 클릭하면 색칠 되는 기능
+         $('.pn_button').click(function(){
             $('.pn_button').removeClass('pn_active')
             $(this).addClass('pn_active')
         })
+       })
     </script>
 </body>
 </html>

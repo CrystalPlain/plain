@@ -274,6 +274,7 @@
     font-weight: 800;
     color: #646464;
     line-height: 38px;
+    text-align: center;
 
     position: absolute;
     top: 0;
@@ -451,5 +452,6 @@
     .b_num {display: none;}
     .bar {width:  70%;}
     .box {flex-direction: column;}
+    .bar_little_box {justify-content: flex-start;}
     body {background-color: #f3f3f3;}
  }
