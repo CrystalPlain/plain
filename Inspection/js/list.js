@@ -133,5 +133,13 @@ $(document).ready(function() {
 
         $('.pre_next').css({opacity:'1', zIndex: '99'})
     })
+
+    
+
+    // var top_prev = $('.prev_page');
+    // var delay = 1000;
+    // top_prev.on('click', function(){
+    //     $('html, body').stop().animate({scrollTop:0}. delay);
+    // });
 })
 
