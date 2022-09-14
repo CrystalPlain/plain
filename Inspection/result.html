@@ -105,31 +105,27 @@
                         <div class="on_shar_btn">
                             <span>ON P.E.P test 공유하기</span>
 
-                            <ul class="snsList">
-                                <li class="link">
-                                    <a href="#n" onclick="clip2('https://crystalplain.github.io/plain/Inspection/index.html'); " id="link" title="링크복사">
-                                        <span>링크복사</span>
-                                    </a>
-                                </li>
-                                <!-- <li class="kakaotalk">
-                                    <span class="btn_comm" id="shareKa" onclick="kipid.popUpKakao()" >카카오톡</span>
-                                </li> -->
-                                <!-- <a href="#" onclick="javascript:window.open('https://story.kakao.com/s/share?url='+encodeURIComponent(document.URL), 'kakaostorysharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');return false;" target="_blank" alt="Share on kakaostory">
-                                    <img src="./images/Kakao_Story.png"> 카카오스토리
-                                </a> -->
-                                <li class="kakaostory">
-                                    <a href="#" id="vIconKs" onclick="return false;"><i class="vIconKs">카카오스토리</i></a>
-                                </li>
-                                <li class="instargram">
-                                    <span class="btn_comm" id="shareIn">인스타그램</span>
-                                </li>
-                                <li class="facebook">
-                                    <a href="#" id="vIconFb" onclick="return false;"><i class="vIconFb">페이스북</i></a>
-                                </li>
-                                <li class="twitter">
-                                    <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw">트위터</i></a>
-                                </li>
-                            </ul>
+                            <div class="on_shar_btn_box">
+                                <ul class="snsList">
+                                    <li class="link">
+                                        <a href="#n" onclick="clip2('https://crystalplain.github.io/plain/Inspection/index.html'); " id="link" title="링크복사">
+                                            <span>링크복사</span>
+                                        </a>
+                                    </li>
+                                    <li class="kakaotalk">
+                                        <a href="#"><span class="btn_comm" id="shareKa" width="64" style="" onclick="link_app('kakaotalk://kakaotalk/home','id362057947')">카카오톡</span></a>
+                                    </li>
+                                    <li class="instargram">
+                                        <span class="btn_comm" id="shareIn">인스타그램</span>
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="#" id="vIconFb" onclick="return false;"><i class="vIconFb">페이스북</i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw">트위터</i></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,6 +183,21 @@
             }
             window.open(cUrl,'','width=600,height=300,top=100,left=100,scrollbars=yes');
         }
+
+        function link_app(name, id){
+            location.href = name;
+         
+          /* if(checkMobile() == 'ios'){
+               
+               setTimeout( function() {
+                    window.location.href = "https://itunes.apple.com/app/"+id;
+               }, 1000);
+               location.href =name;
+   
+           }else{
+               location.href = name;
+           }*/
+       }
     </script>
 </body>
 </html>

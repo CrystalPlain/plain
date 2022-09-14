@@ -289,9 +289,15 @@ body {
 
 .box2 {
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
+
+.link_btn_box {
+    width: 100%;
+}
 
 @media (max-width: 1800px) {
     .chart {font-size: 14px;}
