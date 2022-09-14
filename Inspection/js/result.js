@@ -10,6 +10,12 @@ $(document).ready(function(){
             $('.bar_line_per2').html(pc_param_v +'%')
             $('.orange').css({width: param_v + '%'})
 
+            if (pc_param_v > 100) {
+                $('.bar_line_per2').css({left: '100%'})
+            } else if (pc_param_v <= 100) {
+                $('.bar_line_per2').css({left: pc_param_v +'%'})
+            }
+
             var pc_num = Number(param[1])  // param[1] = 23.5  Number(param[1])
 
             if (pc_num <= 24) {
@@ -34,9 +40,14 @@ $(document).ready(function(){
             $('.m_ins_pan').html(param[1])
             var param_v = param[1]
             $('.bar_line1').css({left: param_v +'%'})
-            $('.bar_line_per1').css({left: param_v +'%'})
             $('.bar_line_per1').html(param_v +'%')
             $('.yellow').css({width: param_v + '%'})
+
+            if (param_v > 100) {
+                $('.bar_line_per1').css({left: '100%'})
+            } else if (param_v <= 100) {
+                $('.bar_line_per1').css({left: param_v +'%'})
+            }
 
             var p_num = Number(param[1])  // param[1] = 23.5  Number(param[1])
 
@@ -75,6 +86,11 @@ $(document).ready(function(){
             console.log(0)
         }
     } 
+
+    $('.on_shar_btn').click(function(){
+        $('.on_shar_btn_box').toggleClass('on_s_active')
+        $('body').toggleClass('padding_b')
+    })
 
 })
 

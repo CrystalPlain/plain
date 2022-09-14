@@ -13,6 +13,7 @@ body {
     margin: 0 auto;
 
     border-radius: 30px;
+    margin-top: 180px;
 }
 .q_t_box1 > span {
     font-weight: 800;
@@ -47,12 +48,13 @@ body {
 .ql_q_num {
     width: 40px;
     height: 40px;
-    background-color: #1f273a;
+    background-color: #feb041;
+    color: #fff;
+    text-shadow: 0px 0px 3px #f3690c; /* #ecc874 #feb041 */
     border-radius: 20%;
 
     font-size: 18px;
     font-weight: 800;
-    color: #fff;
     text-align: center;
     line-height: 38px;
 }
@@ -112,12 +114,13 @@ body {
     width: 100%;
     max-width: 240px;
     height: 40px;
-    background-color: #1f273a;
+    background-color: #feb041;
+    color: #fff;
+    text-shadow: 0px 0px 3px #f3690c;
     border-radius: 10px;
     font-weight: 700;
     text-align: center;
     line-height: 40px;
-    color: #fff;
     border: none;
     font-size: 14px;
 }
@@ -191,13 +194,15 @@ body {
     width: 100%;
     max-width: 240px;
     height: 40px;
-    background-color: #1f273a;
+    
+    background-color: #feb041;
+    color: #fff;
+    text-shadow: 0px 0px 3px #f3690c;
     border-radius: 10px;
     
     font-weight: 700;
     text-align: center;
     line-height: 40px;
-    color: #fff;
     border: none;
     font-size: 14px;
 }

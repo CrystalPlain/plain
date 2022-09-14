@@ -1,8 +1,10 @@
 body {
     padding-bottom: 100px;
 }
+.padding_b {
+    padding-bottom: 160px !important;
+}
 .wrap {
-    max-width: 1920px;
     width: 100%;
 }
 .header {
@@ -19,6 +21,8 @@ body {
     /* border: 14px solid #1f273a49; */
     padding: 0 20px 50px 20px;
     border-radius: 30px;
+
+    margin-top: 110px;
 }
 .top_box {
     width: 100%;
@@ -30,8 +34,9 @@ body {
     width: auto;
     margin: 0 20px ;
     text-align: center;
-    padding: 0 50px;
+    padding: 0 40px;
     box-sizing: border-box;
+    color: #464b56;
 }
 .table_box {
     width: 75%;
@@ -48,7 +53,20 @@ body {
 
     border: 1px solid #1f273a49;
 }
-
+.doctor {
+    width: 120px;
+    position: absolute;
+    top: -200px;
+    left: 60px;
+}
+.pancreas {
+    display: none;
+    
+    width: 150px;
+    position: absolute;
+    top: -200px;
+    right: 60px;
+}
 .inspection {
     width: 100%;
     height: 60px;
@@ -64,13 +82,18 @@ body {
     width: 100%;
     height: 40px;
     text-align: center;
-    background-color: #1f273a49;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     line-height: 36px;
     font-size: 17px;
     font-weight: 800;
     padding-top: 10px;
+}
+.chart:nth-of-type(1) .dis_name {
+    background: #ffdd76;
+}
+.chart:nth-of-type(2) .dis_name {
+    background: #fe6565;
 }
 .ins,
 .nam {
@@ -193,10 +216,12 @@ body {
 
 .bar_box {
     width: 80%;
-    margin-top: 40px;
+    margin-top: 50px;
     padding: 40px 30px;
     border-radius: 30px;
-    border: 7px solid #1f273a49;
+    border: 7px solid #646974;
+
+    position: relative;
 }
 .bar_little_box {
     height: 50px;
@@ -258,8 +283,8 @@ body {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
-.yellow {width: 30%; background-color: #efc673;}
-.orange {width: 50%; background-color: #ee5b28;}
+.yellow {width: 30%; background-color: #ffdd76; max-width: 100%;}
+.orange {width: 50%; background-color: #fe6565; max-width: 100%;}
 .bar_line_per2,
 .bar_line_per1 {
     width: auto;
@@ -297,7 +322,64 @@ body {
 
 .link_btn_box {
     width: 100%;
+    margin-top: 40px;
 }
+.link_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.main_btn,
+.test_shar_btn,
+.on_shar_btn {
+    width: 200px;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #feb041;
+    border-radius: 15px;
+    color: #fff;
+    text-shadow: 0px 0px 3px #f3690c;
+    font-weight: 800;
+}
+.on_shar_btn {
+    position: relative;
+}
+.on_s_active {
+    display: inline-block !important;
+}
+
+
+.on_shar_btn_box {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    display: none;
+    background-color: #feb041;
+    border-radius: 15px;
+    /* padding: 20px 0; */
+}
+.snsList {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.snsList li {
+    padding: 15px 0;
+}
+.snsList li:hover {
+    background-color: #ffffff60;
+}
+.snsList li:nth-of-type(1):hover  {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.snsList li:nth-of-type(4):hover  {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
 
 @media (max-width: 1800px) {
     .chart {font-size: 14px;}
@@ -345,6 +427,8 @@ body {
 }
 @media (max-width: 1002px) {
     .table_box {width: 75%;}
+    .link_btn {flex-direction: column;}
+    .doctor {left: 0;}
 }
 @media (max-width: 818px) {
     .top_box {display: inline-block;}
@@ -363,6 +447,24 @@ body {
     .b_name {font-size: 14px;}
     .bar_little_box  {gap: 15px;}
 }
+@media (max-width: 760px) {
+    .bar_box {
+        margin-top: 220px;
+    }
+    .doctor {
+        width: 120px;
+        position: absolute;
+        top: -200px;
+        left: 80px;
+    }
+    .pancreas {
+        display: inline-block;
+        width: 150px;
+        position: absolute;
+        top: -180px;
+        right: 120px;
+    }
+}
 @media (max-width: 740px) {
     .pc_bar::before,
     .p_bar::before {
@@ -371,6 +473,19 @@ body {
 }
 @media (max-width: 670px) {
     .bar_little_box  {gap: 5px;}
+    .doctor {
+        width: 120px;
+        position: absolute;
+        top: -200px;
+        left: 80px;
+    }
+    .pancreas {
+        display: inline-block;
+        width: 150px;
+        position: absolute;
+        top: -180px;
+        right: 50px;
+    }
 }
 @media (max-width: 630px) {
     .per_2_persent_box, .per_1_persent_box {width: 60%;}
@@ -385,6 +500,26 @@ body {
     .result_text_box {margin: 0;}
     .r_t_text {font-size: 20px;}
     .rt_dis_ins_p, .rt_dis_ins_pc {font-size: 20px;}
+    .main_btn, .test_shar_btn, .on_shar_btn {
+        font-size: 14px;
+        width: 100%;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+    }
+    .doctor {
+        width: 120px;
+        position: absolute;
+        top: -200px;
+        left: 20px;
+    }
+    .pancreas {
+        display: inline-block;
+        width: 150px;
+        position: absolute;
+        top: -180px;
+        right: 30px;
+    }
 }
 @media(max-width: 535px) {.rt_result_text{padding: 0 10px 6px 10px;} }
 @media (max-width: 520px) {
@@ -425,6 +560,22 @@ body {
     .box {flex-direction: column;}
     .bar_little_box {justify-content: flex-start;}
     body {padding: 0;}
+ }
+ @media(max-width: 440px) {
+    
+    .doctor {
+        width: 100px;
+        position: absolute;
+        top: -169px;
+        left: 0px;
+    }
+    .pancreas {
+        display: inline-block;
+        width: 130px;
+        position: absolute;
+        top: -140px;
+        right: 0px;
+    }
  }
 @media(max-width: 330px) {
     .bar_per,

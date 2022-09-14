@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ON P.E.P test</title>
+    <title>ON PEP Test</title>
 
     <script src="./js/jquery-1.12.4.js"></script>
     <script defer src="./js/list_item.js"></script>
@@ -18,10 +18,9 @@
     <div class="wrap">
         <div class="header">
             <div class="logo">
-                <a href="#">
+                <a href="./index.html">
                     <div class="flex">
-                        <img src="./img/logo.png" alt="logo" class="logo_img">
-                        <span>ON P.E.P test</span>
+                        <span>ON PEP Test</span>
                     </div>
                 </a>
             </div>
@@ -40,6 +39,8 @@
             </div>
 
             <div class="bar_box">
+                <img src="./img/doctor.png" alt="doctor" class="doctor">
+                <img src="./img/pancreas2.png" alt="pancreas" class="pancreas">
                 <div class="bar_little_box">
                     <div class="bar p_bar">
                         <div class="bar_title">췌장염 유발 가능성</div>
@@ -97,13 +98,13 @@
                 <div class="link_btn_box">
                     <div class="link_btn">
                         <div class="main_btn">
-                            <span>검사 다시하기</span>
+                            <a href="./index.html"><span>검사 다시하기</span></a>
                         </div>
                         <div class="test_shar_btn">
                             <a href="#" onclick="clip(); return false;"><span>검사결과 공유하기</span></a>
                         </div>
                         <div class="on_shar_btn">
-                            <span>ON P.E.P test 공유하기</span>
+                            <span>ON PEP Test 공유하기</span>
 
                             <div class="on_shar_btn_box">
                                 <ul class="snsList">
@@ -113,17 +114,17 @@
                                         </a>
                                     </li>
                                     <li class="kakaotalk">
-                                        <a href="#"><span class="btn_comm" id="shareKa" width="64" style="" onclick="link_app('kakaotalk://kakaotalk/home','id362057947')">카카오톡</span></a>
+                                        <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')">카카오톡</span></a>
                                     </li>
                                     <li class="instargram">
                                         <span class="btn_comm" id="shareIn">인스타그램</span>
                                     </li>
                                     <li class="facebook">
-                                        <a href="#" id="vIconFb" onclick="return false;"><i class="vIconFb">페이스북</i></a>
+                                        <a href="#" id="vIconFb" onclick="return false;"><i class="vIconFb"></i>페이스북</a>
                                     </li>
-                                    <li class="twitter">
-                                        <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw">트위터</i></a>
-                                    </li>
+                                   <!--<li class="twitter">
+                                        <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
@@ -166,20 +167,20 @@
             var snsCode = $(a).attr('id');
             var cUrl = "https://crystalplain.github.io/plain/Inspection/index.html";
             switch(snsCode){
-                case"vIconTw":
+                //case"vIconTw":
                     //트위터
-                    cUrl = 'https://twitter.com/intent/tweet?text=ON_PEP_Test:&url='+cUrl;
-                break;
+                    //cUrl = 'https://twitter.com/intent/tweet?text=ON_PEP_Test:&url='+cUrl;
+                //break;
                         
                 case"vIconFb":
                     //페이스북
                     cUrl = 'http://www.facebook.com/sharer/sharer.php?u='+cUrl;
                 break;
         
-                case"vIconKs":
+               // case"vIconKs":
                     //카카오스토리
-                    cUrl = 'https://story.kakao.com/share?url='+cUrl;
-                break;
+                    //cUrl = 'https://story.kakao.com/share?url='+cUrl;
+               // break;
             }
             window.open(cUrl,'','width=600,height=300,top=100,left=100,scrollbars=yes');
         }
@@ -187,7 +188,7 @@
         function link_app(name, id){
             location.href = name;
          
-          /* if(checkMobile() == 'ios'){
+            if(checkMobile() == 'ios'){
                
                setTimeout( function() {
                     window.location.href = "https://itunes.apple.com/app/"+id;
@@ -196,7 +197,7 @@
    
            }else{
                location.href = name;
-           }*/
+           }
        }
     </script>
 </body>

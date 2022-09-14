@@ -1,20 +1,28 @@
 .wrap {
     width: 100%;
-    max-width: 1920px;
+
+    margin-bottom: 100px;
 }
 input[type=text]  {
-    background-color: #f3f3f3;
+    background-color: #feb04133;
+    border: 1px solid #00000030 !important;
 }
 .header {
     margin-bottom: 60px;
 }
 .content {
-    width: 60%;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
     text-align: center;
-    border: 7px solid #f3f3f3;
+    /* border: 7px solid #feb041; */
+    box-shadow: 0px 0px 30px #feb04198;
     border-radius: 30px;
     padding: 50px 40px;
+
+    margin-top: 130px;
+}
+.title_box img {
+    width: 170px;
 }
 .title_box {
     width: 100%;
@@ -23,8 +31,10 @@ input[type=text]  {
     color: #2f2f2f;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 10px;
 }
 .center_box {
@@ -44,6 +54,20 @@ input[type=text]  {
     font-size: 17px;
     color: #4b4b4b;
 }
+
+.f_box,
+.s_box,
+.t_box {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    margin: 40px 0;
+}
+.f_box {justify-content: center;}
+.s_box {justify-content: space-around;}
+.t_box {justify-content: space-around;}
+
+
 .c_name_box {justify-content: center;}
 .c_b_type_box,
 .c_name_box,
@@ -52,10 +76,7 @@ input[type=text]  {
     gap: 30px;
     align-items: center;
 }
-.c_name_box {
-    width: 100%;
-    margin-top: 50px;
-}
+
 .bsa_box,
 .bmi_box,
 .c_b_type_box,
@@ -63,8 +84,7 @@ input[type=text]  {
 .c_birth_box,
 .c_month_box,
 .c_body_box {
-    width: calc(100% /2);
-    margin-top: 50px;
+    width: auto;
     justify-content: center;
     align-items: center;
 }
@@ -97,26 +117,19 @@ input[type=text]  {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    accent-color: #1f273a;
+    accent-color: #646974;
 }
 .active {
-    background-color: #1f273a;
+    background-color: #ecc874;
 }
 
-.name_box {
-    width: 170px;
-    height: 40px;
-    background-color: #f3f3f3;
-    box-sizing: border-box;
-    border-radius: 30px;
-    padding: 8px 0 10px 0;
-}
 .c_name_box  input {
-    width: 120px;
-    outline: none;
-    padding: 5px 20px 5px 6px;
+    width: 140px;
+    height: 34px;
+    padding: 5px 20px 5px 10px;
+    border-radius: 15px;
     border: none;
-    background-color: transparent;
+    outline: none;
 }
 
 .bu_box {
@@ -124,13 +137,15 @@ input[type=text]  {
     margin-top: 50px;
 }
 .to_inspect {
-    width: 240px;
+    max-width: 240px;
+    width: 100%;
     height: 45px;
     border: none;
     border-radius: 30px;
-    background-color: #1f273a;
+    background-color: #feb041;
+    color: #fff;
+    text-shadow: 0px 0px 3px #f3690c;
 
-    color: #f3f3f3;
     font-size: 15px;
     font-weight: 800;
 }
@@ -138,7 +153,7 @@ input[type=text]  {
     margin-top: 10px;
 }
 input[name="rg_c"]:checked ~ label > div {
-    background-color: #1f273a;
+    background-color: #ecc874;
 }
 .radio_box input {
     display: none;
@@ -200,15 +215,16 @@ input[name="rg_c"]:checked ~ label > div {
 .bsa_in {
     width: 100px;
     height: 30px;
-    background-color: #1f273a;
+    background-color: #feb04133;
     border-radius: 5px;
-    color: #ffffff;
+    color: rgb(41, 41, 41);
     line-height: 30px;
+    border: 1px solid #00000030;
 }
 .bsa_after,
 .bmi_after {
     font-size: 14px;
-    color: #1f273a;
+    color: #262626;
 }
 
 @media (max-width: 1560px) {
@@ -230,14 +246,12 @@ input[name="rg_c"]:checked ~ label > div {
         gap: 0 !important;
     }
     
-    .bsa_box, .bmi_box, .c_b_type_box, .c_gender_box, .c_birth_box, .c_month_box, .c_body_box {
+    /* .bsa_box, .bmi_box, .c_b_type_box, .c_gender_box, .c_birth_box, .c_month_box, .c_body_box {
         justify-content: center;
         width: 50%;
         margin-top: 30px;
-    }
+    } */
     .content {margin-bottom: 50px;}
-    .c_text_box {height: 510px;}
-    .content {width: 80%;}
     .c_birth_box > span, .c_body_box > span {width: auto;}
 }
 @media (max-width: 1320px) {
@@ -256,10 +270,10 @@ input[name="rg_c"]:checked ~ label > div {
         gap: 40px;
         align-content: center;
         flex-wrap: wrap;
-        padding: 50px 0;
+        padding: 30px 0;
     }
     .c_name_box, .c_gender_box {margin: 0}
-    .c_body_box, .c_birth_box {flex-direction: column;}
+    .content { padding:  50px 10px;}
 }
 
 @media (max-width: 1000px) {
@@ -267,6 +281,16 @@ input[name="rg_c"]:checked ~ label > div {
     .title_box {
         font-size: 14px;
     }
+    .f_box {justify-content: space-around; flex-wrap: wrap;}
+    .title_box img {width: 150px;}
+    .wrap {margin-bottom: 80px;}
+    .c_name_box,
+    .c_gender_box,
+    .c_b_type_box,
+    .bmi_box,
+    .bsa_box,
+    .c_body_box, 
+    .c_birth_box {flex-direction: column;}
 }
 
 @media (max-width: 880px) {
@@ -284,35 +308,34 @@ input[name="rg_c"]:checked ~ label > div {
 }
 
 @media (max-width: 667px) {
-    .content {
-        width: 90%;
-    }
     .c_b_type_box, .c_name_box, .c_gender_box {
         gap: 10px;
     }
+    .c_name_box {width: 100%;}
+    .content {margin-top: 100px;}
 }
 @media (max-width: 580px) {
     .c_b_type_box {flex-direction: column; margin-top: 10px;}
     .c_gender_box {margin-top: 30px;}
+    .title_box img {width: 130px;}
 }
 
 @media (max-width: 500px) {
-    .content {
-        width: 70%;
-    }
     .c_box > span,
     .title_box {
         font-size: 12px;
     }
-    .to_inspect {
-        width: 220px;
-    }
     .header {
         margin-bottom: 50px;
     }
-    .c_text_box {align-content: space-around; height: 780px; gap: 10px !important;}
-    .bsa_box, .bmi_box, .c_b_type_box, .c_gender_box, .c_birth_box, .c_month_box, .c_body_box {width: 100%; margin-top: 20px;}
+    .c_text_box {align-content: space-around; gap: 10px !important;}
+    /* .bsa_box, .bmi_box, .c_b_type_box, .c_gender_box, .c_birth_box, .c_month_box, .c_body_box {width: 100%; margin-top: 20px;} */
     .c_name_box input {width: 110px;}
     .name_box {width: 150px;}
     .bmi_in, .bsa_in {width: 50px;}
+    .s_box, .t_box {flex-wrap: wrap;}
+    .bu_box {margin-top: 30px;}
+    .f_box, .s_box, .t_box {gap: 20px;}
+    .title_box img {width: 100px;}
+    .content {width: 84%;}
 }
