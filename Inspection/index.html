@@ -18,11 +18,18 @@
     <div class="wrap">
         <div class="header">
             <div class="logo">
-                <a href="#">ON P.E.P test</a>
+                <a href="#">
+                    <div class="flex">
+                        <img src="./img/logo.png" alt="logo" class="logo_img">
+                        <span>ON P.E.P test</span>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="content">
-            <div class="title_box"><h1>ON P.E.P test</h1></div>
+            <div class="title_box">
+                <img src="./img/logo.png" alt="logo" class="logo_img"><h1>ON P.E.P test</h1>
+            </div>
             <div class="c_box">
                 <span>검사를 시작하기 전 정보를 입력해주세요</span>
             </div>
@@ -72,11 +79,13 @@
                     <div class="bmi_box">
                         <span>BMI</span>
                         <span class="bmi_in"></span>
+                        <span class="bmi_after">(kg/m<sup>2</sup>)</span>
                         <input type="hidden" name="bmi" value="" id="bmi">
                     </div>
                     <div class="bsa_box">
                         <span>BSA</span>
                         <span class="bsa_in"></span>
+                        <span class="bsa_after">(m<sup>2</sup>)</span>
                         <input type="hidden" name="bsa" value="" id="bsa">
                     </div>
                     <div class="bu_box"><button type="submit" class="to_inspect">검사 하기</button></div>

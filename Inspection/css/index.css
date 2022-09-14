@@ -2,6 +2,9 @@
     width: 100%;
     max-width: 1920px;
 }
+input[type=text]  {
+    background-color: #f3f3f3;
+}
 .header {
     margin-bottom: 60px;
 }
@@ -9,14 +12,20 @@
     width: 60%;
     margin: 0 auto;
     text-align: center;
-    background-color: #f3f3f3;
+    border: 7px solid #f3f3f3;
     border-radius: 30px;
     padding: 50px 40px;
 }
 .title_box {
+    width: 100%;
     margin: 0;
     padding: 0;
     color: #2f2f2f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 .center_box {
     width: 100%;
@@ -88,16 +97,16 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    accent-color: rgb(106, 106, 106);
+    accent-color: #1f273a;
 }
 .active {
-    background-color: #414a56;
+    background-color: #1f273a;
 }
 
 .name_box {
     width: 170px;
     height: 40px;
-    background-color: white;
+    background-color: #f3f3f3;
     box-sizing: border-box;
     border-radius: 30px;
     padding: 8px 0 10px 0;
@@ -105,7 +114,7 @@
 .c_name_box  input {
     width: 120px;
     outline: none;
-    padding: 0 20px 8px 6px;
+    padding: 5px 20px 5px 6px;
     border: none;
     background-color: transparent;
 }
@@ -119,7 +128,7 @@
     height: 45px;
     border: none;
     border-radius: 30px;
-    background-color: #707882;
+    background-color: #1f273a;
 
     color: #f3f3f3;
     font-size: 15px;
@@ -129,7 +138,7 @@
     margin-top: 10px;
 }
 input[name="rg_c"]:checked ~ label > div {
-    background-color: #414a56;
+    background-color: #1f273a;
 }
 .radio_box input {
     display: none;
@@ -191,10 +200,15 @@ input[name="rg_c"]:checked ~ label > div {
 .bsa_in {
     width: 100px;
     height: 30px;
-    background-color: #7d838b;
+    background-color: #1f273a;
     border-radius: 5px;
     color: #ffffff;
     line-height: 30px;
+}
+.bsa_after,
+.bmi_after {
+    font-size: 14px;
+    color: #1f273a;
 }
 
 @media (max-width: 1560px) {

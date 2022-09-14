@@ -20,7 +20,7 @@ $(document).ready(function(){
         var list_var9 = Number($("input[name='pan_pc_9']:checked").val());
         var list_var10 = Number($("input[name='pan_pc_10']:checked").val());
         var list_var11 = Number($("input[name='pan_pc_11']:checked").val());
-        var list_var12 = Number($("input[name='pc_12']:checked").val());
+        var list_var12 = Number($("input[name='pan_pc_12']:checked").val());
         var list_var13 = Number($("input[name='pc_13']:checked").val());
         var list_var14 = Number($("input[name='pc_14']:checked").val());
         var list_var15 = Number($("input[name='pc_15']:checked").val());
@@ -31,7 +31,7 @@ $(document).ready(function(){
         var list_var20 = Number($("input[name='pc_20']:checked").val());
         var list_var21 = Number($("input[name='pc_21']:checked").val());
         var list_var22 = Number($("input[name='pc_22']:checked").val());
-        var list_var23 = Number($("input[name='pan_23']:checked").val());
+        var list_var23 = Number($("input[name='pc_23']:checked").val());
         var list_var24 = Number($("input[name='pan_24']:checked").val());
         var list_var25 = Number($("input[name='pan_25']:checked").val());
         var list_var26 = Number($("input[name='pan_26']:checked").val());
@@ -42,6 +42,7 @@ $(document).ready(function(){
         var list_var31 = Number($("input[name='pan_31']:checked").val());
         var list_var32 = Number($("input[name='pan_32']:checked").val());
         var list_var33 = Number($("input[name='pan_33']:checked").val());
+        var list_var34 = Number($("input[name='pan_34']:checked").val());
 
         var pan_list_plus = 
             list_var *
@@ -74,7 +75,8 @@ $(document).ready(function(){
             list_var30 *
             list_var31 *
             list_var32 *
-            list_var33
+            list_var33 *
+            list_var34
  
         var pc_list_plus = 
             list_var *
@@ -109,7 +111,8 @@ $(document).ready(function(){
             list_var30 *
             list_var31 *
             list_var32 *
-            list_var33
+            list_var33 *
+            list_var34
         console.log('list_var' , list_var)
 
         var p_percent = Math.sqrt(pan_list_plus)
@@ -158,6 +161,16 @@ $(document).ready(function(){
                 $("#pan_pc_Obesity3").prop('checked',true);
             } else if (param_bmi <= 35) {
                 $("#pan_pc_Obesity4").prop('checked',true);
+            }
+        }
+        else if (param[0] == 'bsa') {
+            var param_bsa = Number(param[1])
+            if(param_bsa <= 1.60) {
+                $("#pan_pc_bsa1").prop('checked',true);
+            } else if(param_bsa <= 1.90) {
+                $("#pan_pc_bsa2").prop('checked',true);
+            } else if (param_bsa >= 1.91) {
+                $("#pan_pc_bsa3").prop('checked',true);
             }
         }
         else if (param[0] == 'b_type') {

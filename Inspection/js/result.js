@@ -5,6 +5,10 @@ $(document).ready(function(){
         if(param[0] == 'pc_total_v') {
             $('.m_ins_pc').html(param[1])
             var pc_param_v = param[1]
+            $('.bar_line2').css({left: pc_param_v +'%'})
+            $('.bar_line_per2').css({left: pc_param_v +'%'})
+            $('.bar_line_per2').html(pc_param_v +'%')
+            $('.orange').css({width: param_v + '%'})
 
             var pc_num = Number(param[1])  // param[1] = 23.5  Number(param[1])
 
@@ -29,6 +33,10 @@ $(document).ready(function(){
         else if(param[0] == 'p_total_v') {
             $('.m_ins_pan').html(param[1])
             var param_v = param[1]
+            $('.bar_line1').css({left: param_v +'%'})
+            $('.bar_line_per1').css({left: param_v +'%'})
+            $('.bar_line_per1').html(param_v +'%')
+            $('.yellow').css({width: param_v + '%'})
 
             var p_num = Number(param[1])  // param[1] = 23.5  Number(param[1])
 
@@ -47,20 +55,22 @@ $(document).ready(function(){
                 $('.rt_dis_ins_p').addClass('dangerous_text')
             }
         }
-        else if (param[0] == 'p_pro_v') {
-            var param_v = param[1]
-            console.log(param[1])
-            $('.bar_line1').css({left: param_v +'%'})
-            $('.bar_line_per1').css({left: param_v +'%'})
-            $('.bar_line_per1').html(param_v +'%')
-        }
-        else if(param[0] == 'pc_pro_v') {
-            console.log(param[1])
-            var pc_param_v = param[1]
-            $('.bar_line2').css({left: pc_param_v +'%'})
-            $('.bar_line_per2').css({left: pc_param_v +'%'})
-            $('.bar_line_per2').html(pc_param_v +'%')
-        }
+        // else if (param[0] == 'p_pro_v') {
+        //     var param_v = param[1]
+        //     console.log(param[1])
+        //     $('.bar_line1').css({left: param_v +'%'})
+        //     $('.bar_line_per1').css({left: param_v +'%'})
+        //     $('.bar_line_per1').html(param_v +'%')
+        //     $('.yellow').css({width: param_v + '%'})
+        // }
+        // else if(param[0] == 'pc_pro_v') {
+        //     console.log(param[1])
+        //     var pc_param_v = param[1]
+        //     $('.bar_line2').css({left: pc_param_v +'%'})
+        //     $('.bar_line_per2').css({left: pc_param_v +'%'})
+        //     $('.bar_line_per2').html(pc_param_v +'%')
+        //     $('.orange').css({width: param_v + '%'})
+        // }
         else {
             console.log(0)
         }

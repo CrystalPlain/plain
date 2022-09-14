@@ -1,3 +1,6 @@
+body {
+    padding-bottom: 100px;
+}
 .wrap {
     max-width: 1920px;
     width: 100%;
@@ -13,20 +16,21 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #f3f3f3;
-    padding: 30px 20px 50px 20px;
+    /* border: 14px solid #1f273a49; */
+    padding: 0 20px 50px 20px;
     border-radius: 30px;
 }
 .top_box {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-top: 30px;
 }
 .result_text_box {
     width: auto;
     margin: 0 20px ;
     text-align: center;
-    padding: 0 50px 50px 50px;
+    padding: 0 50px;
     box-sizing: border-box;
 }
 .table_box {
@@ -41,6 +45,8 @@
     border-radius: 20px;
     display: inline-block;
     background-color: white;
+
+    border: 1px solid #1f273a49;
 }
 
 .inspection {
@@ -58,7 +64,7 @@
     width: 100%;
     height: 40px;
     text-align: center;
-    background-color: #d0d0d0;
+    background-color: #1f273a49;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     line-height: 36px;
@@ -186,43 +192,33 @@
 }
 
 .bar_box {
-    width: 100%;
-    margin-top: 30px;
+    width: 80%;
+    margin-top: 40px;
+    padding: 40px 30px;
+    border-radius: 30px;
+    border: 7px solid #1f273a49;
 }
 .bar_little_box {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    align-items: center;
+    height: 50px;
 }
 .bar_little_box:nth-of-type(1) {
-    margin-top: 30px;
+    padding: 30px 0;
+    border-bottom: 2px solid #1f273a49;
 }
 .bar_little_box:nth-of-type(2) {
-    margin-top: 70px;
+    padding: 70px 0 30px 0;
+    border-bottom: 2px solid #1f273a49;
 }
 .bar_name_t {display: flex; gap: 10px; align-items: center;}
 .b_num {font-weight: 800; font-size: 18px;}
 .bar {
     width: 50%;
     height: 40px;
-    border-left: 2px solid gray;
-    border-right: 2px solid gray;
 
     position: relative;
+    margin: 0 auto;
 }
-.p_bar::before {
-    content: "< 췌장염 유발 가능성 >";
-    font-size: 16px;
-    font-weight: 800;
-    width: 100%;
-    text-align: center;
-
-    position: absolute;
-    top: -30px;
-}
-.pc_bar::before {
-    content: "< 췌장암 유발 가능성 >";
+.bar_title {
     font-size: 16px;
     font-weight: 800;
     width: 100%;
@@ -238,37 +234,36 @@
     justify-content: center;
     padding-top: 6px;
 }
-.bar_stick_box::before {
-    content: "0%";
-    font-size: 13px;
+.bar_per {
+    font-size: 15px;
     font-weight: 800;
     position: absolute;
-    top: 100%;
-    left: -10px;
+    top: 10px;
 }
-.bar_stick_box::after {
-    content: "100%";
-    font-size: 13px;
-    font-weight: 800;
-    position: absolute;
-    top: 100%;
-    right: -20px;
-}
+.bar_0 {left: -40px;}
+.bar_100 {right: -50px;}
 .bar_stick {
     width: 100%;
     height: 70%;
     text-align: center;
     font-size: 16px;
     color: rgb(48, 48, 48);
-    background-color: #8b8b8b;
+    background-color: #f5f5f5;
     line-height: 27px;
     font-weight: 800;
+    border-radius: 30px;
 }
+.bar_color {
+    height: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.yellow {width: 30%; background-color: #efc673;}
+.orange {width: 50%; background-color: #ee5b28;}
 .bar_line_per2,
 .bar_line_per1 {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(229, 229, 229);
+    width: auto;
+    height: auto;
     border-radius: 10px;
     font-size: 14px;
     font-weight: 800;
@@ -277,16 +272,9 @@
     text-align: center;
 
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 0%;
-
-    margin-left: 9px;
-    padding: 0 10px;
 }
-.green {background-color: rgb(27, 182, 27);}
-.orange {background-color: orange;}
-.yellow {background-color: rgb(255, 255, 68);}
-.red {background-color: rgb(255, 48, 48);}
 .bar_line2,
 .bar_line1 {
     width: 2px;
@@ -297,20 +285,6 @@
     position: absolute;
     top: 0;
     left: 0%;
-}
-.bar_line2::before,
-.bar_line1::before {
-    content: "";
-    content: "";
-    width: 0px;
-    height: 0px;
-    border-bottom: calc( 10px * 1.732 ) solid #666666;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-
-    position: absolute;
-    top: 110%;
-    left: -10px;
 }
 
 .box2 {
@@ -327,14 +301,11 @@
     .rt_fixed {font-size: 18px;}
     .rt_result_text {font-size: 20px;}
     .r_t_text  {font-size: 24px;}
-    .result_text_box {
-        padding-bottom: 50px;
-    }
 }
 @media (max-width: 1430px) {
     .content {width: 80%;}
     .result_text_box {
-        padding: 0 0 50px 70px ;
+        padding-right:70px ;
     }
     .bottom_box {
         padding-left: 70px;
@@ -342,18 +313,15 @@
 }
 @media (max-width: 1380px) {
     .result_text_box {
-        padding: 0 0 50px 50px ;
+        padding-right: 50px ;
     }
 }
 @media (max-width: 1260px) {
     .result_text_box {
-        padding: 0 0 50px 30px ;
+        padding-right:30px ;
     }
 }
 @media (max-width: 1140px) {
-    .result_text_box {
-        padding: 0 0 50px 0 ;
-    }
     .bottom_box {
         padding-left: 50px;
     }
@@ -362,7 +330,6 @@
     .chart {font-size: 13px;}
     .rt_fixed {font-size: 16px;}
     .rt_result_text {font-size: 18px;}
-    .result_text_box {padding-bottom:50px;}
     .r_t_text {font-size: 22px;}
     .inspection {height: 50px; line-height: 50px;}
     .dis_name {height: 30px; line-height: 26px; font-size: 14px;}
@@ -379,7 +346,6 @@
     .my_result {height: 80px; line-height: 80px;}
     .my_inspection_ch,.my_inspection_da {height: 50px; line-height: 50px;}
     .dis_name {height: 40px; line-height: 36px;}
-    .result_text_box { padding-bottom:40px ;}
     .bottom_box {padding-left: 0;}
     .rt_result_text {
         padding: 0 15px 6px 15px;
@@ -392,7 +358,6 @@
     .bar_little_box  {gap: 15px;}
 }
 @media (max-width: 740px) {
-    .result_text_box {padding-bottom: 40px;}
     .pc_bar::before,
     .p_bar::before {
         font-size: 14px;
@@ -411,14 +376,14 @@
     .rt_dis_ins_p, .rt_dis_ins_pc {font-size: 22px;}
 }
 @media (max-width: 577px) {
-    .result_text_box {padding-bottom: 40px; margin: 0;}
+    .result_text_box {margin: 0;}
     .r_t_text {font-size: 20px;}
     .rt_dis_ins_p, .rt_dis_ins_pc {font-size: 20px;}
 }
 @media(max-width: 535px) {.rt_result_text{padding: 0 10px 6px 10px;} }
 @media (max-width: 520px) {
-    .header {margin-bottom: 60px;}
-    .content {padding: 150px 20px 80px 20px;}
+    .header {margin-bottom: 30px;}
+    .content {padding: 90px 20px 80px 20px;}
     .rt_fixed {
         flex-direction: column;
         align-items: center;
@@ -437,7 +402,7 @@
     }
     .p2_ten, .p1_ten {width: calc(100% / 5);}
     .persent_2_box, .persent_1_box {gap: 10px; font-size: 14px;}
-    .result_text_box {position: absolute; top: 100px;}
+    .result_text_box {position: absolute; top: 80px;}
     .bottom_box {margin-bottom: 30px;}
     .rt_result_text {
         padding: 10px 20px 6px 20px;
@@ -453,5 +418,13 @@
     .bar {width:  70%;}
     .box {flex-direction: column;}
     .bar_little_box {justify-content: flex-start;}
-    body {background-color: #f3f3f3;}
+    body {padding: 0;}
  }
+@media(max-width: 330px) {
+    .bar_per,
+    .bar_title {font-size: 14px;}
+}
+@media(max-width: 286px) {
+    .bar_per,
+    .bar_title {font-size: 13px;}
+}
