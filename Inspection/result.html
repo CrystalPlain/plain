@@ -105,7 +105,7 @@
                         <div class="on_shar_btn">
                             <span>ON P.E.P test 공유하기</span>
 
-                            <ul class="sns">
+                            <ul class="snsList">
                                 <li class="link">
                                     <a href="#n" onclick="clip2('https://crystalplain.github.io/plain/Inspection/index.html'); " id="link" title="링크복사">
                                         <span>링크복사</span>
@@ -114,17 +114,20 @@
                                 <!-- <li class="kakaotalk">
                                     <span class="btn_comm" id="shareKa" onclick="kipid.popUpKakao()" >카카오톡</span>
                                 </li> -->
+                                <!-- <a href="#" onclick="javascript:window.open('https://story.kakao.com/s/share?url='+encodeURIComponent(document.URL), 'kakaostorysharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');return false;" target="_blank" alt="Share on kakaostory">
+                                    <img src="./images/Kakao_Story.png"> 카카오스토리
+                                </a> -->
+                                <li class="kakaostory">
+                                    <a href="#" id="vIconKs" onclick="return false;"><i class="vIconKs">카카오스토리</i></a>
+                                </li>
                                 <li class="instargram">
                                     <span class="btn_comm" id="shareIn">인스타그램</span>
                                 </li>
                                 <li class="facebook">
-                                    <span class="btn_comm" id="shareFb">페이스북</span>
+                                    <a href="#" id="vIconFb" onclick="return false;"><i class="vIconFb">페이스북</i></a>
                                 </li>
                                 <li class="twitter">
-                                    <span class="btn_comm" id="shareTw">트위터</span>
-                                </li>
-                                <li class="band">
-                                    <span class="btn_comm" id="shareNb">네이버 밴드</span>
+                                    <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw">트위터</i></a>
                                 </li>
                             </ul>
                         </div>
@@ -156,22 +159,34 @@
             document.body.removeChild(t);
             alert("URL이 복사되었습니다.")
         }
-
-        const btnShareTw = document.querySelector('#shareTw');
-        const btnShareFb = document.querySelector('#shareFb');
-
-        btnShareTw.sddEventListener('click', () => {
-            const sendText = 'ON P.E.P. test';
-            const pageUrl = 'https://crystalplain.github.io/plain/Inspection/';
-            window.open(`https://twitter.com/intent/tweet?text=${sendText}&url=${pageUrl}`);
-        })
-
-        btnShareFb.sddEventListener('click', () => {
-            const pageUrl = 'https://crystalplain.github.io/plain/Inspection/';
-            window.open(`http://www.facebook.com/sharer/sharer.php?u=${pageUrl}`);
-        })
         
-
+        $(window).ready(function(){ 
+            $(".snsList li a").click(function(){
+                shareAct(this);
+            });
+        });
+        
+        function shareAct(a){
+            var snsCode = $(a).attr('id');
+            var cUrl = "https://crystalplain.github.io/plain/Inspection/index.html";
+            switch(snsCode){
+                case"vIconTw":
+                    //트위터
+                    cUrl = 'https://twitter.com/intent/tweet?text=ON_PEP_Test:&url='+cUrl;
+                break;
+                        
+                case"vIconFb":
+                    //페이스북
+                    cUrl = 'http://www.facebook.com/sharer/sharer.php?u='+cUrl;
+                break;
+        
+                case"vIconKs":
+                    //카카오스토리
+                    cUrl = 'https://story.kakao.com/share?url='+cUrl;
+                break;
+            }
+            window.open(cUrl,'','width=600,height=300,top=100,left=100,scrollbars=yes');
+        }
     </script>
 </body>
 </html>
