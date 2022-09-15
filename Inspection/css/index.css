@@ -60,33 +60,29 @@ input[type=text]  {
 .t_box {
     width: 100%;
     display: flex;
-    gap: 50px;
+    gap: 30px;
     margin: 40px 0;
 }
 .f_box {justify-content: center;}
-.s_box {justify-content: space-around;}
-.t_box {justify-content: space-around;}
+.s_box {justify-content: center;}
+.t_box {justify-content: center;}
 
 
 .c_name_box {justify-content: center;}
+
 .c_b_type_box,
 .c_name_box,
-.c_gender_box {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
+.c_gender_box,
 .bsa_box,
 .bmi_box,
-.c_b_type_box,
-.c_gender_box,
 .c_birth_box,
-.c_month_box,
 .c_body_box {
     width: auto;
     justify-content: center;
     align-items: center;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 .bsa_box > span:nth-of-type(1),
 .bmi_box > span:nth-of-type(1),
@@ -97,6 +93,8 @@ input[type=text]  {
 .c_name_box > span,
 .c_body_box > span,
 .c_gender_box > span {
+    width: 100%;
+    display: inline-block;
     font-size: 15px ;
     font-weight: 700;
     color: rgb(44, 44, 44);
@@ -116,12 +114,45 @@ input[type=text]  {
 .r_gen_circle {
     width: 30px;
     height: 30px;
+    accent-color: #ee5b28;  /* #feb041 #646974 #ee5b28*/
+    /* -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    outline:0;
+    box-shadow:none; */
+
+    
+   
+}
+
+/* 임시 radio */
+/* .r_box {
+    position: absolute;
+}
+.line {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    accent-color: #646974;
+    background-color: white; 
+    border: 1px solid #00000030;
+    padding: 4px 0px;
+    box-sizing: border-box;
+}
+.color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto;
 }
 .active {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 auto;
     background-color: #ecc874;
-}
+} */
+
+/*/////////////////////////*/
 
 .c_name_box  input {
     width: 140px;
@@ -158,21 +189,9 @@ input[name="rg_c"]:checked ~ label > div {
 .radio_box input {
     display: none;
 }
-.c_body_box,
-.c_birth_box {
-    display: flex;
-    flex-wrap: wrap;
-}
 .c_body_box {gap: 15px;}
 .c_birth_box {
     gap: 10px;
-}
-.bmi > span,
-.bsa > span,
-.c_body_box > span,
-.c_birth_box > span {
-    width: 100%;
-    display: inline-block;
 }
 .height_box,
 .weight_box,
@@ -227,32 +246,13 @@ input[name="rg_c"]:checked ~ label > div {
     color: #262626;
 }
 
-@media (max-width: 1560px) {
-    .c_gender_box,
-    .c_name_box {
-        gap: 40px;
-    }
-}
-
-@media (max-width: 1440px) {
-    .c_gender_box,
-    .c_name_box {
-        gap: 20px;
-    }
-}
 @media (max-width: 1380px) {
     .c_text_box {
         flex-direction: row !important;
         gap: 0 !important;
     }
     
-    /* .bsa_box, .bmi_box, .c_b_type_box, .c_gender_box, .c_birth_box, .c_month_box, .c_body_box {
-        justify-content: center;
-        width: 50%;
-        margin-top: 30px;
-    } */
     .content {margin-bottom: 50px;}
-    .c_birth_box > span, .c_body_box > span {width: auto;}
 }
 @media (max-width: 1320px) {
     .c_hidden_box {
@@ -273,7 +273,7 @@ input[name="rg_c"]:checked ~ label > div {
         padding: 30px 0;
     }
     .c_name_box, .c_gender_box {margin: 0}
-    .content { padding:  50px 10px;}
+    .content { padding:  50px 10px; margin-left: 25px; margin-right: 20px;}
 }
 
 @media (max-width: 1000px) {
@@ -281,16 +281,8 @@ input[name="rg_c"]:checked ~ label > div {
     .title_box {
         font-size: 14px;
     }
-    .f_box {justify-content: space-around; flex-wrap: wrap;}
     .title_box img {width: 150px;}
     .wrap {margin-bottom: 80px;}
-    .c_name_box,
-    .c_gender_box,
-    .c_b_type_box,
-    .bmi_box,
-    .bsa_box,
-    .c_body_box, 
-    .c_birth_box {flex-direction: column;}
 }
 
 @media (max-width: 880px) {
@@ -305,18 +297,23 @@ input[name="rg_c"]:checked ~ label > div {
     .name_box {
         padding: 11px 0 10px 0;
     }
+    .s_box {gap: 120px;}
+    .c_body_box,.c_birth_box {flex-direction: column;}
+    .c_body_box > span, .c_birth_box > span {margin-bottom: 10px;}
+    .f_box, .s_box, .t_box {margin: 20px 0;}
 }
 
 @media (max-width: 667px) {
-    .c_b_type_box, .c_name_box, .c_gender_box {
+    /* .c_b_type_box, .c_name_box, .c_gender_box {
         gap: 10px;
-    }
+    } */
     .c_name_box {width: 100%;}
     .content {margin-top: 100px;}
+    .f_box, .s_box, .t_box {flex-wrap: wrap;}
+    .c_name_box {width: 100%;}
 }
 @media (max-width: 580px) {
-    .c_b_type_box {flex-direction: column; margin-top: 10px;}
-    .c_gender_box {margin-top: 30px;}
+    .c_b_type_box {flex-direction: column; }
     .title_box img {width: 130px;}
 }
 
@@ -329,13 +326,20 @@ input[name="rg_c"]:checked ~ label > div {
         margin-bottom: 50px;
     }
     .c_text_box {align-content: space-around; gap: 10px !important;}
-    /* .bsa_box, .bmi_box, .c_b_type_box, .c_gender_box, .c_birth_box, .c_month_box, .c_body_box {width: 100%; margin-top: 20px;} */
+   
     .c_name_box input {width: 110px;}
     .name_box {width: 150px;}
     .bmi_in, .bsa_in {width: 50px;}
     .s_box, .t_box {flex-wrap: wrap;}
     .bu_box {margin-top: 30px;}
-    .f_box, .s_box, .t_box {gap: 20px;}
+    .s_box, .t_box {gap: 20px;}
+    .f_box {gap: 30px;}
     .title_box img {width: 100px;}
     .content {width: 84%;}
+}
+@media (max-width: 350px) {
+    .content {margin-left: 13px; margin-right: 0;}
+}
+@media (max-width: 270px) {
+    .content {margin-left: 0px; margin-right: 0;}
 }

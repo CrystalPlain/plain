@@ -15,6 +15,16 @@ body {
     border-radius: 30px;
     margin-top: 180px;
 }
+.position_wrap {
+    width: 100%;
+    position: fixed;
+    padding: 0px 25%;
+}
+.list_img {
+    width: 50%;
+    opacity: 0.15;
+    min-width: 500px;
+}
 .q_t_box1 > span {
     font-weight: 800;
     margin-bottom: 10px;
@@ -22,6 +32,11 @@ body {
 
 .q_text_box {
     border-bottom: 1px solid #888888;
+}
+.q_t_box1 {    font-size: 20px;
+    font-weight: 600;
+    color: #f88722;
+    margin-bottom: 10px;
 }
 
 .q_list_box2,
@@ -276,9 +291,6 @@ input[name=page] {
         flex-direction: column;
         align-items: flex-start;
     }
-    .q_t_box1 {
-        font-size: 14px;
-    }
     .ql_q_num,
     .ql_q_text {
         font-size: 18px;
@@ -292,20 +304,18 @@ input[name=page] {
     .q_t_box1 > span {
         margin: 0;
     }
-    .q_t_box1 {
-        margin-bottom: 20px;
-    }
     .prev_page,
     .next_page1,
     .next_page2 {
         left: 25%;
     }
+    .position_wrap {
+        padding: 0px 10%;
+    }
+    .list_img {width: 80%; min-width: 500px;}
 }
 
 @media (max-width: 990px) {
-    .q_t_box1 {
-        font-size: 13px;
-    }
     .ql_q_num,
     .ql_q_text {
         font-size: 17px;
@@ -315,12 +325,10 @@ input[name=page] {
     .next_page2 {
         left: 22%;
     }
+    .q_t_box1 {font-size: 17px;}
 }
 
 @media (max-width: 895px) {
-    .q_t_box1 {
-        font-size: 13px;
-    }
     .prev_page,
     .next_page1,
     .next_page2 {
@@ -347,6 +355,7 @@ input[name=page] {
     .next_page2 {
         left: 8%;
     }
+    .q_t_box1 {font-size: 15px;}
 }
 @media(max-width: 610px) {
     .prev_page,
@@ -354,6 +363,7 @@ input[name=page] {
     .next_page2 {
         left: 6%;
     }
+    .list_img {width: 80%; min-width: 200px;}
 }
 
 @media (max-width: 590px) {
@@ -403,12 +413,23 @@ input[name=page] {
     .next_page2 {
         left: 0%;
     }
+
+    .position_wrap {
+        padding: 0;
+        left: 0px;
+    }
+    .list_img {width: 100%; min-width: 470px;}
 }
 
+@media(max-width: 500px) {
+    .position_wrap {
+        left: -30px;
+    }
+}
 @media (max-width: 480px) {
     .content {
         width: 80%;
-        padding: 30px 20px;
+        padding: 0 20px;
     }
     .ql_q_num, .ql_q_text {
         font-size: 13px;
@@ -431,6 +452,9 @@ input[name=page] {
     .next_page1,
     .next_page2 {
         left: 9%;
+    }
+    .position_wrap {
+        left: -60px;
     }
 }
 @media(max-width: 390px) {

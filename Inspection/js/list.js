@@ -142,5 +142,16 @@ $(document).ready(function() {
     // top_prev.on('click', function(){
     //     $('html, body').stop().animate({scrollTop:0}. delay);
     // });
+
+    $('.next_page1').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 300);
+    });
+    $('.next_page2').on('click', function () {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 300);
+    });
 })
 
