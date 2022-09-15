@@ -12,6 +12,7 @@ $(document).ready(function(){
 
             if (pc_param_v >100) {
                 $('.bar_line_per2').css({left: '100%'})
+                $('.bar_color').css({borderTopRightRadius: '30px', borderBottomRightRadius: '30px'})
             } else if (pc_param_v <=100) {
                 $('.bar_line_per2').css({left: pc_param_v +'%'})
             }

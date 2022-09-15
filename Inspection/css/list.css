@@ -13,12 +13,13 @@ body {
     margin: 0 auto;
 
     border-radius: 30px;
-    margin-top: 180px;
+    margin-top: 130px;
 }
 .position_wrap {
     width: 100%;
     position: fixed;
     padding: 0px 25%;
+    top: 270px;
 }
 .list_img {
     width: 50%;
@@ -368,7 +369,8 @@ input[name=page] {
 
 @media (max-width: 590px) {
     .content {
-        padding: 40px 30px;
+        padding: 0 30px;
+        margin-top: 100px;
     }
     .header {margin-bottom: 30px;}
     .prev_page,

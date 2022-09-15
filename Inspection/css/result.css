@@ -54,7 +54,7 @@ body {
 .doctor {
     width: 200px;
     position: absolute;
-    top: -170px;
+    top: 90px;
     left: 60px;
     z-index: 8;
 }
@@ -63,7 +63,7 @@ body {
     
     width: 150px;
     position: absolute;
-    top: -200px;
+    top: 90px;
     right: 60px;
 }
 
@@ -201,6 +201,7 @@ body {
     width: 100%;
     margin-top: 50px;
     padding: 40px 30px 80px 30px;
+    box-sizing: border-box;
     border-radius: 30px;
     border: 7px solid #646974;
     background-color: white;
@@ -237,7 +238,7 @@ body {
 .bar_title {
     font-size: 16px;
     font-weight: 800;
-    width: 100%;
+    width: 108%;
     text-align: center;
 
     position: absolute;
@@ -456,15 +457,15 @@ body {
     .doctor {
         width: 120px;
         position: absolute;
-        top: -200px;
+        top: 60px;
         left: 80px;
     }
     .pancreas {
         display: inline-block;
         width: 150px;
         position: absolute;
-        top: -180px;
-        right: 120px;
+        top: 70px;
+        right: 50px;
     }
     .flex_bar {flex-wrap: wrap; gap: 30px;}
     .bar_box_2,.top_box {width: 100%;}
@@ -479,19 +480,6 @@ body {
 }
 @media (max-width: 670px) {
     .bar_little_box  {gap: 5px;}
-    .doctor {
-        width: 120px;
-        position: absolute;
-        top: -200px;
-        left: 80px;
-    }
-    .pancreas {
-        display: inline-block;
-        width: 150px;
-        position: absolute;
-        top: -180px;
-        right: 50px;
-    }
 }
 @media (max-width: 630px) {
     .per_2_persent_box, .per_1_persent_box {width: 60%;}
@@ -516,26 +504,19 @@ body {
     .main_btn > a,
     .test_shar_btn > a,
     .on_shar_btn > a {
-        padding: 0 80px;
+        padding: 0 0;
     }
     .doctor {
-        width: 120px;
-        position: absolute;
-        top: -200px;
         left: 20px;
     }
     .pancreas {
-        display: inline-block;
-        width: 150px;
-        position: absolute;
-        top: -180px;
         right: 30px;
     }
 }
-@media(max-width: 535px) {.rt_result_text{padding: 0 10px 6px 10px;} .bar_box {width: 80%;} }
+@media(max-width: 535px) {.rt_result_text{padding: 0 10px 6px 10px;}  }
 @media (max-width: 520px) {
     .header {margin-bottom: 30px;}
-    .content {padding: 90px 20px 80px 20px;}
+    .content {padding: 90px 0;}
     .rt_fixed {
         flex-direction: column;
         align-items: center;
@@ -577,15 +558,15 @@ body {
     .doctor {
         width: 100px;
         position: absolute;
-        top: -169px;
-        left: 0px;
+        top: 90px;
+        left: 20px;
     }
     .pancreas {
         display: inline-block;
         width: 130px;
         position: absolute;
-        top: -140px;
-        right: 0px;
+        top: 90px;
+        right: 10px;
     }
  }
 @media(max-width: 330px) {
@@ -595,4 +576,13 @@ body {
 @media(max-width: 286px) {
     .bar_per,
     .bar_title {font-size: 13px;}
+    .content {
+        margin: 0 !important;
+        margin-top: 90px !important;
+        margin-bottom: 90px !important;
+        width: 100%;
+    }
+    .on_shar_btn > a {
+        padding: 0 50px;
+    }
 }
