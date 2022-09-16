@@ -61,10 +61,10 @@ input[type=text]  {
     width: 100%;
     display: flex;
     gap: 30px;
-    margin: 40px 0;
+    margin: 30px 0;
 }
 .f_box {justify-content: center;}
-.s_box {justify-content: center;}
+.s_box {justify-content: center; align-items: flex-start;}
 .t_box {justify-content: center;}
 
 
@@ -85,7 +85,13 @@ input[type=text]  {
     flex-wrap: wrap;
 }
 .bsa_box > span:nth-of-type(1),
-.bmi_box > span:nth-of-type(1),
+.bmi_box > span:nth-of-type(1) {
+
+    display: inline-block;
+    font-size: 15px ;
+    font-weight: 700;
+    color: rgb(44, 44, 44);
+}
 .c_b_type_box > span,
 .c_gender_box > span,
 .c_birth_box > span,
@@ -108,6 +114,11 @@ input[type=text]  {
 .gender {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+}
+.a_b_type,
+.o_ab_type{
+    display: flex;
     gap: 10px;
 }
 .r_b_type_circle,
@@ -273,7 +284,7 @@ input[name="rg_c"]:checked ~ label > div {
         padding: 30px 0;
     }
     .c_name_box, .c_gender_box {margin: 0}
-    .content { padding:  50px 10px; margin-left: 25px; margin-right: 20px;}
+    .content { padding:  50px 10px; width: 80%;}
 }
 
 @media (max-width: 1000px) {
@@ -294,13 +305,9 @@ input[name="rg_c"]:checked ~ label > div {
         font-size: 13px;
         gap: 20px;
     }
-    .name_box {
-        padding: 11px 0 10px 0;
-    }
-    .s_box {gap: 120px;}
+    .s_box {gap: 80px;}
     .c_body_box,.c_birth_box {flex-direction: column;}
-    .c_body_box > span, .c_birth_box > span {margin-bottom: 10px;}
-    .f_box, .s_box, .t_box {margin: 20px 0;}
+    .f_box, .s_box, .t_box {margin: 0 0 15px 0;}
 }
 
 @media (max-width: 667px) {
@@ -333,13 +340,24 @@ input[name="rg_c"]:checked ~ label > div {
     .s_box, .t_box {flex-wrap: wrap;}
     .bu_box {margin-top: 30px;}
     .s_box, .t_box {gap: 20px;}
-    .f_box {gap: 30px;}
+    .f_box {gap: 20px;}
     .title_box img {width: 100px;}
-    .content {width: 84%;}
+    .a_b_type, .o_ab_type {flex-direction: column;}
+    .c_b_type_box {margin-right: 20px;}
+    .c_b_type_box, .c_name_box, .c_gender_box, .c_birth_box, .c_body_box {flex-direction: column; justify-content: flex-start;}
+}
+@media (max-width: 360px) {
+    .f_box {flex-direction: column;}
+    .c_gender_box {margin-right: 20px;}
+    .t_box {padding-left: 60px !important;}
 }
 @media (max-width: 350px) {
-    .content {margin-left: 13px; margin-right: 0;}
+    .t_box {justify-content: flex-start; padding-left: 50px !important; box-sizing: border-box;}
+    .f_box,.s_box,.t_box {margin: 10px 0;}
 }
+
 @media (max-width: 270px) {
     .content {margin-left: 0px; margin-right: 0;}
+    .t_box {padding-left: 30px !important;}
+    
 }

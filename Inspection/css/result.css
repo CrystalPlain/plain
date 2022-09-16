@@ -1,5 +1,5 @@
 body {
-    padding-bottom: 100px;
+    position: relative;
 }
 .con_box {
     width: 100%;
@@ -10,6 +10,7 @@ body {
 }
 .wrap {
     width: 100%;
+    padding-bottom: 107px;
 }
 .header {
     margin-bottom: 40px;
@@ -25,11 +26,20 @@ body {
     /* border: 14px solid #1f273a49; */
     padding: 0 20px 50px 20px;
     border-radius: 30px;
+    box-sizing: border-box;
 
-    margin-top: 110px;
+    margin-top: 60px;
 }
 .top_box {
     width: 30%;
+}
+.r_box_content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    position: relative;
 }
 .result_text_box {
     width: auto;
@@ -38,6 +48,7 @@ body {
     padding: 0 40px;
     box-sizing: border-box;
     color: #464b56;
+    z-index: 9;
 }
 .table_box {
     width: 100%;
@@ -52,19 +63,24 @@ body {
     border: 1px solid #1f273a49;
 }
 .doctor {
-    width: 200px;
+    width: 320px;
     position: absolute;
-    top: 90px;
-    left: 60px;
+    top: -180px;
+    right: 0px;
     z-index: 8;
 }
-.pancreas {
-    display: none;
-    
+.pancreas {    
     width: 150px;
     position: absolute;
-    top: 90px;
-    right: 60px;
+    top: -150px;
+    right: -60px;
+}
+.talk_b {
+    width: 500px;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    z-index: 8;
 }
 
 .dis_name {
@@ -96,10 +112,23 @@ body {
     font-weight: 600;
 
     border-bottom: 1px solid #1f273a49;
+
+    color: #0fbc23;
+}
+.hori_num:nth-of-type(2),
+.hori_title:nth-of-type(2) {
+    color: #dcb01f;
+}
+.hori_num:nth-of-type(3),
+.hori_title:nth-of-type(3) {
+    color: #f4742a;
+    text-shadow: -1px 0 #f4742a;
 }
 .hori_num:nth-of-type(4),
 .hori_title:nth-of-type(4) {
     border-bottom: none;
+    color: #da1e1e;
+    text-shadow: -1px 0  #da631e,-1px 0  #da631e;
 }
 .hori_title {border-right: 1px solid #1f273a49;}
 .my_result {
@@ -123,7 +152,10 @@ body {
 .box {
     display: flex;
     gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+.r_span {font-weight: 900;}
 #rt_name {
     font-weight: 800;
     font-size: 18px;
@@ -169,6 +201,9 @@ body {
     margin: 20px 0;
     font-size: 24px;
     font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -201,12 +236,10 @@ body {
     width: 100%;
     margin-top: 50px;
     padding: 40px 30px 80px 30px;
+    box-shadow: 0 0 30px #646974;
     box-sizing: border-box;
     border-radius: 30px;
-    border: 7px solid #646974;
     background-color: white;
-    position: relative;
-    z-index: 9;
 }
 .flex_bar {
     width: 100%;
@@ -349,9 +382,6 @@ body {
 .on_s_active {
     display: inline-block !important;
 }
-.sns_a {
-    transform: translateY(-20px);
-}
 .on_shar_btn_box:checked  ~ .sns_a {
     transform: translateY(0px);
 }
@@ -360,26 +390,56 @@ body {
 .on_shar_btn_box {
     position: absolute;
     width: 100%;
-    top: 50px;
-    left: 0;
     display: none;
-    border-radius: 15px;
+    background-color: #464b5698;
+    height: 100%;
+    z-index: 999999;
     /* padding: 20px 0; */
+}
+.sns_title {
+    font-size: 16px;
+    font-weight: 800;
+}
+.close {
+    font-size: 15px;
+    font-weight: 800;
+}
+.close_img {
+    width: 15px;
+}
+.div_p {
+    width: 360px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 0 auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-190px, -90px);
+    
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.on_top {
+    display: flex;
+    justify-content: space-between;
 }
 .snsList2,
 .snsList {
-    height: 50px;
+    width: 100%;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+    margin:  30px 0 20px 0;
 }
 .snsList2 li,
 .snsList li {
-    padding: 25px 20px;
-    box-sizing: border-box;
-    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
 }
+.btn_link_a,.btn_comm,.btn_face  {padding: 15px 15px; border-radius: 50%; box-sizing: border-box; }
+.btn_link_a { background-color: #e3e3e3;}
+.btn_comm { background-color: #ffe812;}
+.btn_face { background-color: #3b5998;}
+
 .snsList2 li:hover img,
 .snsList li:hover img {
     transform: scale(1.1);
@@ -429,10 +489,37 @@ body {
     .dis_name {height: 30px; line-height: 26px; font-size: 14px;}
     .my_result {height: 60px; line-height: 63px;}
     .persent_2_box, .persent_1_box {font-size: 15px;}
+    .talk_b {
+        left: -30px;
+    }
 }
 @media (max-width: 1002px) {
     .link_btn {flex-direction: column;}
-    .doctor {left: 0;}
+    .bar_box {
+        margin-top: 250px;
+    }
+    .r_box_content {justify-content: center; flex-wrap: wrap;}
+    
+    .doctor {
+        width: 299px;
+        top: 5px;
+        right: 0px;
+    }
+    .pancreas {
+        top: 20px;
+        right: -60px;
+    }
+    
+    .talk_b {
+        left: 140px;
+        top: 5px;
+    }
+    .wrap {padding-bottom: 17px;}
+}
+@media (max-width: 894px) {
+    .talk_b {left: 100px;}
+    .bar_stick_box {flex-direction: column;}
+    .pancreas {top: 90px; right: 310px;}
 }
 @media (max-width: 818px) {
     .top_box {display: inline-block;}
@@ -449,28 +536,19 @@ body {
     .b_num {font-size: 16px;}
     .b_name {font-size: 14px;}
     .bar_little_box  {gap: 15px;}
+    .hori_title,.hori_num {font-size: 14px;}
+}
+@media (max-width: 780px) {
+    .talk_b {left: 50px;
+        width: 450px;
+        height: 200px;}
 }
 @media (max-width: 760px) {
-    .bar_box {
-        margin-top: 220px;
-    }
-    .doctor {
-        width: 120px;
-        position: absolute;
-        top: 60px;
-        left: 80px;
-    }
-    .pancreas {
-        display: inline-block;
-        width: 150px;
-        position: absolute;
-        top: 70px;
-        right: 50px;
-    }
     .flex_bar {flex-wrap: wrap; gap: 30px;}
     .bar_box_2,.top_box {width: 100%;}
     .bar_little_box:nth-of-type(2) {border-bottom: 2px solid #1f273a49 !important;}
     .bar_little_box {margin-right: 0 !important; width: 100%;}
+    .hori_title,.hori_num {font-size: 17px;}
 }
 @media (max-width: 740px) {
     .pc_bar::before,
@@ -480,6 +558,9 @@ body {
 }
 @media (max-width: 670px) {
     .bar_little_box  {gap: 5px;}
+}
+@media (max-width: 650px) {
+    .talk_b {left: 10px; height: 210px; top: 15px;}
 }
 @media (max-width: 630px) {
     .per_2_persent_box, .per_1_persent_box {width: 60%;}
@@ -492,7 +573,7 @@ body {
 }
 @media (max-width: 577px) {
     .result_text_box {margin: 0;}
-    .r_t_text {font-size: 20px;}
+    .r_t_text {font-size: 20px; flex-direction: column;}
     .rt_dis_ins_p, .rt_dis_ins_pc {font-size: 20px;}
     .main_btn, .test_shar_btn, .on_shar_btn {
         font-size: 14px;
@@ -508,15 +589,22 @@ body {
     }
     .doctor {
         left: 20px;
+        top: 35px !important;
     }
     .pancreas {
         right: 30px;
     }
+    .talk_b {
+        left: 0;
+        top: 20px;
+        width: 410px;
+    }
+    .bar_stick {height: 40%;}
+    .pancreas {display: none;}
 }
 @media(max-width: 535px) {.rt_result_text{padding: 0 10px 6px 10px;}  }
 @media (max-width: 520px) {
     .header {margin-bottom: 30px;}
-    .content {padding: 90px 0;}
     .rt_fixed {
         flex-direction: column;
         align-items: center;
@@ -535,7 +623,6 @@ body {
     }
     .p2_ten, .p1_ten {width: calc(100% / 5);}
     .persent_2_box, .persent_1_box {gap: 10px; font-size: 14px;}
-    .result_text_box {position: absolute; top: 80px;}
     .bottom_box {margin-bottom: 30px;}
     .rt_result_text {
         padding: 10px 20px 6px 20px;
@@ -545,6 +632,7 @@ body {
     .rt_dis_ins {font-size: 25px;}
     .rt_dis_name {font-size: 17px;}
     .r_t_text {font-size: 16px;}
+    .r_span {font-size: 18px;}
     .bar_name_t > .b_num {display: none;}
     .b_name {font-size: 15px;}
     .b_num {display: none;}
@@ -552,37 +640,126 @@ body {
     .box {flex-direction: column;}
     .bar_little_box {justify-content: flex-start;}
     body {padding: 0;}
+    .r_box_content {padding-bottom: 20px;}
+    .talk_b {
+        left: 0;
+        top: 15px;
+        width: 360px;
+    }
+ }
+ @media(max-width:465px) {
+    .talk_b {
+        left: 0;
+        top: 25px;
+        width: 300px;
+        height: 180px;
+    }
+    .doctor {top: 0;}
+    .div_p {
+        width: 220px;
+        transform: translate(-110px, -90px);
+    }
+    .sns_a {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .wrap {padding-bottom: 47px;}
  }
  @media(max-width: 440px) {
     
     .doctor {
-        width: 100px;
-        position: absolute;
-        top: 90px;
-        left: 20px;
+        width: 300px;
+        left: -40px;
     }
-    .pancreas {
-        display: inline-block;
-        width: 130px;
-        position: absolute;
-        top: 90px;
-        right: 10px;
+ }
+ @media(max-width:415px) {
+    .talk_b {
+        width: 280px;
+        height: 200px;
+        top: 15px;
+        left: 10px;
+    }
+    .content {padding: 0;}
+    .doctor {
+        width: 300px;
+        left: -10px;
+    }
+ }
+ @media(max-width:364px) {
+    .talk_b {
+        width: 240px;
+        top: 15px;
+        height: 250px;
+    }
+    .rt_r_name {    flex-direction: column;}
+    .doctor {
+        width: 230px;
+        top: 85px !important;
     }
  }
 @media(max-width: 330px) {
     .bar_per,
     .bar_title {font-size: 14px;}
+    .rt_r_name {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .talk_b {
+        width: 280px;
+    }
+    .content {width: 95%;}
+    .doctor {
+        left: 10px;
+    }
+    
+}
+@media(max-width: 317px) {
+    .talk_b {
+        left: 5px;
+        width: 270px;
+    }
+ }
+@media (max-width: 290px) {
+    .talk_b {
+        left: 15px;
+        width: 240px;
+    }
 }
 @media(max-width: 286px) {
+    .r_box_content {justify-content: center;}
+    .result_text_box {margin: 0; padding-left: 20px;}
     .bar_per,
-    .bar_title {font-size: 13px;}
+    .bar_title {font-size: 14px;}
     .content {
         margin: 0 !important;
-        margin-top: 90px !important;
-        margin-bottom: 90px !important;
+        margin-top: 30px !important;
         width: 100%;
     }
     .on_shar_btn > a {
         padding: 0 50px;
+    }
+    .talk_b {
+        width: 240px;
+        top: 20px;
+        left: 8px;
+    }
+    .bar_box {width: 90%; margin: 250px auto 0;}
+}
+@media(max-width: 280px) {
+    .result_text_box {padding-left: 10px;}
+    .r_box_content {justify-content: center;}
+    .talk_b {
+        width: 240px;
+        top: 20px;
+        left: 15px;
+    }
+}
+@media(max-width: 266px) {
+    .doctor {
+        width: 190px;
+        top: 114px !important;
+    }
+    .talk_b {
+        width: 210px;
     }
 }

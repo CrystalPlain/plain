@@ -15,32 +15,88 @@
     <link rel="stylesheet" href="./css/result.css">
 </head>
 <body>
+    <div class="on_shar_btn_box">
+
+        <div class="div_p">
+            <div class="on_top">
+                <div class="sns_title">ON : PEP Test 공유하기</div>
+                <div class="close"><img src="./img/close.png" alt="close_img" class="close_img"></div>
+            </div>
+            <ul class="snsList">
+                
+                <li class="link sns_a">
+                    <a href="#n" onclick="clip('https:crystalplain.github.io/plain/Inspection/index.html'); return false; " id="link" title="링크복사">
+                        <span class="btn_link_a"><img src="./img/link2.png" alt="sns_link_img" class="sns_link_img"></span>
+                    </a>
+                </li>
+                <li class="kakaotalk sns_a">
+                    <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakaoTalk_img" class="kakao_talk_img"></span></a>
+                </li>
+                <li class="facebook sns_a">
+                    <a href="#" id="vIconFb" onclick="return false;"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
+                </li>
+                <!--<li class="twitter">
+                    <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="test_shar_btn_box">
+        <div class="div_p">
+            <div class="on_top">
+                <div class="sns_title">검사결과 공유하기</div>
+                <div class="close"><img src="./img/close.png" alt="close_img" class="close_img"></div>
+            </div>
+            <ul class="snsList2">
+                <li class="link sns_a">
+                    <a href="#n" onclick="clip(); return false; " id="link" title="링크복사">
+                        <span class="btn_link_a"><img src="./img/link2.png" alt="sns_link_img" class="sns_link_img"></span>
+                    </a>
+                </li>
+                <li class="kakaotalk sns_a">
+                    <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakao_talk_img" class="kakao_talk_img"></span></a>
+                </li>
+                <li class="facebook sns_a">
+                    <a href="#" id="vIconFb" onclick="return false;"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
+                </li>
+                <!--<li class="twitter">
+                    <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
     <div class="wrap">
-        <div class="header">
-            <div class="logo">
-                <a href="./index.html">
-                    <div class="flex">
-                        <span>ON : PEP Test</span>
-                    </div>
-                </a>
+        
+        <div class="h_d">
+            <div class="header">
+                <div class="logo">
+                    <a href="./index.html">
+                        <div class="flex">
+                            <span>ON : PEP Test</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="content">
-            <div class="result_text_box">
-                <div class="r_t_result_box">
-                    <div class="rt_fixed">
-                        <div class="box">
-                            <span class="rt_r_name"><span id="rt_name">환자</span> 님의 검사결과는</span>
-                            <span class="rt_text">  아래와 같습니다.</span>
+            <div class="r_box_content">
+                <img src="./img/talk_b2.png" alt="talk_b_img" class="talk_b">
+                <div class="result_text_box">
+                    <div class="r_t_result_box">
+                        <div class="rt_fixed">
+                            <div class="box">
+                                <span class="rt_r_name"><span id="rt_name">환자</span> 님의 검사결과는</span>
+                                <span class="rt_text">  아래와 같습니다.</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="r_t_text"><span class="r_span">" 3년 안에 "</span> 검사 받아야 합니다</div>
                 </div>
-                <div class="r_t_text">" 3년 " 안에 검사 받아야 합니다</div>
             </div>
 
             <div class="con_box">
-                <img src="./img/doctor2.png" alt="doctor" class="doctor">
-                <img src="./img/pancreas2.png" alt="pancreas" class="pancreas">
+                <img src="./img/doctor6.png" alt="doctor_img" class="doctor">
+                <img src="./img/pancreas3.png" alt="pancreas_img" class="pancreas">
                 <div class="bar_box">
                     
                     <div class="flex_bar">
@@ -98,7 +154,7 @@
                             <div class="test_shar_btn">
                                 <span>검사결과 공유하기</span>
     
-                                <div class="test_shar_btn_box">
+                                <!-- <div class="test_shar_btn_box">
                                     <ul class="snsList2">
                                         <li class="link sns_a">
                                             <a href="#n" onclick="clip(); return false; " id="link" title="링크복사">
@@ -110,17 +166,17 @@
                                         </li>
                                         <li class="facebook sns_a">
                                             <a href="#" id="vIconFb" onclick="return false;"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></a>
-                                        </li>
+                                        </li> -->
                                        <!--<li class="twitter">
                                             <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
                                         </li> -->
-                                    </ul>
-                                </div>
+                                    <!-- </ul>
+                                </div> -->
                             </div>
                             <div class="on_shar_btn">
-                                <span>ON PEP Test 공유하기</span>
+                                <span>ON : PEP Test 공유하기</span>
     
-                                <div class="on_shar_btn_box">
+                                <!-- <div class="on_shar_btn_box">
                                     <ul class="snsList">
                                         <li class="link sns_a">
                                             <a href="#n" onclick="clip('https:crystalplain.github.io/plain/Inspection/index.html'); return false; " id="link" title="링크복사">
@@ -136,8 +192,8 @@
                                        <!--<li class="twitter">
                                             <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
                                         </li> -->
-                                    </ul>
-                                </div>
+                                    <!-- </ul>
+                                </div>  -->
                             </div>
                         </div>
                     </div>

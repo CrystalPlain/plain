@@ -5,21 +5,18 @@ body {
     max-width: 1920px;
     width: 100%;
 }
-.header {
-    margin-bottom: 120px;
-}
 .content {
     width: 50%;
     margin: 0 auto;
 
     border-radius: 30px;
-    margin-top: 130px;
+    margin-top: 70px;
 }
 .position_wrap {
     width: 100%;
     position: fixed;
     padding: 0px 25%;
-    top: 270px;
+    top: 220px;
 }
 .list_img {
     width: 50%;
@@ -142,7 +139,7 @@ body {
 }
 
 .pn_active {
-    background-color: #414a56;
+    background-color: #ed5c27;
     color: #ffffff;
 }
 .pre_next input {
@@ -168,12 +165,20 @@ body {
     margin: 10px 60px;
     font-size: 16px;
 }
-.q_list_tab input {
+.q_list_tab label input {
     display: inline-block;
-    width: 20px;
+    width: 100%;
+    max-width: 20px;
     height: 20px;
 
     margin-right: 10px;
+}
+.q_list_tab label {
+    display: flex;
+    justify-content: flex-start;
+}
+.q_list_tab label span {
+    word-break: break-all;
 }
 .q_list_tab input:checked{
     accent-color: rgb(49, 49, 49);
@@ -408,7 +413,7 @@ input[name=page] {
         font-size: 13px;
     }
     .q_list_tab {
-        margin: 10px 30px;
+        margin: 10px 25px;
     }
     .prev_page,
     .next_page1,
@@ -486,4 +491,8 @@ input[name=page] {
     .next_page2 {
         left: 0%;
     }
+    .position_r {
+        margin: 10px 0;
+    }
+    .position_wrap {top: 170px;}
 }

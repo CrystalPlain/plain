@@ -21,21 +21,21 @@ $(document).ready(function(){
 
             if (pc_num <=24) {
                 $('.bar_t_dan').html('정상')
-                $('div').remove('.r_t_text')
+                $('div').remove('.r_span')
             }
             else if (pc_num <=49) {
                 $('.bar_t_dan').html('위험(저)')
-                $('.r_t_text').html('5년 안으로 검사 받아야 합니다')
+                $('.r_span').html('" 5년 안으로 "')
             }
             else if(pc_num <=74) {
                 $('.bar_t_dan').html('위험(중)')
-                $('.r_t_text').html('3년 안으로 검사 받아야 합니다')
+                $('.r_span').html('" 3년 안으로 "')
             }
             else {
                 $('.bar_t_dan').html('위험(고)')
                 $('.pc_my_r').html('위험')
                 $('.rt_dis_ins_pc').addClass('dangerous_text')
-                $('.r_t_text').html('1년 안으로 검사 받아야 합니다')
+                $('.r_span').html('" 1년 안으로 "')
             }
         }
         else if(param[0] == 'p_total_v') {
@@ -91,12 +91,16 @@ $(document).ready(function(){
     } 
 
     $('.on_shar_btn').click(function(){
-        $('.on_shar_btn_box').toggleClass('on_s_active')
-        
+        $('.on_shar_btn_box').addClass('on_s_active')
     })
     $('.test_shar_btn').click(function(){
-        $('.test_shar_btn_box').toggleClass('test_s_active')
-        
+        $('.test_shar_btn_box').addClass('test_s_active')
+    })
+    $('.close').click(function(){
+        $('.on_shar_btn_box').removeClass('on_s_active')
+    })
+    $('.close').click(function(){
+        $('.test_shar_btn_box').removeClass('test_s_active')
     })
     // $('.test_shar_btn').click(function((){
     //     $(window).resize(function(){
