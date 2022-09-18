@@ -57,7 +57,7 @@
                     <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakao_talk_img" class="kakao_talk_img"></span></a>
                 </li>
                 <li class="facebook sns_a">
-                    <a href="javascript:shareFacebook()" ><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
+                    <a href="#" onclick="javascript:shareFacebook();"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
                 </li>
                 <!--<li class="twitter">
                     <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
@@ -224,7 +224,9 @@
             document.body.removeChild(t);
             alert("URL이 복사되었습니다.")
         }
+
         
+
         $(window).ready(function(){ 
             $(".snsList li a").click(function(){
                 shareAct(this);
@@ -232,7 +234,18 @@
         });
         
         function shareFacebook() {
-            window.open("http://www.facebook.com/share.php?u=" + encodeURIComponent(location.href));
+            var url = '';
+            var textarea = document.createElement("textarea");
+            
+            document.body.appendChild(textarea);
+            url = window.document.location.href;
+            textarea.value = url;
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+
+            var sendUrl = url;
+            window.open("http://www.facebook.com/share.php?u=" + sendUrl);
         }
         function shareAct(a){
             var snsCode = $(a).attr('id');
@@ -256,6 +269,31 @@
             window.open(cUrl,'','width=600,height=300,top=100,left=100,scrollbars=yes');
         }
         
+        function link_kakao() {
+            var param = 'sendurl?msg=' + encodeURIComponent('ON : PEP Test로 췌장암/췌장염에 대해 검사해보세요');
+                param += '&url=' + 'https://crystalplain.github.io/plain/Inspection/index.html';
+                param += '&type=link';
+                param += '&apiver=2.0.1';
+                param += '&appver=2.0';
+                param += '&appid=crystalplain.github.io/plain/Inspection/index.html';
+                param += '&appname=' + encodeURIComponent('ON : PEP Test');
+            
+            if(navigator.userAgent.match(/android/i))
+            {
+                setTimeout(function(){
+                    location.href = 'intent://' + param + '#Intent;package=com.kakao.talk;end';
+                }, 100);
+            }
+            else if(navigator.userAgent.match(/(iphone)|(ipod)|(ipad)/i))
+            {
+                setTimeout(function(){
+                    location.href = 'itms-apps://itunes.apple.com/app/id362057947?mt=8';
+                }, 200);
+                setTimeout(function(){
+                    location.href = 'kakaolink://' + param;
+                }, 100);
+            }
+        }
 
         function link_app(name, id){
             location.href = name;
