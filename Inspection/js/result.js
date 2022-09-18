@@ -102,6 +102,12 @@ $(document).ready(function(){
     $('.close').click(function(){
         $('.test_shar_btn_box').removeClass('test_s_active')
     })
+    $('.on_shar_btn_box').click(function(){
+        $('.on_shar_btn_box').removeClass('on_s_active')
+    })
+    $('.test_shar_btn_box').click(function(){
+        $('.test_shar_btn_box').removeClass('test_s_active')
+    })
     // $('.test_shar_btn').click(function((){
     //     $(window).resize(function(){
     //         var width = window.innerWidth;
