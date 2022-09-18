@@ -520,6 +520,7 @@ body {
     .talk_b {left: 100px;}
     .bar_stick_box {flex-direction: column;}
     .pancreas {top: 90px; right: 310px;}
+    .bar_title {font-size: 14px;}
 }
 @media (max-width: 818px) {
     .top_box {display: inline-block;}
@@ -542,6 +543,7 @@ body {
     .talk_b {left: 50px;
         width: 450px;
         height: 200px;}
+    .bar_title {font-size: 13px;}
 }
 @media (max-width: 760px) {
     .flex_bar {flex-wrap: wrap; gap: 30px;}
@@ -549,6 +551,7 @@ body {
     .bar_little_box:nth-of-type(2) {border-bottom: 2px solid #1f273a49 !important;}
     .bar_little_box {margin-right: 0 !important; width: 100%;}
     .hori_title,.hori_num {font-size: 17px;}
+    .bar_title {font-size: 15px;}
 }
 @media (max-width: 740px) {
     .pc_bar::before,
@@ -570,6 +573,7 @@ body {
     .rt_dis_name {font-size: 14px;}
     .rt_dis_ins {font-size: 20px;}
     .rt_dis_ins_p, .rt_dis_ins_pc {font-size: 22px;}
+    .bar_title {width: 140%; left: -20px;}
 }
 @media (max-width: 577px) {
     .result_text_box {margin: 0;}
@@ -646,6 +650,7 @@ body {
         top: 15px;
         width: 360px;
     }
+    .bar_title {left: -40px;}
  }
  @media(max-width:465px) {
     .talk_b {
@@ -696,10 +701,11 @@ body {
         width: 230px;
         top: 85px !important;
     }
+    .bar_title {font-size: 14px; left: -20px;}
  }
 @media(max-width: 330px) {
     .bar_per,
-    .bar_title {font-size: 14px;}
+    
     .rt_r_name {
         justify-content: center;
         flex-wrap: wrap;
