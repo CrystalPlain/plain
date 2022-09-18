@@ -57,7 +57,7 @@
                     <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakao_talk_img" class="kakao_talk_img"></span></a>
                 </li>
                 <li class="facebook sns_a">
-                    <a href="#" id="vIconFb" onclick="return false;"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
+                    <a href="javascript:shareFacebook()" ><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
                 </li>
                 <!--<li class="twitter">
                     <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
@@ -231,6 +231,9 @@
             });
         });
         
+        function shareFacebook() {
+            window.open("http://www.facebook.com/share.php?u=" + encodeURIComponent(location.href));
+        }
         function shareAct(a){
             var snsCode = $(a).attr('id');
             var cUrl = "https://crystalplain.github.io/plain/Inspection/index.html";
