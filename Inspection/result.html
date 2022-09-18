@@ -57,8 +57,11 @@
                     <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakao_talk_img" class="kakao_talk_img"></span></a>
                 </li>
                 <li class="facebook sns_a">
-                    <a href="#" onclick="javascript:shareFacebook();"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
+                    <a href="#" class="btn_share_sns" id="sns_facebook" title="페이스북 연동 새창열기" onclick="shareSns('facebook');"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
                 </li>
+                <!-- <li class="facebook sns_a">
+                    <a href="#" onclick="javascript:shareFacebook();"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
+                </li> -->
                 <!--<li class="twitter">
                     <a href="#" id="vIconTw" onclick="return false;"><i class="vIconTw"></i>트위터</a>
                 </li> -->
@@ -233,12 +236,23 @@
             });
         });
         
-        function shareFacebook() {
-            var url = $(location).attr('href');
-
-            var sendUrl = url;
-            window.open("http://www.facebook.com/share.php?u=" + sendUrl);
+        function shareSns(sns){
+            var snsTitle = '';
+            var snsItems = new Array();
+            var winOpt = new Array();
+            var snsUrl = location.href;
+    
+            snsItems['facebook'] = "http://www.facebook.com/share.php?t="+encodeURIComponent(snsTitle) + "&u=" + encodeURIComponent(snsUrl);
+    
+            winOpt['facebook'] = "";
+    
+            var win = window.open(snsItems[sns], sns, winOpt[sns]);
+            if (win) {
+                win.focus();
+            }
         }
+
+
         function shareAct(a){
             var snsCode = $(a).attr('id');
             var cUrl = "https://crystalplain.github.io/plain/Inspection/index.html";
