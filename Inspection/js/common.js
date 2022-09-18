@@ -195,6 +195,7 @@ $(document).ready(function(){
 
         var t_age = (t_year - year) +1
         $('#age').attr('value', t_age)
+
     })
 
     $('#height, #weight').change(function(){
@@ -213,23 +214,26 @@ $(document).ready(function(){
         console.log(bmi_t,bsa_t)
     })
 
-    $('.bmi').click(function(){
-        var height = $('#height').val()
-        var weight = $('#weight').val()
+    $('#cr').change(function(){
+        var gender = $("input[name='gender']:checked").val();
+        var weight = $('#weight').val();
+        var cr = $('#cr').val();
+
+        var year = $('#year').val();
+        var date = new Date();
+        var t_year = String(date.getFullYear());
+        var t_age = (t_year - year) +1
         
-        var bmi_t = weight/ (height/100 * height/100)
-        $('.bmi_in').html(bmi_t.toFixed(2))
-        $('#bmi').attr('value', bmi_t.toFixed(2))
+        if(gender === 'women') {
+            var ccr = (140 - t_age) * weight * 0.85/ cr * 72
+            $('.ccr_in').html(ccr)
+            $('.#ccr').attr('value', ccr)
+        }
+        else {
+            var ccr = (140 - t_age) * weight / cr * 72
+            $('.ccr_in').html(ccr.toFixed(0))
+            $('.#ccr').attr('value', ccr.toFixed(0))
+        }
     })
-
-    $('.bsa').click(function(){
-        var height = $('#height').val()
-        var weight = $('#weight').val()
-
-        var bsa_t = Math.sqrt((height * weight) / 3600)
-        $('.bsa_in').html(bsa_t.toFixed(2))
-        $('#bsa').attr('value', bsa_t.toFixed(2))
-    })
-
 
 })

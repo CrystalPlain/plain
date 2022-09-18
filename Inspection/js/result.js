@@ -102,23 +102,15 @@ $(document).ready(function(){
     $('.close').click(function(){
         $('.test_shar_btn_box').removeClass('test_s_active')
     })
-    // $('.test_shar_btn').click(function((){
-    //     $(window).resize(function(){
-    //         var width = window.innerWidth;
-    //         if(width <1002){
-    //             $('.test_shar_btn').css({marginBottom: '40px'})
-    //         }
-    //             else {$('.test_shar_btn').css({marginBottom: '0'})}
-    //     }).resize();
-    // });
+    
+
+    $(window).resize(function(){ 
+        if (window.innerWidth > 1900) {  
+            $('.pancreas').css({animation: 'move 1.5s linear infinite alternate'})
+        } else if(1003 < window.innerWidth > 1002) {
+            $('.pancreas').css({animation: 'move2 1.5s linear infinite alternate'})
+        } else if(window.innerWidth < 894) {
+            $('.pancreas').css({animation: 'move3 1.5s linear infinite alternate'})
+        }
+    }).resize(); 
 })
-
-
-
-
-// $("input[type=radio]:checked").each(function(i, elements) {
-//     index = $(elements).index("input:checked[type=radio]");
-//     console.log($("input:checked[type=radio]").eq(index).attr("id"));
-//     console.log($("input:checked[type=radio]").eq(index).val())
-// })
-

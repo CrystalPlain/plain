@@ -1,6 +1,4 @@
-body {
-    padding-bottom: 130px;
-}
+
 .wrap {
     max-width: 1920px;
     width: 100%;
@@ -250,12 +248,22 @@ input[name=page] {
 }
 
 
+
 #page3:checked ~ #pan,
 #page2:checked ~ #pan_cancer,
 #page1:checked ~ #pan_pc {
     opacity: 1;
     z-index: 99;
 }
+
+
+
+/* footer */
+.footer {
+    margin-top: 150px;
+}
+
+
 @media (max-width: 1800px) {
     .prev_page,
     .next_page1,

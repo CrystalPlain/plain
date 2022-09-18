@@ -1,7 +1,5 @@
 .wrap {
     width: 100%;
-
-    margin-bottom: 100px;
 }
 input[type=text]  {
     background-color: #feb04133;
@@ -20,6 +18,7 @@ input[type=text]  {
     padding: 50px 40px;
 
     margin-top: 130px;
+    margin-bottom: 150px;
 }
 .title_box img {
     width: 170px;
@@ -63,9 +62,9 @@ input[type=text]  {
     gap: 30px;
     margin: 30px 0;
 }
-.f_box {justify-content: center;}
+.f_box {justify-content: center;align-items: flex-start;}
 .s_box {justify-content: center; align-items: flex-start;}
-.t_box {justify-content: center;}
+.t_box {justify-content: center;align-items: flex-start;}
 
 
 .c_name_box {justify-content: center;}
@@ -73,6 +72,7 @@ input[type=text]  {
 .c_b_type_box,
 .c_name_box,
 .c_gender_box,
+.ccr_box,
 .bsa_box,
 .bmi_box,
 .c_birth_box,
@@ -84,6 +84,25 @@ input[type=text]  {
     gap: 10px;
     flex-wrap: wrap;
 }
+.ccr_box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.ccr {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.ccr_cr_in {font-weight: 800;}
+#cr {
+    width: 70px;
+    height: 28px;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+.ccr_box > span:nth-of-type(1),
 .bsa_box > span:nth-of-type(1),
 .bmi_box > span:nth-of-type(1) {
 
@@ -125,43 +144,9 @@ input[type=text]  {
 .r_gen_circle {
     width: 30px;
     height: 30px;
-    accent-color: #ee5b28;  /* #feb041 #646974 #ee5b28*/
-    /* -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-    outline:0;
-    box-shadow:none; */
-
-    
-   
+    accent-color: #ee5b28;  /* #feb041 #646974 #ee5b28*/ 
 }
 
-/* 임시 radio */
-/* .r_box {
-    position: absolute;
-}
-.line {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: white; 
-    border: 1px solid #00000030;
-    padding: 4px 0px;
-    box-sizing: border-box;
-}
-.color {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin: 0 auto;
-}
-.active {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin: 0 auto;
-    background-color: #ecc874;
-} */
 
 /*/////////////////////////*/
 
@@ -225,6 +210,7 @@ input[name="rg_c"]:checked ~ label > div {
     border: none;
     outline: none;
 }
+#ccr,
 #bmi,
 #bsa {
     width: 100px;
@@ -234,6 +220,7 @@ input[name="rg_c"]:checked ~ label > div {
     border-radius: 5px;
     line-height: 30px;
 }
+.ccr_box,
 .bsa_box,
 .bmi_box {
     display: flex;
@@ -241,6 +228,7 @@ input[name="rg_c"]:checked ~ label > div {
     align-items: center;
     gap: 10px;
 }
+.ccr_in,
 .bmi_in,
 .bsa_in {
     width: 100px;
@@ -251,11 +239,16 @@ input[name="rg_c"]:checked ~ label > div {
     line-height: 30px;
     border: 1px solid #00000030;
 }
+.ccr_after,
 .bsa_after,
 .bmi_after {
     font-size: 14px;
     color: #262626;
 }
+
+
+
+/* media 반응형 사이즈 css */
 
 @media (max-width: 1380px) {
     .c_text_box {
@@ -263,7 +256,7 @@ input[name="rg_c"]:checked ~ label > div {
         gap: 0 !important;
     }
     
-    .content {margin-bottom: 50px;}
+    .content {margin-bottom: 100px;}
 }
 @media (max-width: 1320px) {
     .c_hidden_box {
@@ -293,7 +286,6 @@ input[name="rg_c"]:checked ~ label > div {
         font-size: 14px;
     }
     .title_box img {width: 150px;}
-    .wrap {margin-bottom: 80px;}
 }
 
 @media (max-width: 880px) {
@@ -336,7 +328,7 @@ input[name="rg_c"]:checked ~ label > div {
    
     .c_name_box input {width: 110px;}
     .name_box {width: 150px;}
-    .bmi_in, .bsa_in {width: 50px;}
+    .ccr_in,.bmi_in, .bsa_in {width: 50px;}
     .s_box, .t_box {flex-wrap: wrap;}
     .bu_box {margin-top: 30px;}
     .s_box, .t_box {gap: 20px;}

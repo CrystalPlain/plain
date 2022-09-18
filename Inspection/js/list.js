@@ -117,7 +117,6 @@ $(document).ready(function() {
         $('#pan_cancer').css({
             display: 'inline-block'
         })
-        $('body').css({paddingBottom: '150px'})
         
         $('.window').animate( { scrollTop : $('.header').offset().top }, 500 );
     })
@@ -130,7 +129,6 @@ $(document).ready(function() {
             zIndex: '9',
             bottom: '0',
         })
-        $('body').css({paddingBottom: '150px'})
 
         $('.pre_next').css({opacity:'1', zIndex: '99'})
     })
