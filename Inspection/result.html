@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li class="kakaotalk sns_a">
-                    <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakaoTalk_img" class="kakao_talk_img"></span></a>
+                    <a href="javascript:ShareKakaoTalk()" title="카카오톡"><span class="btn_comm"  width="64"  ><img src="./img/kakao6.png" alt="kakaoTalk_img" class="kakao_talk_img"></span></a>
                 </li>
                 <li class="facebook sns_a">
                     <a href="#" id="vIconFb" onclick="return false;"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
@@ -56,7 +56,7 @@
                 <li class="kakaotalk sns_a">
                     <a href="#"><span class="btn_comm" id="shareKa" width="64"  onclick="link_app('kakaotalk://kakaotalk/home','id362057947')"><img src="./img/kakao6.png" alt="kakao_talk_img" class="kakao_talk_img"></span></a>
                 </li>
-                <li class="facebook sns_a">
+                <li class="fabook sns_a">
                     <a href="#" class="btn_share_sns" id="sns_facebook" title="페이스북 연동 새창열기" onclick="shareSns('facebook');"><span class="btn_face"><i class="vIconFb"></i><img src="./img/face_book3.png" alt="faceBook_img" class="face_book_img"></span></a>
                 </li>
                 <!--<li class="twitter">
@@ -227,12 +227,8 @@
 
         
 
-        $(window).ready(function(){ 
-            $(".snsList li a").click(function(){
-                shareAct(this);
-            });
-        });
         
+        // 페이스북 (검사결과 공유)
         function shareSns(sns){
             var snsTitle = '';
             var snsItems = new Array();
@@ -249,7 +245,12 @@
             }
         }
 
-
+        // 페이스북 (ON : PEP Test)
+        $(window).ready(function(){ 
+            $(".facebook a").click(function(){
+                shareAct(this);
+            });
+        });
         function shareAct(a){
             var snsCode = $(a).attr('id');
             var cUrl = "https://crystalplain.github.io/plain/Inspection/index.html";
@@ -272,46 +273,13 @@
             window.open(cUrl,'','width=600,height=300,top=100,left=100,scrollbars=yes');
         }
         
-        function link_kakao() {
-            var param = 'sendurl?msg=' + encodeURIComponent('ON : PEP Test로 췌장암/췌장염에 대해 검사해보세요');
-                param += '&url=' + 'https://crystalplain.github.io/plain/Inspection/index.html';
-                param += '&type=link';
-                param += '&apiver=2.0.1';
-                param += '&appver=2.0';
-                param += '&appid=crystalplain.github.io/plain/Inspection/index.html';
-                param += '&appname=' + encodeURIComponent('ON : PEP Test');
-            
-            if(navigator.userAgent.match(/android/i))
-            {
-                setTimeout(function(){
-                    location.href = 'intent://' + param + '#Intent;package=com.kakao.talk;end';
-                }, 100);
-            }
-            else if(navigator.userAgent.match(/(iphone)|(ipod)|(ipad)/i))
-            {
-                setTimeout(function(){
-                    location.href = 'itms-apps://itunes.apple.com/app/id362057947?mt=8';
-                }, 200);
-                setTimeout(function(){
-                    location.href = 'kakaolink://' + param;
-                }, 100);
-            }
-        }
+        function ShareKakaoTalk() {
+            Kakao.Link.sendScrap({
+                requestUrl: location.href
+            });
+        };
 
-        function link_app(name, id){
-            location.href = name;
-         
-            if(checkMobile() == 'ios'){
-               
-               setTimeout( function() {
-                    window.location.href = "https://itunes.apple.com/app/"+id;
-               }, 1000);
-               location.href =name;
-   
-           }else{
-               location.href = name;
-           }
-       }
+        
     </script>
 </body>
 </html>
