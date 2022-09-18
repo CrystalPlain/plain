@@ -8,7 +8,7 @@ $(document).ready(function(){
             $('.bar_line2').css({left: pc_param_v +'%'})
             $('.bar_line_per2').css({left: pc_param_v +'%'})
             $('.bar_line_per2').html(pc_param_v +'%')
-            $('.orange').css({width: param_v + '%'})
+            $('.orange').css({width: pc_param_v + '%'})
 
             if (pc_param_v >100) {
                 $('.bar_line_per2').css({left: '100%'})
