@@ -475,7 +475,7 @@ h1,h2,h3,h4,h5,h6 {
 @media (max-width: 575px) { 
     #kso-container {padding-top: 100px;}
 
-    #kso-promotion {height: 250px !important;}
+    #kso-promotion {height: 200px !important;}
     #kso-parallax {padding: 3rem 0;}
     #kso-about .caption .btn-more {
         padding: 5px 1rem;
